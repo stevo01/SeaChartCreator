@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="testprj" outputFormat="PNGWorldfile">
+    <Layer name="GlindowerSee">
+        <Map maxTileCoordinate="17983999/11031551" minTileCoordinate="17980672/11027200" mapSource="OpenSeaMapTEST" zoom="17" name="GlindowerSee_17"/>
+    </Layer>
+    <Layer name="Schwielowsee">
+        <Map maxTileCoordinate="17987327/11036159" minTileCoordinate="17981696/11028736" mapSource="OpenSeaMapTEST" zoom="17" name="Schwielowsee_17"/>
+    </Layer>
+</atlas>

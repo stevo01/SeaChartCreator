@@ -1,0 +1,18 @@
+http://motoplaner.de/
+ - allows you to create and export track files in gpx format
+
+https://code.google.com/archive/p/gmapcatcher/
+
+http://wiki.openstreetmap.org/wiki/GMapCatcher
+  - tool allows download of tiles from severel tiles servers
+
+http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Python
+  - describes the tiles names and conversion between tiles names and coordinates
+
+http://wiki.openstreetmap.org/wiki/KAP-Dateien_aus_OSeaMap_erstellen
+  - describes howto create KAB files for navigation
+  
+http://tools.geofabrik.de/map/#2/29.1466/31.9609&type=Geofabrik_Standard&grid=1
+
+http://mobac.sourceforge.net/
+ - mobile atlas Creator

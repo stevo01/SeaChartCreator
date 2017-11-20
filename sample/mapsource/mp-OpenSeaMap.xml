@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customMultiLayerMapSource>
+    <name>OpenSeaMapTEST</name>
+    <tileType>PNG</tileType>
+    <layers>
+   <customMapSource>
+       <name>OpenSeaMapBase</name>
+       <minZoom>0</minZoom>
+       <maxZoom>18</maxZoom>
+       <tileType>png</tileType>
+       <tileUpdate>None</tileUpdate>
+       <url>http://{$serverpart}.tile.openstreetmap.org/{$z}/{$x}/{$y}.png</url>
+       <serverParts>a b c</serverParts>
+   </customMapSource>
+   <customMapSource>
+       <name>SeaMark</name>
+       <minZoom>0</minZoom>
+       <maxZoom>18</maxZoom>
+       <tileType>png</tileType>
+       <tileUpdate>None</tileUpdate>
+       
+       <!-- Ignore missing tiles where no sea marks are present -->
+       <ignoreErrors>true</ignoreErrors>
+
+       <!-- Transparent tiles instead of the missing tiles -->
+       <backgroundColor>#00000000</backgroundColor>
+
+       <url>http://tiles.openseamap.org/seamark/{$z}/{$x}/{$y}.png</url>
+   </customMapSource>
+    </layers>
+</customMultiLayerMapSource>
