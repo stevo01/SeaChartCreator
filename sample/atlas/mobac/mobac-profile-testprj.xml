@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="testprj" outputFormat="PNGWorldfile">
+    <Layer name="Kleiner Wannsee">
+        <Map maxTileCoordinate="9002751/5510655" minTileCoordinate="9001216/5509888" mapSource="OpenSeaMapTEST" zoom="16" name="Kleiner_Wannsee_16"/>
+    </Layer>
+    <Layer name="Grosser Wannsee">
+        <Map maxTileCoordinate="9003007/5509887" minTileCoordinate="9001728/5507840" mapSource="OpenSeaMapTEST" zoom="16" name="Grosser_Wannsee_16"/>
+    </Layer>
+</atlas>

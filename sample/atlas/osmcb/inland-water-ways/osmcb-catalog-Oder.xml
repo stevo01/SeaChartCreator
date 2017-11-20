@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+  <catalog name="Oder" size="13" version="2">
+    <Layer name="Oder_12" zoomLvl="16">
+      <Map lrc="53.33743343712966, 14.7216796875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21245/35447" minTileCoordinate="21200/35406" name="Oder_12 16" number="162120035406" ulc="53.48804553605621, 14.490966796875"/>
+    </Layer>
+    <Layer name="Oder_3" zoomLvl="16">
+      <Map lrc="52.25134602067366, 14.677734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21572/35439" minTileCoordinate="21525/35412" name="Oder_3 16" number="162152535412" ulc="52.412472059624854, 14.52392578125"/>
+    </Layer>
+    <Layer name="Oder_1" zoomLvl="16">
+      <Map lrc="52.05249047600099, 14.8699951171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21631/35474" minTileCoordinate="21617/35445" name="Oder_1 16" number="162161735445" ulc="52.10313118589298, 14.7052001953125"/>
+    </Layer>
+    <Layer name="Oder_13" zoomLvl="16">
+      <Map lrc="53.471700485727624, 14.7052001953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21204/35444" minTileCoordinate="21150/35415" name="Oder_13 16" number="162115035415" ulc="53.651149925396226, 14.5404052734375"/>
+    </Layer>
+    <Layer name="Oder_10" zoomLvl="16">
+      <Map lrc="53.051120038785136, 14.4415283203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21332/35396" minTileCoordinate="21280/35368" name="Oder_10 16" number="162128035368" ulc="53.2257684357902, 14.2822265625"/>
+    </Layer>
+    <Layer name="Oder_5" zoomLvl="16">
+      <Map lrc="52.4961595310971, 14.666748046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21499/35437" minTileCoordinate="21460/35410" name="Oder_5 16" number="162146035410" ulc="52.629728867183566, 14.512939453125"/>
+    </Layer>
+    <Layer name="Oder_2" zoomLvl="16">
+      <Map lrc="52.09300763963823, 14.765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21619/35455" minTileCoordinate="21568/35436" name="Oder_2 16" number="162156835436" ulc="52.26815737376817, 14.65576171875"/>
+    </Layer>
+    <Layer name="Oder_7" zoomLvl="16">
+      <Map lrc="52.722985524570674, 14.381103515625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21431/35385" minTileCoordinate="21400/35338" name="Oder_7 16" number="162140035338" ulc="52.82932091031373, 14.117431640625"/>
+    </Layer>
+    <Layer name="Oder_11" zoomLvl="16">
+      <Map lrc="53.20603255157843, 14.556884765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21285/35417" minTileCoordinate="21230/35387" name="Oder_11 16" number="162123035387" ulc="53.389880751560305, 14.3865966796875"/>
+    </Layer>
+    <Layer name="Oder_9" zoomLvl="16">
+      <Map lrc="52.9486378848832, 14.3701171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21363/35383" minTileCoordinate="21328/35340" name="Oder_9 16" number="162132835340" ulc="53.067626642387374, 14.12841796875"/>
+    </Layer>
+    <Layer name="Oder_4" zoomLvl="16">
+      <Map lrc="52.382305628707854, 14.6502685546875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21533/35434" minTileCoordinate="21490/35403" name="Oder_4 16" number="162149035403" ulc="52.52958999943302, 14.4744873046875"/>
+    </Layer>
+    <Layer name="Oder_8" zoomLvl="16">
+      <Map lrc="52.80940281068805, 14.1943359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21405/35351" minTileCoordinate="21358/35336" name="Oder_8 16" number="162135835336" ulc="52.96849212681396, 14.1064453125"/>
+    </Layer>
+    <Layer name="Oder_6" zoomLvl="16">
+      <Map lrc="52.609719391566486, 14.6173095703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21465/35428" minTileCoordinate="21426/35385" name="Oder_6 16" number="162142635385" ulc="52.74294319885714, 14.3756103515625"/>
+    </Layer>
+  </catalog>

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+  <atlas name="HOW-HavelOderWasserstrasse" outputFormat="PNGWorldfile" version="1">
+    <Layer name="HOW_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9011712/5490688" minTileCoordinate="9004800/5477632" name="HOW_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="HOW_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9023744/5478656" minTileCoordinate="9008640/5475840" name="HOW_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="HOW_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9007872/5501696" minTileCoordinate="9003008/5493760" name="HOW_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="HOW_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9039616/5477632" minTileCoordinate="9021440/5475840" name="HOW_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="HOW_1_Havel_Oder_Wasserstrasse">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9049088/5477376" minTileCoordinate="9038080/5474560" name="HOW_1_Havel_Oder_Wasserstrasse 16" zoom="16"/>
+    </Layer>
+    <Layer name="HOW_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9007360/5497088" minTileCoordinate="9003520/5489152" name="HOW_5 16" zoom="16"/>
+    </Layer>
+  </atlas>

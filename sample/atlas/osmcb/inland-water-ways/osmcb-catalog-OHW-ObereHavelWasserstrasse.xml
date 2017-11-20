@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+  <catalog name="OHW-ObereHavelWasserstrasse" size="7" version="2">
+    <Layer name="OHW_3" zoomLvl="16">
+      <Map lrc="53.17311920264063, 13.1561279296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21295/35162" minTileCoordinate="21280/35133" name="OHW_3 16" number="162128035133" ulc="53.2257684357902, 12.9913330078125"/>
+    </Layer>
+    <Layer name="OHW_1_Obere_Havel_Wasserstr" zoomLvl="16">
+      <Map lrc="53.2717834792382, 13.062744140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21265/35145" minTileCoordinate="21234/35122" name="OHW_1_Obere_Havel_Wasserstr 16" number="162123435122" ulc="53.37677497506021, 12.930908203125"/>
+    </Layer>
+    <Layer name="OHW_6" zoomLvl="16">
+      <Map lrc="52.96518371955125, 13.3538818359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21358/35198" minTileCoordinate="21335/35187" name="OHW_6 16" number="162133535187" ulc="53.04451562644129, 13.2879638671875"/>
+    </Layer>
+    <Layer name="OHW_4" zoomLvl="16">
+      <Map lrc="53.113811493168235, 13.3154296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21313/35191" minTileCoordinate="21290/35160" name="OHW_4 16" number="162129035160" ulc="53.192870243632605, 13.1396484375"/>
+    </Layer>
+    <Layer name="OHW_5" zoomLvl="16">
+      <Map lrc="53.03130376554962, 13.38134765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21338/35203" minTileCoordinate="21311/35188" name="OHW_5 16" number="162131135188" ulc="53.12370179884571, 13.29345703125"/>
+    </Layer>
+    <Layer name="OHW_2" zoomLvl="16">
+      <Map lrc="53.21919081798935, 13.1011962890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21281/35152" minTileCoordinate="21262/35129" name="OHW_2 16" number="162126235129" ulc="53.284921546196216, 12.9693603515625"/>
+    </Layer>
+    <Layer name="OHW_7" zoomLvl="16">
+      <Map lrc="52.83595824834851, 13.414306640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21397/35209" minTileCoordinate="21358/35194" name="OHW_7 16" number="162135835194" ulc="52.96849212681396, 13.326416015625"/>
+    </Layer>
+  </catalog>

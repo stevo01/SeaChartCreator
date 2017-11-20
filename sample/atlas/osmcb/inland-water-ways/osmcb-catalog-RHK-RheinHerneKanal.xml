@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <catalog name="RHK-RheinHerneKanal" size="3" version="2">
+    <Layer name="RHK_3" zoomLvl="16">
+      <Map lrc="51.423189290253156, 6.83349609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21816/34011" minTileCoordinate="21797/33988" name="RHK_3 16" number="162179733988" ulc="51.49164465653033, 6.70166015625"/>
+    </Layer>
+    <Layer name="RHK_2" zoomLvl="16">
+      <Map lrc="51.484803739516046, 7.1026611328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21798/34060" minTileCoordinate="21779/34009" name="RHK_2 16" number="162177934009" ulc="51.55316672962129, 6.8170166015625"/>
+    </Layer>
+    <Layer name="RHK_1" zoomLvl="16">
+      <Map lrc="51.5292513551899, 7.3388671875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21785/34103" minTileCoordinate="21758/34056" name="RHK_1 16" number="162175834056" ulc="51.624837461743205, 7.0751953125"/>
+    </Layer>
+  </catalog>

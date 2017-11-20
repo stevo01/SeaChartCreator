@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+  <atlas name="ELK-ElbeLuebeckKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="ELK_1_ElbeLuebeckKanal">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8884992/5437184" minTileCoordinate="8880128/5425920" name="ELK_1_ElbeLuebeckKanal 16" zoom="16"/>
+    </Layer>
+    <Layer name="ELK_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8888064/5427968" minTileCoordinate="8883200/5416960" name="ELK_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="ELK_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8887040/5407488" minTileCoordinate="8883200/5396480" name="ELK_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="ELK_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8886528/5417728" minTileCoordinate="8883712/5406720" name="ELK_3 16" zoom="16"/>
+    </Layer>
+  </atlas>

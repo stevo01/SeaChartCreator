@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+  <atlas name="Dahme" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Dahme_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9026816/5519104" minTileCoordinate="9023744/5513216" name="Dahme_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Dahme_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9025536/5513216" minTileCoordinate="9022720/5509376" name="Dahme_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Dahme_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9023232/5510912" minTileCoordinate="9020416/5507072" name="Dahme_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Dahme_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9028608/5519872" minTileCoordinate="9024256/5517312" name="Dahme_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Dahme_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9031168/5533440" minTileCoordinate="9029376/5524736" name="Dahme_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Dahme_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9030400/5524992" minTileCoordinate="9028096/5519104" name="Dahme_2 16" zoom="16"/>
+    </Layer>
+  </atlas>

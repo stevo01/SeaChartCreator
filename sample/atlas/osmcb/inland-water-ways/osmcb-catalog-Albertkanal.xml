@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+  <catalog name="Albertkanal" size="8" version="2">
+    <Layer name="Albertkanal_2" zoomLvl="16">
+      <Map lrc="50.86144411058924, 5.6634521484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21979/33798" minTileCoordinate="21956/33755" name="Albertkanal_2 16" number="162195633755" ulc="50.94458443495011, 5.4217529296875"/>
+    </Layer>
+    <Layer name="Albertkanal_4" zoomLvl="16">
+      <Map lrc="51.02412130394264, 5.240478515625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21932/33721" minTileCoordinate="21905/33682" name="Albertkanal_4 16" number="162190533682" ulc="51.12076493195686, 5.020751953125"/>
+    </Layer>
+    <Layer name="Albertkanal_6" zoomLvl="16">
+      <Map lrc="51.11041991029263, 5.042724609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21907/33685" minTileCoordinate="21888/33642" name="Albertkanal_6 16" number="162188833642" ulc="51.17934297928927, 4.801025390625"/>
+    </Layer>
+    <Layer name="Albertkanal_1" zoomLvl="16">
+      <Map lrc="50.78510168548185, 5.6964111328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22001/33804" minTileCoordinate="21974/33793" name="Albertkanal_1 16" number="162197433793" ulc="50.882243111139694, 5.6304931640625"/>
+    </Layer>
+    <Layer name="Albertkanal_5" zoomLvl="16">
+      <Map lrc="51.11041991029263, 5.042724609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21907/33685" minTileCoordinate="21888/33642" name="Albertkanal_5 16" number="162188833642" ulc="51.17934297928927, 4.801025390625"/>
+    </Layer>
+    <Layer name="Albertkanal_7" zoomLvl="16">
+      <Map lrc="51.16901107945215, 4.822998046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21890/33645" minTileCoordinate="21879/33606" name="Albertkanal_7 16" number="162187933606" ulc="51.21032478948135, 4.603271484375"/>
+    </Layer>
+    <Layer name="Albertkanal_8" zoomLvl="16">
+      <Map lrc="51.19999983412069, 4.625244140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21881/33609" minTileCoordinate="21867/33570" name="Albertkanal_8 16" number="162186733570" ulc="51.25160146817653, 4.405517578125"/>
+    </Layer>
+    <Layer name="Albertkanal_3" zoomLvl="16">
+      <Map lrc="50.92727577667012, 5.4547119140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21960/33760" minTileCoordinate="21929/33717" name="Albertkanal_3 16" number="162192933717" ulc="51.03793989429936, 5.2130126953125"/>
+    </Layer>
+  </catalog>

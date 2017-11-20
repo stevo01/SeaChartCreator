@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <catalog name="Ems" size="3" version="2">
+    <Layer name="Ems_1" zoomLvl="16">
+      <Map lrc="53.27835301753182, 7.1905517578125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21263/34076" minTileCoordinate="21236/34021" name="Ems_1 16" number="162123634021" ulc="53.370220573956786, 6.8829345703125"/>
+    </Layer>
+    <Layer name="Ems_3" zoomLvl="16">
+      <Map lrc="53.140180585580396, 7.4871826171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21305/34130" minTileCoordinate="21254/34107" name="Ems_3 16" number="162125434107" ulc="53.31118556593908, 7.3553466796875"/>
+    </Layer>
+    <Layer name="Ems_2" zoomLvl="16">
+      <Map lrc="53.27835301753182, 7.4212646484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21263/34118" minTileCoordinate="21236/34075" name="Ems_2 16" number="162123634075" ulc="53.370220573956786, 7.1795654296875"/>
+    </Layer>
+  </catalog>

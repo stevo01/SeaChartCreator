@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+  <atlas name="OHW-ObereHavelWasserstrasse" outputFormat="PNGWorldfile" version="1">
+    <Layer name="OHW_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9001472/5451520" minTileCoordinate="8994048/5447680" name="OHW_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="OHW_1_Obere_Havel_Wasserstr">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8997120/5443840" minTileCoordinate="8991232/5435904" name="OHW_1_Obere_Havel_Wasserstr 16" zoom="16"/>
+    </Layer>
+    <Layer name="OHW_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9010688/5467648" minTileCoordinate="9007872/5461760" name="OHW_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="OHW_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9008896/5456128" minTileCoordinate="9000960/5450240" name="OHW_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="OHW_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9011968/5462528" minTileCoordinate="9008128/5455616" name="OHW_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="OHW_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8998912/5447936" minTileCoordinate="8993024/5443072" name="OHW_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="OHW_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9013504/5477632" minTileCoordinate="9009664/5467648" name="OHW_7 16" zoom="16"/>
+    </Layer>
+  </atlas>

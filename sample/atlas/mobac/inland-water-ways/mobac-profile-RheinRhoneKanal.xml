@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+  <atlas name="RheinRhoneKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Rhein_Rhone_Kanal_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8673792/5889280" minTileCoordinate="8664832/5881344" name="Rhein_Rhone_Kanal_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8698368/5786624" minTileCoordinate="8688384/5783808" name="Rhein_Marne_Kanal_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein+Rhone+Kanal_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8712960/5867776" minTileCoordinate="8703488/5860864" name="Rhein+Rhone+Kanal_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8638720/5906944" minTileCoordinate="8627712/5904640" name="Rhein_Rhone_Kanal_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8721152/5862144" minTileCoordinate="8712192/5856256" name="Rhein_Rhone_Kanal_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8730368/5856768" minTileCoordinate="8720384/5850880" name="Rhein_Rhone_Kanal_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8684544/5882624" minTileCoordinate="8673536/5876736" name="Rhein_Rhone_Kanal_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8665344/5892096" minTileCoordinate="8655360/5888256" name="Rhein_Rhone_Kanal_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8663808/5784576" minTileCoordinate="8652800/5781760" name="Rhein_Marne_Kanal_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8646912/5900800" minTileCoordinate="8641024/5893888" name="Rhein_Rhone_Kanal_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8654592/5789440" minTileCoordinate="8648704/5781504" name="Rhein_Marne_Kanal_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8680704/5787904" minTileCoordinate="8672768/5777920" name="Rhein_Marne_Kanal_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8655872/5895424" minTileCoordinate="8645888/5890560" name="Rhein_Rhone_Kanal_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8688896/5787904" minTileCoordinate="8678912/5786112" name="Rhein_Marne_Kanal_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8694784/5878016" minTileCoordinate="8683776/5872128" name="Rhein_Rhone_Kanal_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8680704/5787904" minTileCoordinate="8672768/5777920" name="Rhein_Marne_Kanal_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8704768/5872896" minTileCoordinate="8692736/5867520" name="Rhein_Rhone_Kanal_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8751872/5790720" minTileCoordinate="8745984/5780736" name="Rhein_Marne_Kanal_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8720128/5784064" minTileCoordinate="8708096/5781248" name="Rhein_Marne_Kanal_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8738816/5780992" minTileCoordinate="8728832/5778176" name="Rhein_Marne_Kanal_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8709632/5785088" minTileCoordinate="8696576/5782272" name="Rhein_Marne_Kanal_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8641792/5906432" minTileCoordinate="8637952/5899520" name="Rhein_Rhone_Kanal_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8747520/5783808" minTileCoordinate="8737536/5778944" name="Rhein_Marne_Kanal_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8740096/5853184" minTileCoordinate="8729088/5847296" name="Rhein_Rhone_Kanal_1 16" zoom="16"/>
+    </Layer>
+  </atlas>

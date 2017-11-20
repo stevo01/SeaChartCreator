@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+  <catalog name="MLK-Mittellandkanal" size="18" version="2">
+    <Layer name="MLK_1Mittellandkanal" zoomLvl="16">
+      <Map lrc="52.2143386082582, 11.6729736328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21583/34892" minTileCoordinate="21560/34841" name="MLK_1Mittellandkanal 16" number="162156034841" ulc="52.29504228453733, 11.3873291015625"/>
+    </Layer>
+    <Layer name="MLK_16" zoomLvl="16">
+      <Map lrc="52.31183707141887, 8.41552734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21554/34299" minTileCoordinate="21523/34248" name="MLK_16 16" number="162152334248" ulc="52.41917291058089, 8.1298828125"/>
+    </Layer>
+    <Layer name="MK_11" zoomLvl="16">
+      <Map lrc="52.382305628707854, 9.635009765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21533/34521" minTileCoordinate="21522/34470" name="MK_11 16" number="162152234470" ulc="52.422522954239064, 9.349365234375"/>
+    </Layer>
+    <Layer name="MK_5" zoomLvl="16">
+      <Map lrc="52.389011062234566, 10.78857421875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21531/34731" minTileCoordinate="21500/34696" name="MK_5 16" number="162150034696" ulc="52.4961595310971, 10.5908203125"/>
+    </Layer>
+    <Layer name="MLK_15" zoomLvl="16">
+      <Map lrc="52.315195264379575, 8.67919921875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21553/34347" minTileCoordinate="21542/34296" name="MLK_15 16" number="162154234296" ulc="52.35547370875268, 8.3935546875"/>
+    </Layer>
+    <Layer name="MLK_2" zoomLvl="16">
+      <Map lrc="52.28160186807143, 11.414794921875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21563/34845" minTileCoordinate="21528/34822" name="MLK_2 16" number="162152834822" ulc="52.40241887397332, 11.282958984375"/>
+    </Layer>
+    <Layer name="MK_8" zoomLvl="16">
+      <Map lrc="52.29840175155, 10.2008056640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21558/34624" minTileCoordinate="21551/34577" name="MK_8 16" number="162155134577" ulc="52.32526831457075, 9.9371337890625"/>
+    </Layer>
+    <Layer name="MK_4" zoomLvl="16">
+      <Map lrc="52.389011062234566, 11.041259765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21531/34777" minTileCoordinate="21500/34730" name="MK_4 16" number="162150034730" ulc="52.4961595310971, 10.777587890625"/>
+    </Layer>
+    <Layer name="MLK_14" zoomLvl="16">
+      <Map lrc="52.28160186807143, 8.94287109375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21563/34395" minTileCoordinate="21544/34344" name="MLK_14 16" number="162154434344" ulc="52.34876318198808, 8.6572265625"/>
+    </Layer>
+    <Layer name="MK_9" zoomLvl="16">
+      <Map lrc="52.301760963736704, 9.942626953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21557/34577" minTileCoordinate="21526/34554" name="MK_9 16" number="162152634554" ulc="52.40912125231122, 9.810791015625"/>
+    </Layer>
+    <Layer name="MLK_17" zoomLvl="16">
+      <Map lrc="52.35211857272092, 8.1463623046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21542/34250" minTileCoordinate="21523/34191" name="MLK_17 16" number="162152334191" ulc="52.41917291058089, 7.8167724609375"/>
+    </Layer>
+    <Layer name="MLK_18" zoomLvl="16">
+      <Map lrc="52.26815737376817, 7.8387451171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21567/34194" minTileCoordinate="21536/34149" name="MLK_18 16" number="162153634149" ulc="52.3755991766591, 7.5860595703125"/>
+    </Layer>
+    <Layer name="MK_6" zoomLvl="16">
+      <Map lrc="52.308478623663355, 10.601806640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21555/34697" minTileCoordinate="21528/34670" name="MK_6 16" number="162152834670" ulc="52.40241887397332, 10.447998046875"/>
+    </Layer>
+    <Layer name="MLK_10" zoomLvl="16">
+      <Map lrc="52.389011062234566, 9.8492431640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21531/34560" minTileCoordinate="21520/34517" name="MLK_10 16" number="162152034517" ulc="52.42922227795512, 9.6075439453125"/>
+    </Layer>
+    <Layer name="MK_7" zoomLvl="16">
+      <Map lrc="52.29168256269091, 10.4754638671875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21560/34674" minTileCoordinate="21553/34623" name="MK_7 16" number="162155334623" ulc="52.318553202553254, 10.1898193359375"/>
+    </Layer>
+    <Layer name="MK_3" zoomLvl="16">
+      <Map lrc="52.389011062234566, 11.3104248046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21531/34826" minTileCoordinate="21504/34775" name="MK_3 16" number="162150434775" ulc="52.48278022207821, 11.0247802734375"/>
+    </Layer>
+    <Layer name="MLk_12" zoomLvl="16">
+      <Map lrc="52.32862548843018, 9.3768310546875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21549/34474" minTileCoordinate="21530/34415" name="MLk_12 16" number="162153034415" ulc="52.395715477302076, 9.0472412109375"/>
+    </Layer>
+    <Layer name="MLK_13" zoomLvl="16">
+      <Map lrc="52.264795612972044, 9.107666015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21568/34425" minTileCoordinate="21529/34382" name="MLK_13 16" number="162152934382" ulc="52.3990673029333, 8.865966796875"/>
+    </Layer>
+  </catalog>

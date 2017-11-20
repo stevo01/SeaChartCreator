@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+  <atlas name="_unsored" outputFormat="PNGWorldfile" version="1">
+    <Layer name="GenferSee_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8713984/5956352" minTileCoordinate="8673280/5932032" name="GenferSee_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="BuesumHafen16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8802560/5377792" minTileCoordinate="8800256/5375744" name="BuesumHafen16 16" zoom="16"/>
+    </Layer>
+    <Layer name="NordfriesischeInseln14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8806144/5350144" minTileCoordinate="8773632/5301248" name="NordfriesischeInseln14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Helgoland17">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8758016/5373440" minTileCoordinate="8754688/5370880" name="Helgoland17 16" zoom="16"/>
+    </Layer>
+    <Layer name="OstfriesischeInseln14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8763136/5432064" minTileCoordinate="8695808/5401600" name="OstfriesischeInseln14 16" zoom="16"/>
+    </Layer>
+    <Layer name="BorkumHafen17">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8703744/5422336" minTileCoordinate="8702464/5420800" name="BorkumHafen17 16" zoom="16"/>
+    </Layer>
+    <Layer name="Juist16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8718336/5416448" minTileCoordinate="8705792/5410816" name="Juist16 16" zoom="16"/>
+    </Layer>
+    <Layer name="EiderElbe">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8810240/5387008" minTileCoordinate="8785920/5350400" name="EiderElbe 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neuchateller_See">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8720128/5918464" minTileCoordinate="8695808/5898240" name="Neuchateller_See 16" zoom="16"/>
+    </Layer>
+    <Layer name="Wollin_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9081600/5403392" minTileCoordinate="9049088/5383168" name="Wollin_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="SenftenbergerSee_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9044224/5581312" minTileCoordinate="9039360/5577472" name="SenftenbergerSee_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="Zuerichsee_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8806144/5889792" minTileCoordinate="8785920/5873664" name="Zuerichsee_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="BorkumJuistGreetsiel">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8735488/5448448" minTileCoordinate="8696832/5405696" name="BorkumJuistGreetsiel 16" zoom="16"/>
+    </Layer>
+    <Layer name="SchwerinerSee_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8926720/5418752" minTileCoordinate="8918784/5403648" name="SchwerinerSee_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="Ruegen14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9030400/5370624" minTileCoordinate="8993792/5329920" name="Ruegen14 16" zoom="16"/>
+    </Layer>
+    <Layer name="LausitzerSeen14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9069312/5593856" minTileCoordinate="9026560/5568512" name="LausitzerSeen14 16" zoom="16"/>
+    </Layer>
+  </atlas>

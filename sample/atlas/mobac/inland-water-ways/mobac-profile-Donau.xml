@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+  <atlas name="Donau" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Donau_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8984064/5772544" minTileCoordinate="8975104/5767680" name="Donau_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9020416/5793024" minTileCoordinate="9008384/5789184" name="Donau_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8976384/5769472" minTileCoordinate="8966400/5762560" name="Donau_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8958976/5763840" minTileCoordinate="8948992/5758976" name="Donau_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8950528/5768704" minTileCoordinate="8942592/5762816" name="Donau_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9029120/5796096" minTileCoordinate="9020160/5791232" name="Donau_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9009664/5789952" minTileCoordinate="8999680/5785088" name="Donau_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8994048/5776640" minTileCoordinate="8983040/5771776" name="Donau_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8967424/5763840" minTileCoordinate="8957440/5758976" name="Donau_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9059840/5814272" minTileCoordinate="9045760/5808384" name="Donau_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9069568/5819392" minTileCoordinate="9058560/5812480" name="Donau_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9037824/5802496" minTileCoordinate="9027840/5795584" name="Donau_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9000192/5785856" minTileCoordinate="8993280/5775872" name="Donau_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Donau_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9046784/5810944" minTileCoordinate="9036800/5800960" name="Donau_12 16" zoom="16"/>
+    </Layer>
+  </atlas>

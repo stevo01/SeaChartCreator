@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+  <atlas name="Labe" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Labe_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9083648/5678848" minTileCoordinate="9072640/5676032" name="Labe_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9126400/5687808" minTileCoordinate="9117440/5684992" name="Labe_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9052672/5655808" minTileCoordinate="9041664/5646848" name="Labe_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9095680/5681920" minTileCoordinate="9082624/5676032" name="Labe_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9105408/5689344" minTileCoordinate="9094400/5681408" name="Labe_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9049856/5648640" minTileCoordinate="9041920/5639680" name="Labe_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9052416/5640960" minTileCoordinate="9048576/5626880" name="Labe_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9065984/5670144" minTileCoordinate="9061120/5660160" name="Labe_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9117440/5687808" minTileCoordinate="9105408/5684992" name="Labe_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9073664/5677824" minTileCoordinate="9064704/5668864" name="Labe_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Labe_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9063680/5663744" minTileCoordinate="9051648/5654784" name="Labe_8 16" zoom="16"/>
+    </Layer>
+  </atlas>

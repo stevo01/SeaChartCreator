@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <atlas name="WDK-WeselDattelnKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="WDK_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8707840/5570048" minTileCoordinate="8695808/5566464" name="WDK_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="WDK_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8728832/5565952" minTileCoordinate="8716800/5562112" name="WDK_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="WDK_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8718592/5567744" minTileCoordinate="8706560/5564928" name="WDK_3 16" zoom="16"/>
+    </Layer>
+  </atlas>

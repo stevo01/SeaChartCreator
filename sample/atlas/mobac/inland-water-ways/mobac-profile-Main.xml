@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+  <atlas name="Main" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Main_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8862464/5714176" minTileCoordinate="8853504/5707264" name="Main_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8810240/5689088" minTileCoordinate="8800256/5680128" name="Main_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8788224/5690624" minTileCoordinate="8774144/5682688" name="Main_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8819968/5711872" minTileCoordinate="8814080/5695744" name="Main_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8868608/5697280" minTileCoordinate="8861696/5685248" name="Main_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8814848/5696512" minTileCoordinate="8808960/5685504" name="Main_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8896256/5697280" minTileCoordinate="8887296/5691392" name="Main_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8830208/5711616" minTileCoordinate="8819200/5704704" name="Main_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8842240/5696768" minTileCoordinate="8834304/5684992" name="Main_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_15">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8801280/5684480" minTileCoordinate="8786176/5679616" name="Main_15 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8880384/5690368" minTileCoordinate="8867840/5684480" name="Main_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8865536/5708800" minTileCoordinate="8860672/5696768" name="Main_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8847616/5699584" minTileCoordinate="8840704/5689856" name="Main_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8889088/5692672" minTileCoordinate="8878080/5687808" name="Main_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8836864/5708544" minTileCoordinate="8829440/5696512" name="Main_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Main_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8854784/5708032" minTileCoordinate="8846848/5699072" name="Main_7 16" zoom="16"/>
+    </Layer>
+  </atlas>

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+  <catalog name="MDK-MainDonauKanal" size="8" version="2">
+    <Layer name="MDK_2" zoomLvl="16">
+      <Map lrc="49.59290945425263, 11.0797119140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22340/34784" minTileCoordinate="22285/34765" name="MDK_2 16" number="162228534765" ulc="49.79190382004588, 10.9698486328125"/>
+    </Layer>
+    <Layer name="MDK_7" zoomLvl="16">
+      <Map lrc="49.03066522571669, 11.502685546875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22497/34861" minTileCoordinate="22458/34834" name="MDK_7 16" number="162245834834" ulc="49.17452151806784, 11.348876953125"/>
+    </Layer>
+    <Layer name="MDK_4" zoomLvl="16">
+      <Map lrc="49.34302002289675, 11.1016845703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22410/34788" minTileCoordinate="22379/34769" name="MDK_4 16" number="162237934769" ulc="49.457413352792216, 10.9918212890625"/>
+    </Layer>
+    <Layer name="MDK_6" zoomLvl="16">
+      <Map lrc="49.160154652338015, 11.370849609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22461/34837" minTileCoordinate="22446/34802" name="MDK_6 16" number="162244634802" ulc="49.217597105175976, 11.173095703125"/>
+    </Layer>
+    <Layer name="MDK_1" zoomLvl="16">
+      <Map lrc="49.77771695156375, 11.041259765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22288/34777" minTileCoordinate="22249/34738" name="MDK_1 16" number="162224934738" ulc="49.9193987302727, 10.821533203125"/>
+    </Layer>
+    <Layer name="MDK_9" zoomLvl="16">
+      <Map lrc="48.90083790234089, 11.9366455078125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22533/34940" minTileCoordinate="22514/34893" name="MDK_9 16" number="162251434893" ulc="48.97300592158682, 11.6729736328125"/>
+    </Layer>
+    <Layer name="MDK_8" zoomLvl="16">
+      <Map lrc="48.95136647094772, 11.71142578125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22519/34899" minTileCoordinate="22492/34856" name="MDK_8 16" number="162249234856" ulc="49.052270256016065, 11.4697265625"/>
+    </Layer>
+    <Layer name="MDK_3" zoomLvl="16">
+      <Map lrc="49.439556958940834, 11.019287109375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22383/34773" minTileCoordinate="22336/34758" name="MDK_3 16" number="162233634758" ulc="49.610709938074216, 10.931396484375"/>
+    </Layer>
+  </catalog>

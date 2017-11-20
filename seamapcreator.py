@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # encoding: utf-8
 
 '''
@@ -28,56 +28,64 @@ from Utils.DlMan import MapDownloadManager
 
 __app_identifier__ = "seamapcreator version 0.1"
 
-
 # python createmap.py -i ./sample/atlas/mobac-profile-testprj.xml
 # python createmap.py --latnw 52.3705686692 --lonnw 12.9116821289 --latse 52.3437296183 --lonse 12.9446411133 --name GlindowerSee --zoom 15
 if __name__ == "__main__":
 
     parser = OptionParser()
     usage = "usage: %prog [options] arg1 arg2"
-    atlas=list()
-    
-    parser.add_option("-d",     "--DownloadPath", type="string", help="download path",                       dest="DownloadPath", default="./download")
-    parser.add_option("-w",     "--WorkingPath",  type="string", help="working path",                        dest="WorkingPath",  default="./work")
-    parser.add_option("-i",     "--InFile",       type="string", help="MOBAC Project File",                  dest="ProjectFile")
-    parser.add_option("--latnw",                  type="float",  help="latitude north west corner of map",   dest="latnw")
-    parser.add_option("--lonnw",                  type="float",  help="longitude north west corner of map",  dest="lonnw")
-    parser.add_option("--latse",                  type="float",  help="latitude south east corner of map",   dest="latse")
-    parser.add_option("--lonse",                  type="float",  help="longitude south east corner of map",  dest="lonse")
-    parser.add_option("-n",      "--name",        type="string", help="name",                                dest="name")
-    parser.add_option("-z",      "--zoom",        type="int",    help="zoom level (1-17)",                   dest="level")
-    
+    atlas = list()
+
+    parser.add_option("-d", "--DownloadPath", type="string", help="download path", dest="DownloadPath", default="./download")
+    parser.add_option("-w", "--WorkingPath", type="string", help="working path", dest="WorkingPath", default="./work")
+    parser.add_option("-i", "--InFile", type="string", help="MOBAC Project File", dest="ProjectFile", default="./sample/atlas/mobac/mobac-profile-testprj.xml")
+    parser.add_option("--latnw", type="float", help="latitude north west corner of map", dest="latnw")
+    parser.add_option("--lonnw", type="float", help="longitude north west corner of map", dest="lonnw")
+    parser.add_option("--latse", type="float", help="latitude south east corner of map", dest="latse")
+    parser.add_option("--lonse", type="float", help="longitude south east corner of map", dest="lonse")
+    parser.add_option("-n", "--name", type="string", help="name", dest="name")
+    parser.add_option("-z", "--zoom", type="int", help="zoom level (1-17)", dest="level")
+
     options, arguments = parser.parse_args()
-    
-    if( options.latnw != None and 
-        options.lonnw != None and
-        options.latse != None and
-        options.lonse != None and
-        options.name  != None and
-        options.level != None ):
+
+    # handling for single map
+    if(options.latnw is not None and
+       options.lonnw is not None and
+       options.latse is not None and
+       options.lonse is not None and
+       options.name is not None and
+       options.level is not None):
         #                   lat0, lon0, lat1, lon1
-        atlas.append( area( options.latnw, options.lonnw, options.latse, options.lonse, options.name, options.level ))
-    
-    elif options.ProjectFile != None:
+        atlas.append(area(options.latnw, options.lonnw, options.latse, options.lonse, options.name, options.level))
+
+    # get map from mobac projekt file
+    elif options.ProjectFile is not None:
         # get list of chart areas from project file
-        atlas = ExtractMapsFromAtlas(options.ProjectFile) 
+        atlas = ExtractMapsFromAtlas(options.ProjectFile)
     else:
-        exit        
-    
+        exit()
+
     dl = MapDownloadManager(options.DownloadPath, options.WorkingPath, __app_identifier__)
-    
+
     for singlemap in atlas:
         ti = TileInfo(singlemap)
         print(ti)
+
         # check requested zoom level and number of tiles to meet the tile usage policy
         if(ti.zoom >= 17):
             print("zoom level {} not supported. Please check https://operations.osmfoundation.org/policies/tiles/ for detailes ")
-            continue  
-        elif(ti.nr_of_tiles >= 100):
+            continue
+        elif(ti.nr_of_tiles >= 3000):
             print(singlemap)
-            continue  
+            continue
+
+        dl.PrintInfo(ti)
+
         dl.LoadTiles(ti)
+
         dl.MergeTiles(ti)
+
         dl.GenKapFile(ti)
-    
+        print(".")
+
     print("end")

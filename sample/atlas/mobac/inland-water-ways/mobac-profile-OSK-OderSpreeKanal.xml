@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+  <atlas name="OSK-OderSpreeKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="OSK_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9058304/5521408" minTileCoordinate="9048320/5515520" name="OSK_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="OSK_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9068288/5525504" minTileCoordinate="9057280/5520640" name="OSK_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="OSK_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9048320/5516288" minTileCoordinate="9039872/5513472" name="OSK_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="OSK_1Oder-Spree-Kanal">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9073408/5532160" minTileCoordinate="9067520/5525248" name="OSK_1Oder-Spree-Kanal 16" zoom="16"/>
+    </Layer>
+    <Layer name="OSK_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9040384/5516544" minTileCoordinate="9025280/5512704" name="OSK_5 16" zoom="16"/>
+    </Layer>
+  </atlas>

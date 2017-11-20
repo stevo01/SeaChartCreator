@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+  <catalog name="Rhein" size="38" version="2">
+    <Layer name="Rhein_33" zoomLvl="16">
+      <Map lrc="50.99301440979521, 7.0037841796875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21941/34042" minTileCoordinate="21890/34007" name="Rhein_33 16" number="162189034007" ulc="51.172455303298996, 6.8060302734375"/>
+    </Layer>
+    <Layer name="Rhein_26" zoomLvl="16">
+      <Map lrc="50.14522626967903, 7.7398681640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22184/34176" minTileCoordinate="22145/34145" name="Rhein_26 16" number="162214534145" ulc="50.28582948111449, 7.5640869140625"/>
+    </Layer>
+    <Layer name="Rhein_37" zoomLvl="16">
+      <Map lrc="51.597547657714564, 6.6357421875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21765/33975" minTileCoordinate="21718/33932" name="Rhein_37 16" number="162171833932" ulc="51.76104049272952, 6.39404296875"/>
+    </Layer>
+    <Layer name="Rhein_21" zoomLvl="16">
+      <Map lrc="49.66762782262193, 8.4979248046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22319/34314" minTileCoordinate="22260/34285" name="Rhein_21 16" number="162226034285" ulc="49.88047763874255, 8.3331298828125"/>
+    </Layer>
+    <Layer name="Rhein_11" zoomLvl="16">
+      <Map lrc="47.89793076180494, 7.646484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22808/34159" minTileCoordinate="22753/34140" name="Rhein_11 16" number="162275334140" ulc="48.10376307411776, 7.53662109375"/>
+    </Layer>
+    <Layer name="Rhein_24" zoomLvl="16">
+      <Map lrc="49.96535590991309, 7.9595947265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22235/34216" minTileCoordinate="22208/34177" name="Rhein_24 16" number="162220834177" ulc="50.06419173665909, 7.7398681640625"/>
+    </Layer>
+    <Layer name="Rhein_17" zoomLvl="16">
+      <Map lrc="48.93332642278537, 8.3880615234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22524/34294" minTileCoordinate="22475/34255" name="Rhein_17 16" number="162247534255" ulc="49.113433545959566, 8.1683349609375"/>
+    </Layer>
+    <Layer name="Rhein_25" zoomLvl="16">
+      <Map lrc="50.05008477838257, 7.8277587890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22211/34192" minTileCoordinate="22180/34169" name="Rhein_25 16" number="162218034169" ulc="50.16282433381728, 7.6959228515625"/>
+    </Layer>
+    <Layer name="Rhein_20" zoomLvl="16">
+      <Map lrc="49.47169378524675, 8.4814453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22374/34311" minTileCoordinate="22315/34287" name="Rhein_20 16" number="162231534287" ulc="49.685401019041414, 8.3441162109375"/>
+    </Layer>
+    <Layer name="Rhein_23" zoomLvl="16">
+      <Map lrc="49.96182229868412, 8.2562255859375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22236/34270" minTileCoordinate="22213/34215" name="Rhein_23 16" number="162221334215" ulc="50.04655739071662, 7.9486083984375"/>
+    </Layer>
+    <Layer name="Rhein_13" zoomLvl="16">
+      <Map lrc="48.27953734226006, 7.80029296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22704/34187" minTileCoordinate="22645/34162" name="Rhein_13 16" number="162264534162" ulc="48.498407640964345, 7.657470703125"/>
+    </Layer>
+    <Layer name="Rhein_6" zoomLvl="16">
+      <Map lrc="47.524619996906495, 8.0859375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22909/34239" minTileCoordinate="22890/34204" name="Rhein_6 16" number="162289034204" ulc="47.59875528481801, 7.88818359375"/>
+    </Layer>
+    <Layer name="Rhein_15" zoomLvl="16">
+      <Map lrc="48.63653878261048, 8.1024169921875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22606/34242" minTileCoordinate="22559/34195" name="Rhein_15 16" number="162255934195" ulc="48.810481124720106, 7.8387451171875"/>
+    </Layer>
+    <Layer name="Rhein_31" zoomLvl="16">
+      <Map lrc="50.6668723218107, 7.2235107421875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22035/34082" minTileCoordinate="21988/34035" name="Rhein_31 16" number="162198834035" ulc="50.8336976709807, 6.9598388671875"/>
+    </Layer>
+    <Layer name="Rhein_14" zoomLvl="16">
+      <Map lrc="48.4765629664158, 7.877197265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22650/34201" minTileCoordinate="22600/34178" name="Rhein_14 16" number="162260034178" ulc="48.66194284607007, 7.745361328125"/>
+    </Layer>
+    <Layer name="Rhein_9" zoomLvl="16">
+      <Map lrc="47.68388118858139, 7.591552734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22866/34149" minTileCoordinate="22835/34130" name="Rhein_9 16" number="162283534130" ulc="47.80208652719498, 7.481689453125"/>
+    </Layer>
+    <Layer name="Rhein_32" zoomLvl="16">
+      <Map lrc="50.81981826215654, 7.0697021484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21991/34054" minTileCoordinate="21940/34031" name="Rhein_32 16" number="162194034031" ulc="50.99992885585964, 6.9378662109375"/>
+    </Layer>
+    <Layer name="Rhein_35" zoomLvl="16">
+      <Map lrc="51.28597042110154, 6.7620849609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21856/33998" minTileCoordinate="21805/33975" name="Rhein_35 16" number="162180533975" ulc="51.46427482966439, 6.6302490234375"/>
+    </Layer>
+    <Layer name="Rhein_4" zoomLvl="16">
+      <Map lrc="47.54687159892238, 8.5198974609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22903/34318" minTileCoordinate="22880/34275" name="Rhein_4 16" number="162288034275" ulc="47.63578359086485, 8.2781982421875"/>
+    </Layer>
+    <Layer name="Rhein_10" zoomLvl="16">
+      <Map lrc="47.79470655664555, 7.613525390625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22836/34153" minTileCoordinate="22805/34134" name="Rhein_10 16" number="162280534134" ulc="47.91266030842764, 7.503662109375"/>
+    </Layer>
+    <Layer name="Rhein_36" zoomLvl="16">
+      <Map lrc="51.440312757160115, 6.767578125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21811/33999" minTileCoordinate="21760/33964" name="Rhein_36 16" number="162176033964" ulc="51.6180165487737, 6.56982421875"/>
+    </Layer>
+    <Layer name="Rhein_7" zoomLvl="16">
+      <Map lrc="47.52091047852614, 7.91015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22910/34207" minTileCoordinate="22891/34160" name="Rhein_7 16" number="162289134160" ulc="47.59505101193037, 7.646484375"/>
+    </Layer>
+    <Layer name="Rhein_28" zoomLvl="16">
+      <Map lrc="50.387507803003146, 7.5970458984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22115/34150" minTileCoordinate="22092/34115" name="Rhein_28 16" number="162209234115" ulc="50.47149085139956, 7.3992919921875"/>
+    </Layer>
+    <Layer name="Rhein_29" zoomLvl="16">
+      <Map lrc="50.39801383084027, 7.4322509765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22112/34120" minTileCoordinate="22077/34093" name="Rhein_29 16" number="162207734093" ulc="50.52390462922862, 7.2784423828125"/>
+    </Layer>
+    <Layer name="Rhein_27" zoomLvl="16">
+      <Map lrc="50.27529861142517, 7.66845703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22147/34163" minTileCoordinate="22112/34140" name="Rhein_27 16" number="162211234140" ulc="50.40151532278236, 7.53662109375"/>
+    </Layer>
+    <Layer name="Rhein_19" zoomLvl="16">
+      <Map lrc="49.27497287599638, 8.525390625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22429/34319" minTileCoordinate="22370/34300" name="Rhein_19 16" number="162237034300" ulc="49.48953847306649, 8.41552734375"/>
+    </Layer>
+    <Layer name="Rhein_1" zoomLvl="16">
+      <Map lrc="47.44294999517949, 9.84375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22931/34559" minTileCoordinate="22820/34384" name="Rhein_1 16" number="162282034384" ulc="47.85740289465824, 8.876953125"/>
+    </Layer>
+    <Layer name="Rhein_3" zoomLvl="16">
+      <Map lrc="47.54316365431732, 8.690185546875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22904/34349" minTileCoordinate="22861/34310" name="Rhein_3 16" number="162286134310" ulc="47.70606513569574, 8.470458984375"/>
+    </Layer>
+    <Layer name="Rhein_34" zoomLvl="16">
+      <Map lrc="51.13455469147684, 6.8829345703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21900/34020" minTileCoordinate="21849/33985" name="Rhein_34 16" number="162184933985" ulc="51.313447078275864, 6.6851806640625"/>
+    </Layer>
+    <Layer name="Rhein_38" zoomLvl="16">
+      <Map lrc="51.74063616409768, 6.470947265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21723/33945" minTileCoordinate="21688/33890" name="Rhein_38 16" number="162168833890" ulc="51.862923913602444, 6.163330078125"/>
+    </Layer>
+    <Layer name="Rhein_30" zoomLvl="16">
+      <Map lrc="50.50294609727765, 7.327880859375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22082/34101" minTileCoordinate="22035/34074" name="Rhein_30 16" number="162203534074" ulc="50.67035391495796, 7.174072265625"/>
+    </Layer>
+    <Layer name="Rhein_8" zoomLvl="16">
+      <Map lrc="47.524619996906495, 7.701416015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22909/34169" minTileCoordinate="22862/34130" name="Rhein_8 16" number="162286234130" ulc="47.702368466573716, 7.481689453125"/>
+    </Layer>
+    <Layer name="Rhein_2" zoomLvl="16">
+      <Map lrc="47.63948497925489, 8.9208984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22878/34391" minTileCoordinate="22863/34340" name="Rhein_2 16" number="162286334340" ulc="47.698671535297144, 8.63525390625"/>
+    </Layer>
+    <Layer name="Rhein_16" zoomLvl="16">
+      <Map lrc="48.77067246880509, 8.228759765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22569/34265" minTileCoordinate="22520/34236" name="Rhein_16 16" number="162252034236" ulc="48.95136647094772, 8.06396484375"/>
+    </Layer>
+    <Layer name="Rhein_5" zoomLvl="16">
+      <Map lrc="47.54687159892238, 8.3001708984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22903/34278" minTileCoordinate="22880/34235" name="Rhein_5 16" number="162288034235" ulc="47.63578359086485, 8.0584716796875"/>
+    </Layer>
+    <Layer name="Rhein_18" zoomLvl="16">
+      <Map lrc="49.09545216253482, 8.4979248046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22479/34314" minTileCoordinate="22425/34285" name="Rhein_18 16" number="162242534285" ulc="49.29288913249989, 8.3331298828125"/>
+    </Layer>
+    <Layer name="Rhein_12" zoomLvl="16">
+      <Map lrc="48.09642606004488, 7.71240234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22754/34171" minTileCoordinate="22703/34144" name="Rhein_12 16" number="162270334144" ulc="48.28684818710905, 7.55859375"/>
+    </Layer>
+    <Layer name="Rhein_22" zoomLvl="16">
+      <Map lrc="49.86277585341319, 8.3880615234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22264/34294" minTileCoordinate="22215/34265" name="Rhein_22 16" number="162221534265" ulc="50.03950183762877, 8.2232666015625"/>
+    </Layer>
+  </catalog>

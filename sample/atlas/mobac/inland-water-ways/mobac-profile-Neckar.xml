@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+  <atlas name="Neckar" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Neckar_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8827904/5783040" minTileCoordinate="8819968/5779200" name="Neckar_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neckar_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8818432/5763328" minTileCoordinate="8814592/5751296" name="Neckar_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neckar_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8802304/5734144" minTileCoordinate="8790272/5729280" name="Neckar_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neckar_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8811520/5733888" minTileCoordinate="8801536/5728000" name="Neckar_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neckar_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8815872/5741056" minTileCoordinate="8809984/5733120" name="Neckar_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neckar_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8818688/5752320" minTileCoordinate="8813824/5740288" name="Neckar_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neckar_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8820992/5774080" minTileCoordinate="8816128/5763072" name="Neckar_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neckar_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8791040/5730560" minTileCoordinate="8781056/5724672" name="Neckar_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Neckar_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8820992/5779968" minTileCoordinate="8817152/5773056" name="Neckar_2 16" zoom="16"/>
+    </Layer>
+  </atlas>

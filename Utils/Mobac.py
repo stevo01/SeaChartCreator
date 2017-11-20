@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python33
 # encoding: utf-8
 '''
 implements access to OMAC project file
@@ -32,6 +32,7 @@ def ExtractMapsFromAtlas(filename):
     ret = list()
     for item in itemlist:
         name =  item.attributes['name'].value
+        name = name.replace(" ", "_")
         zoom =  int(item.attributes['zoom'].value)
         
         minTileCoordinate = item.attributes['minTileCoordinate'].value # NW

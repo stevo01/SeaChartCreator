@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+  <atlas name="ESK-ElbeSeitenKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="ESK_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8887296/5501184" minTileCoordinate="8882432/5491200" name="ESK_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="ESK_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8879616/5446912" minTileCoordinate="8876800/5434880" name="ESK_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="ESK1_ElbeSeitenKanal">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8887296/5511424" minTileCoordinate="8882432/5501440" name="ESK1_ElbeSeitenKanal 16" zoom="16"/>
+    </Layer>
+    <Layer name="ESK_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8886528/5492224" minTileCoordinate="8882688/5479168" name="ESK_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="ESK_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8881664/5455360" minTileCoordinate="8876800/5446400" name="ESK_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="ESK_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8886528/5479936" minTileCoordinate="8880640/5466880" name="ESK_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="ESK_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8883200/5467904" minTileCoordinate="8879360/5454848" name="ESK_5 16" zoom="16"/>
+    </Layer>
+  </atlas>

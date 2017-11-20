@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+  <atlas name="Mosel" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Mosel_15">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8743936/5669632" minTileCoordinate="8736000/5661696" name="Mosel_15 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8678144/5751040" minTileCoordinate="8675328/5734912" name="Mosel_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8741120/5673984" minTileCoordinate="8734208/5664000" name="Mosel_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8721920/5698304" minTileCoordinate="8711936/5689344" name="Mosel_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8702208/5711360" minTileCoordinate="8691200/5702400" name="Mosel_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8678144/5760000" minTileCoordinate="8670208/5750016" name="Mosel_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8670720/5788416" minTileCoordinate="8662784/5778432" name="Mosel_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8686336/5735424" minTileCoordinate="8677376/5725440" name="Mosel_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8692480/5719040" minTileCoordinate="8686592/5710080" name="Mosel_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8687104/5730048" minTileCoordinate="8684288/5718016" name="Mosel_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8672768/5770496" minTileCoordinate="8668928/5759488" name="Mosel_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8725760/5690624" minTileCoordinate="8719872/5679616" name="Mosel_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8675328/5779712" minTileCoordinate="8670464/5769728" name="Mosel_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8735232/5679872" minTileCoordinate="8722176/5672960" name="Mosel_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Mosel_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8713216/5705216" minTileCoordinate="8702208/5697280" name="Mosel_10 16" zoom="16"/>
+    </Layer>
+  </atlas>

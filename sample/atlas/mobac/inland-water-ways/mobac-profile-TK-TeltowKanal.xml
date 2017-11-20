@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <atlas name="TK-TeltowKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="TK_1Teltowkanal">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9021184/5509376" minTileCoordinate="9015296/5506560" name="TK_1Teltowkanal 16" zoom="16"/>
+    </Layer>
+    <Layer name="TK_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9009920/5511936" minTileCoordinate="9003008/5508096" name="TK_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="TK_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9015808/5508096" minTileCoordinate="9008896/5506048" name="TK_2 16" zoom="16"/>
+    </Layer>
+  </atlas>

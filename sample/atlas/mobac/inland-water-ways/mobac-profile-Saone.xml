@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+  <atlas name="Saone" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Saone_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8628736/5908480" minTileCoordinate="8621824/5900544" name="Saone_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8620032/5926144" minTileCoordinate="8614144/5914112" name="Saone_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8612864/5973248" minTileCoordinate="8608000/5959168" name="Saone_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8638720/5902080" minTileCoordinate="8626688/5892096" name="Saone_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8647424/5883392" minTileCoordinate="8639488/5872384" name="Saone_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8622848/5915136" minTileCoordinate="8615936/5907200" name="Saone_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8668928/5847552" minTileCoordinate="8663808/5841408" name="Saone2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_15">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8614656/5960192" minTileCoordinate="8610816/5948160" name="Saone_15 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8660480/5867264" minTileCoordinate="8651520/5860352" name="Saone_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8617728/5949440" minTileCoordinate="8612864/5937408" name="Saone_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8668928/5842176" minTileCoordinate="8664064/5837312" name="Saone1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8619776/5938176" minTileCoordinate="8616960/5925120" name="Saone_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8670976/5854208" minTileCoordinate="8668160/5847296" name="Saone_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Saone_17">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8615168/5986560" minTileCoordinate="8610304/5972480" name="Saone_17 16" zoom="16"/>
+    </Layer>
+  </atlas>

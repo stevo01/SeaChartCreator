@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+  <atlas name="MDK-MainDonauKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="MDK_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8904704/5719040" minTileCoordinate="8899840/5704960" name="MDK_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="MDK_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8924416/5759232" minTileCoordinate="8917504/5749248" name="MDK_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="MDK_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8905728/5736960" minTileCoordinate="8900864/5729024" name="MDK_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="MDK_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8918272/5750016" minTileCoordinate="8909312/5746176" name="MDK_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="MDK_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8902912/5705728" minTileCoordinate="8892928/5695744" name="MDK_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="MDK_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8944640/5768448" minTileCoordinate="8932608/5763584" name="MDK_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="MDK_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8934144/5764864" minTileCoordinate="8923136/5757952" name="MDK_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="MDK_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8901888/5730048" minTileCoordinate="8898048/5718016" name="MDK_3 16" zoom="16"/>
+    </Layer>
+  </atlas>

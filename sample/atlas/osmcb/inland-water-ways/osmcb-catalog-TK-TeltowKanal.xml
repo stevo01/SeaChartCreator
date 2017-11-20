@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <catalog name="TK-TeltowKanal" size="3" version="2">
+    <Layer name="TK_1Teltowkanal" zoomLvl="16">
+      <Map lrc="52.422522954239064, 13.5791015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21521/35239" minTileCoordinate="21510/35216" name="TK_1Teltowkanal 16" number="162151035216" ulc="52.462703626583746, 13.447265625"/>
+    </Layer>
+    <Layer name="TK_3" zoomLvl="16">
+      <Map lrc="52.389011062234566, 13.33740234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21531/35195" minTileCoordinate="21516/35168" name="TK_3 16" number="162151635168" ulc="52.44261787120724, 13.18359375"/>
+    </Layer>
+    <Layer name="TK_2" zoomLvl="16">
+      <Map lrc="52.43926935464697, 13.4637451171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21516/35218" minTileCoordinate="21508/35191" name="TK_2 16" number="162150835191" ulc="52.46939684276204, 13.3099365234375"/>
+    </Layer>
+  </catalog>

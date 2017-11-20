@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+  <catalog name="EHK-ElbeHavelKanal" size="4" version="2">
+    <Layer name="ElbeHavelKanal_2" zoomLvl="16">
+      <Map lrc="52.3755991766591, 12.2003173828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21535/34988" minTileCoordinate="21520/34949" name="ElbeHavelKanal_2 16" number="162152034949" ulc="52.42922227795512, 11.9805908203125"/>
+    </Layer>
+    <Layer name="ElbeHavelKanal_3" zoomLvl="16">
+      <Map lrc="52.29168256269091, 12.01904296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21560/34955" minTileCoordinate="21533/34924" name="ElbeHavelKanal_3 16" number="162153334924" ulc="52.38565847278253, 11.84326171875"/>
+    </Layer>
+    <Layer name="ElbeHavelKanal_4" zoomLvl="16">
+      <Map lrc="52.231163984032676, 11.8927001953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21578/34932" minTileCoordinate="21555/34897" name="ElbeHavelKanal_4 16" number="162155534897" ulc="52.31183707141887, 11.6949462890625"/>
+    </Layer>
+    <Layer name="ElbeHavelKanal_1" zoomLvl="16">
+      <Map lrc="52.37224556866933, 12.3980712890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21536/35024" minTileCoordinate="21524/34985" name="ElbeHavelKanal_1 16" number="162152434985" ulc="52.415822612378776, 12.1783447265625"/>
+    </Layer>
+  </catalog>

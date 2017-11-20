@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <atlas name="RHK-RheinHerneKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="RHK_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8706816/5584896" minTileCoordinate="8700928/5580032" name="RHK_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="RHK_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8719360/5580288" minTileCoordinate="8706304/5575424" name="RHK_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="RHK_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8730368/5576960" minTileCoordinate="8718336/5570048" name="RHK_1 16" zoom="16"/>
+    </Layer>
+  </atlas>

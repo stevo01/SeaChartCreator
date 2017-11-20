@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+  <catalog name="Maas" size="19" version="2">
+    <Layer name="Maas_6" zoomLvl="16">
+      <Map lrc="49.264219997347624, 5.3173828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22432/33735" minTileCoordinate="22393/33708" name="Maas_6 16" number="162239333708" ulc="49.40739905889802, 5.16357421875"/>
+    </Layer>
+    <Layer name="Maas_5" zoomLvl="16">
+      <Map lrc="49.1493767672442, 5.3997802734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22464/33750" minTileCoordinate="22429/33731" name="Maas_5 16" number="162242933731" ulc="49.27855664807513, 5.2899169921875"/>
+    </Layer>
+    <Layer name="Maas_3" zoomLvl="16">
+      <Map lrc="48.882779593451254, 5.55908203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22538/33779" minTileCoordinate="22499/33756" name="Maas_3 16" number="162249933756" ulc="49.027063474829326, 5.42724609375"/>
+    </Layer>
+    <Layer name="Maas_4" zoomLvl="16">
+      <Map lrc="49.00544749405809, 5.4547119140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22504/33760" minTileCoordinate="22461/33745" name="Maas_4 16" number="162246133745" ulc="49.163746759588975, 5.3668212890625"/>
+    </Layer>
+    <Layer name="Maas_12" zoomLvl="16">
+      <Map lrc="49.983020075472226, 4.7735595703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22230/33636" minTileCoordinate="22195/33621" name="Maas_12 16" number="162219533621" ulc="50.11001070896015, 4.6856689453125"/>
+    </Layer>
+    <Layer name="Maas_10" zoomLvl="16">
+      <Map lrc="49.738681639280024, 4.7845458984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22299/33638" minTileCoordinate="22256/33619" name="Maas_10 16" number="162225633619" ulc="49.89463439573421, 4.6746826171875"/>
+    </Layer>
+    <Layer name="Maas_1" zoomLvl="16">
+      <Map lrc="48.71271258145238, 5.73486328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22585/33811" minTileCoordinate="22566/33780" name="Maas_1 16" number="162256633780" ulc="48.78515199804314, 5.55908203125"/>
+    </Layer>
+    <Layer name="Maas_14" zoomLvl="16">
+      <Map lrc="50.21206446065373, 4.9273681640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22165/33664" minTileCoordinate="22130/33653" name="Maas_14 16" number="162213033653" ulc="50.338448887254714, 4.8614501953125"/>
+    </Layer>
+    <Layer name="Maas_13" zoomLvl="16">
+      <Map lrc="50.07829454738942, 4.8944091796875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22203/33658" minTileCoordinate="22164/33635" name="Maas_13 16" number="162216433635" ulc="50.21909462044747, 4.7625732421875"/>
+    </Layer>
+    <Layer name="Maas_19" zoomLvl="16">
+      <Map lrc="50.62855775525792, 5.6964111328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22046/33804" minTileCoordinate="22015/33781" name="Maas_19 16" number="162201533781" ulc="50.73993156768006, 5.5645751953125"/>
+    </Layer>
+    <Layer name="Maas_16" zoomLvl="16">
+      <Map lrc="50.45750402042057, 5.1470947265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22095/33704" minTileCoordinate="22080/33657" name="Maas_16 16" number="162208033657" ulc="50.51342652633955, 4.8834228515625"/>
+    </Layer>
+    <Layer name="Maas_11" zoomLvl="16">
+      <Map lrc="49.88047763874255, 4.72412109375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22259/33627" minTileCoordinate="22228/33608" name="Maas_11 16" number="162222833608" ulc="49.993615462541115, 4.6142578125"/>
+    </Layer>
+    <Layer name="Maas_9" zoomLvl="16">
+      <Map lrc="49.66407240384586, 4.954833984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22320/33669" minTileCoordinate="22297/33634" name="Maas_9 16" number="162229733634" ulc="49.74933075001044, 4.757080078125"/>
+    </Layer>
+    <Layer name="Maas_17" zoomLvl="16">
+      <Map lrc="50.49246334187723, 5.350341796875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22085/33741" minTileCoordinate="22066/33698" name="Maas_17 16" number="162206633698" ulc="50.56230444080573, 5.108642578125"/>
+    </Layer>
+    <Layer name="Maas_2" zoomLvl="16">
+      <Map lrc="48.7670519338875, 5.5755615234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22570/33782" minTileCoordinate="22535/33767" name="Maas_2 16" number="162253533767" ulc="48.89722676235673, 5.4876708984375"/>
+    </Layer>
+    <Layer name="Maas_15" zoomLvl="16">
+      <Map lrc="50.324422739309384, 4.9053955078125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22133/33660" minTileCoordinate="22090/33649" name="Maas_15 16" number="162209033649" ulc="50.47848271564206, 4.8394775390625"/>
+    </Layer>
+    <Layer name="Maas_8" zoomLvl="16">
+      <Map lrc="49.567977858927144, 5.1141357421875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22347/33698" minTileCoordinate="22316/33667" name="Maas_8 16" number="162231633667" ulc="49.68184689940127, 4.9383544921875"/>
+    </Layer>
+    <Layer name="Maas_18" zoomLvl="16">
+      <Map lrc="50.548344490674786, 5.614013671875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22069/33789" minTileCoordinate="22042/33738" name="Maas_18 16" number="162204233738" ulc="50.645977340713586, 5.328369140625"/>
+    </Layer>
+    <Layer name="Maas_7" zoomLvl="16">
+      <Map lrc="49.39309989350566, 5.2349853515625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22396/33720" minTileCoordinate="22345/33689" name="Maas_7 16" number="162234533689" ulc="49.57866438815705, 5.0592041015625"/>
+    </Layer>
+  </catalog>

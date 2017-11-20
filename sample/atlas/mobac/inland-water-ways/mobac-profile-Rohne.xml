@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+  <atlas name="Rohne" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Rhone_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8614912/6104320" minTileCoordinate="8610048/6095360" name="Rhone_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8612096/6111744" minTileCoordinate="8603136/6103808" name="Rhone_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8612864/6016256" minTileCoordinate="8609024/6004224" name="Rhone_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8605696/6121728" minTileCoordinate="8603136/6110720" name="Rhone_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8614656/5994752" minTileCoordinate="8611840/5985792" name="Rhone_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8613632/6028544" minTileCoordinate="8611840/6015488" name="Rhone_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8609024/6078208" minTileCoordinate="8604672/6066176" name="Rhone_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8616960/6043392" minTileCoordinate="8613120/6028288" name="Rhone_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8622080/6143744" minTileCoordinate="8609024/6135808" name="Rhone_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8615680/6005248" minTileCoordinate="8610816/5994240" name="Rhone_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8611072/6096128" minTileCoordinate="8607232/6086144" name="Rhone_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_15">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8611840/6139648" minTileCoordinate="8606976/6128640" name="Rhone_15 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8609792/6086912" minTileCoordinate="8604928/6076928" name="Rhone_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8615680/6055936" minTileCoordinate="8609792/6042880" name="Rhone_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8611840/6066944" minTileCoordinate="8606976/6054912" name="Rhone_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhone_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8607488/6129664" minTileCoordinate="8602624/6120704" name="Rhone_14 16" zoom="16"/>
+    </Layer>
+  </atlas>

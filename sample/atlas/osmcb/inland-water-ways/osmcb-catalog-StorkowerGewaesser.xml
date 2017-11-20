@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+  <catalog name="StorkowerGewässer" size="4" version="2">
+    <Layer name="StorkowerGewaesser_3" zoomLvl="16">
+      <Map lrc="52.254708801130825, 13.9581298828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21571/35308" minTileCoordinate="21566/35285" name="StorkowerGewaesser_3 16" number="162156635285" ulc="52.274880130680536, 13.8262939453125"/>
+    </Layer>
+    <Layer name="StorkowerGewaesser_2" zoomLvl="16">
+      <Map lrc="52.20760667286522, 14.0130615234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21585/35318" minTileCoordinate="21569/35303" name="StorkowerGewaesser_2 16" number="162156935303" ulc="52.264795612972044, 13.9251708984375"/>
+    </Layer>
+    <Layer name="StorkowerGewaesser_1" zoomLvl="16">
+      <Map lrc="52.20087371733219, 14.0789794921875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21587/35330" minTileCoordinate="21560/35316" name="StorkowerGewaesser_1 16" number="162156035316" ulc="52.29504228453733, 13.99658203125"/>
+    </Layer>
+    <Layer name="StorkowerGewaesser_4" zoomLvl="16">
+      <Map lrc="52.2277994188707, 13.8482666015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21579/35288" minTileCoordinate="21566/35274" name="StorkowerGewaesser_4 16" number="162156635274" ulc="52.274880130680536, 13.765869140625"/>
+    </Layer>
+  </catalog>

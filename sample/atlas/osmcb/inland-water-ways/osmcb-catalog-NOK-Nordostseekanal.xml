@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+  <catalog name="NOK-Nordostseekanal" size="5" version="2">
+    <Layer name="Nok_5" zoomLvl="16">
+      <Map lrc="53.878440403328824, 9.29443359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21079/34459" minTileCoordinate="21045/34430" name="Nok_5 16" number="162104534430" ulc="53.99162464044431, 9.129638671875"/>
+    </Layer>
+    <Layer name="Nok_1" zoomLvl="16">
+      <Map lrc="54.32613472050531, 10.206298828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="20940/34625" minTileCoordinate="20925/34534" name="Nok_1 16" number="162092534534" ulc="54.37735803151501, 9.700927734375"/>
+    </Layer>
+    <Layer name="Nok_3" zoomLvl="16">
+      <Map lrc="54.11416300731597, 9.5855712890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21006/34512" minTileCoordinate="20975/34465" name="Nok_3 16" number="162097534465" ulc="54.21707306629118, 9.3218994140625"/>
+    </Layer>
+    <Layer name="Nok_2" zoomLvl="16">
+      <Map lrc="54.20101023973888, 9.7393798828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="20979/34540" minTileCoordinate="20940/34509" name="Nok_2 16" number="162094034509" ulc="54.32933804825252, 9.5635986328125"/>
+    </Layer>
+    <Layer name="Nok_4" zoomLvl="16">
+      <Map lrc="53.97547425742952, 9.371337890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21049/34473" minTileCoordinate="21002/34454" name="Nok_4 16" number="162100234454" ulc="54.13025957879543, 9.261474609375"/>
+    </Layer>
+  </catalog>

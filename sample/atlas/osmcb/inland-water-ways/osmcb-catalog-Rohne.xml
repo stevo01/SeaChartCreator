@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+  <catalog name="Rohne" size="16" version="2">
+    <Layer name="Rhone_11" zoomLvl="16">
+      <Map lrc="43.937461690316646, 4.8614501953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23845/33652" minTileCoordinate="23810/33633" name="Rhone_11 16" number="162381033633" ulc="44.07969327425714, 4.7515869140625"/>
+    </Layer>
+    <Layer name="Rhone_12" zoomLvl="16">
+      <Map lrc="43.822638231804966, 4.801025390625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23874/33641" minTileCoordinate="23843/33606" name="Rhone_12 16" number="162384333606" ulc="43.949327348785225, 4.603271484375"/>
+    </Layer>
+    <Layer name="Rhone_3" zoomLvl="16">
+      <Map lrc="45.282617057517406, 4.8175048828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23501/33644" minTileCoordinate="23454/33629" name="Rhone_3 16" number="162345433629" ulc="45.46783598133374, 4.7296142578125"/>
+    </Layer>
+    <Layer name="Rhone_13" zoomLvl="16">
+      <Map lrc="43.66787161011749, 4.6636962890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23913/33616" minTileCoordinate="23870/33606" name="Rhone_13 16" number="162387033606" ulc="43.842451166990365, 4.603271484375"/>
+    </Layer>
+    <Layer name="Rhone_1" zoomLvl="16">
+      <Map lrc="45.60635207711833, 4.85595703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23417/33651" minTileCoordinate="23382/33640" name="Rhone_1 16" number="162338233640" ulc="45.74452698046843, 4.7900390625"/>
+    </Layer>
+    <Layer name="Rhone_4" zoomLvl="16">
+      <Map lrc="45.096791463947376, 4.833984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23549/33647" minTileCoordinate="23498/33640" name="Rhone_4 16" number="162349833640" ulc="45.29807513870795, 4.7900390625"/>
+    </Layer>
+    <Layer name="Rhone_8" zoomLvl="16">
+      <Map lrc="44.33956524809713, 4.735107421875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23743/33629" minTileCoordinate="23696/33612" name="Rhone_8 16" number="162369633612" ulc="44.5278427984555, 4.63623046875"/>
+    </Layer>
+    <Layer name="Rhone_5" zoomLvl="16">
+      <Map lrc="44.87144275016588, 4.9053955078125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23607/33660" minTileCoordinate="23548/33645" name="Rhone_5 16" number="162354833645" ulc="45.104546309768736, 4.8175048828125"/>
+    </Layer>
+    <Layer name="Rhone_16" zoomLvl="16">
+      <Map lrc="43.32517767999295, 5.0152587890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23999/33680" minTileCoordinate="23968/33629" name="Rhone_16 16" number="162396833629" ulc="43.45291889355465, 4.7296142578125"/>
+    </Layer>
+    <Layer name="Rhone_2" zoomLvl="16">
+      <Map lrc="45.44857064811581, 4.8779296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23458/33655" minTileCoordinate="23415/33636" name="Rhone_2 16" number="162341533636" ulc="45.6178796835697, 4.76806640625"/>
+    </Layer>
+    <Layer name="Rhone_10" zoomLvl="16">
+      <Map lrc="44.06390660801778, 4.779052734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23813/33637" minTileCoordinate="23774/33622" name="Rhone_10 16" number="162377433622" ulc="44.22158376545796, 4.691162109375"/>
+    </Layer>
+    <Layer name="Rhone_15" zoomLvl="16">
+      <Map lrc="43.389081939117496, 4.7955322265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23983/33640" minTileCoordinate="23940/33621" name="Rhone_15 16" number="162394033621" ulc="43.5644715872181, 4.6856689453125"/>
+    </Layer>
+    <Layer name="Rhone_9" zoomLvl="16">
+      <Map lrc="44.205835001041834, 4.7515869140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23777/33632" minTileCoordinate="23738/33613" name="Rhone_9 16" number="162373833613" ulc="44.363133113807706, 4.6417236328125"/>
+    </Layer>
+    <Layer name="Rhone_6" zoomLvl="16">
+      <Map lrc="44.680371641890375, 4.8779296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23656/33655" minTileCoordinate="23605/33632" name="Rhone_6 16" number="162360533632" ulc="44.883120442385646, 4.74609375"/>
+    </Layer>
+    <Layer name="Rhone_7" zoomLvl="16">
+      <Map lrc="44.512176171071054, 4.7955322265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23699/33640" minTileCoordinate="23652/33621" name="Rhone_7 16" number="162365233621" ulc="44.69989765840318, 4.6856689453125"/>
+    </Layer>
+    <Layer name="Rhone_14" zoomLvl="16">
+      <Map lrc="43.544566584363565, 4.7021484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23944/33623" minTileCoordinate="23909/33604" name="Rhone_14 16" number="162390933604" ulc="43.6877358451981, 4.59228515625"/>
+    </Layer>
+  </catalog>

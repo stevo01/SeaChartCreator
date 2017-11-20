@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+  <atlas name="MLK-Mittellandkanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="MLK_1Mittellandkanal">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8932352/5525248" minTileCoordinate="8919296/5519360" name="MLK_1Mittellandkanal 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLK_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8780544/5517824" minTileCoordinate="8767488/5509888" name="MLK_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="MK_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8837376/5512448" minTileCoordinate="8824320/5509632" name="MK_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="MK_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8891136/5511936" minTileCoordinate="8882176/5504000" name="MK_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLK_15">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8792832/5517568" minTileCoordinate="8779776/5514752" name="MLK_15 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLK_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8920320/5520128" minTileCoordinate="8914432/5511168" name="MLK_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="MK_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8863744/5518848" minTileCoordinate="8851712/5517056" name="MK_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="MK_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8902912/5511936" minTileCoordinate="8890880/5504000" name="MK_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLK_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8805120/5520128" minTileCoordinate="8792064/5515264" name="MLK_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="MK_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8851712/5518592" minTileCoordinate="8845824/5510656" name="MK_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLK_17">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8768000/5514752" minTileCoordinate="8752896/5509888" name="MLK_17 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLK_18">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8753664/5521152" minTileCoordinate="8742144/5513216" name="MLK_18 16" zoom="16"/>
+    </Layer>
+    <Layer name="MK_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8882432/5518080" minTileCoordinate="8875520/5511168" name="MK_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLK_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8847360/5511936" minTileCoordinate="8836352/5509120" name="MLK_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="MK_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8876544/5519360" minTileCoordinate="8863488/5517568" name="MK_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="MK_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8915456/5511936" minTileCoordinate="8902400/5505024" name="MK_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLk_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8825344/5516544" minTileCoordinate="8810240/5511680" name="MLk_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="MLK_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8812800/5521408" minTileCoordinate="8801792/5511424" name="MLK_13 16" zoom="16"/>
+    </Layer>
+  </atlas>

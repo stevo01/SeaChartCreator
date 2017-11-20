@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+  <atlas name="Elbe" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Elbe_25">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8920064/5460992" minTileCoordinate="8908800/5452800" name="Elbe_25 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_30">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8880896/5436672" minTileCoordinate="8869376/5430784" name="Elbe_30 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_27">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8900096/5450240" minTileCoordinate="8892160/5444352" name="Elbe_27 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9039360/5619968" minTileCoordinate="9032960/5614080" name="Elbe_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_17">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8935168/5538304" minTileCoordinate="8929280/5528320" name="Elbe_17 16" zoom="16"/>
+    </Layer>
+    <Layer name="ElbeCuxhavenBrunsbuettel">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8814336/5406464" minTileCoordinate="8781824/5382144" name="ElbeCuxhavenBrunsbuettel 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9047552/5622784" minTileCoordinate="9038592/5618944" name="Elbe_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9052160/5627648" minTileCoordinate="9046272/5621760" name="Elbe_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9000960/5581312" minTileCoordinate="8994048/5572864" name="Elbe_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_26">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8909824/5454848" minTileCoordinate="8898816/5448960" name="Elbe_26 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8941824/5541120" minTileCoordinate="8931840/5536256" name="Elbe_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8985344/5554944" minTileCoordinate="8971520/5551360" name="Elbe_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9033728/5614592" minTileCoordinate="9023744/5608704" name="Elbe_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_31">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8869376/5435136" minTileCoordinate="8857344/5428224" name="Elbe_31 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_15">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8949760/5551360" minTileCoordinate="8939776/5539328" name="Elbe_15 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_21">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8949760/5501440" minTileCoordinate="8945920/5487360" name="Elbe_21 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_23">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8944896/5474048" minTileCoordinate="8932352/5464064" name="Elbe_23 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_24">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8934144/5465344" minTileCoordinate="8919040/5458432" name="Elbe_24 16" zoom="16"/>
+    </Layer>
+    <Layer name="HamburgHafen_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8859648/5430016" minTileCoordinate="8847616/5422080" name="HamburgHafen_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="HamburgHafen_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8848640/5423872" minTileCoordinate="8835584/5416960" name="HamburgHafen_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_19">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8945408/5517824" minTileCoordinate="8934400/5512960" name="Elbe_19 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8995840/5573120" minTileCoordinate="8986880/5565184" name="Elbe_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_18">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8936448/5528832" minTileCoordinate="8930560/5521920" name="Elbe_18 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9024000/5609472" minTileCoordinate="9015040/5603584" name="Elbe_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="ElbeHamburgBrunsbuettel_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8830976/5409792" minTileCoordinate="8822016/5399808" name="ElbeHamburgBrunsbuettel_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9013504/5596928" minTileCoordinate="9005568/5590016" name="Elbe_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_29">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8887040/5437440" minTileCoordinate="8878080/5435648" name="Elbe_29 16" zoom="16"/>
+    </Layer>
+    <Layer name="ElbeHamburgBrunsbuettel_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8824320/5400064" minTileCoordinate="8810240/5394176" name="ElbeHamburgBrunsbuettel_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="ElbeHamburgBrunsbuettel_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8835840/5418240" minTileCoordinate="8826880/5408256" name="ElbeHamburgBrunsbuettel_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_28">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8893184/5445888" minTileCoordinate="8886272/5435904" name="Elbe_28 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8972544/5553664" minTileCoordinate="8958720/5550080" name="Elbe_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_20">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8948736/5514240" minTileCoordinate="8943872/5500160" name="Elbe_20 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_22">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8950016/5486848" minTileCoordinate="8944128/5472768" name="Elbe_22 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8959744/5553664" minTileCoordinate="8947200/5550080" name="Elbe_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9006848/5590528" minTileCoordinate="9000960/5579520" name="Elbe_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8989952/5568000" minTileCoordinate="8984064/5553920" name="Elbe_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Elbe_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9016064/5604352" minTileCoordinate="9011712/5595648" name="Elbe_6 16" zoom="16"/>
+    </Layer>
+  </atlas>

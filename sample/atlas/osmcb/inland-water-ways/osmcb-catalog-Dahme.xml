@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+  <catalog name="Dahme" size="6" version="2">
+    <Layer name="Dahme_4" zoomLvl="16">
+      <Map lrc="52.29504228453733, 13.699951171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21559/35261" minTileCoordinate="21536/35249" name="Dahme_4 16" number="162153635249" ulc="52.3755991766591, 13.6285400390625"/>
+    </Layer>
+    <Layer name="Dahme_5" zoomLvl="16">
+      <Map lrc="52.37224556866933, 13.6724853515625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21536/35256" minTileCoordinate="21521/35245" name="Dahme_5 16" number="162152135245" ulc="52.425872743361175, 13.6065673828125"/>
+    </Layer>
+    <Layer name="Dahme_6" zoomLvl="16">
+      <Map lrc="52.40241887397332, 13.623046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21527/35247" minTileCoordinate="21512/35236" name="Dahme_6 16" number="162151235236" ulc="52.45600939264075, 13.55712890625"/>
+    </Layer>
+    <Layer name="Dahme_3" zoomLvl="16">
+      <Map lrc="52.28496235446573, 13.7384033203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21562/35268" minTileCoordinate="21552/35251" name="Dahme_3 16" number="162155235251" ulc="52.32191088594772, 13.6395263671875"/>
+    </Layer>
+    <Layer name="Dahme_1" zoomLvl="16">
+      <Map lrc="52.106505190756316, 13.7933349609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21615/35278" minTileCoordinate="21581/35271" name="Dahme_1 16" number="162158135271" ulc="52.224434598719974, 13.7493896484375"/>
+    </Layer>
+    <Layer name="Dahme_2" zoomLvl="16">
+      <Map lrc="52.21770419342145, 13.77685546875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21582/35275" minTileCoordinate="21559/35266" name="Dahme_2 16" number="162155935266" ulc="52.29840175155, 13.721923828125"/>
+    </Layer>
+  </catalog>

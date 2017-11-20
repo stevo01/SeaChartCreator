@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 # encoding: utf-8
 
 '''
@@ -25,23 +25,65 @@ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 
 import subprocess
 from Utils.Helper import TileInfo
-       
-def _ProcessCmd(cmd): 
+
+from sys import platform
+from kap.gen import KapGen
+
+if platform == "linux" or platform == "linux2":
+    COMPOSITE_APP = "composite"
+    MONTAGE_APP = "montage"
+    IMGKAP_APP = "ExternalUtils/imgkap/imgkap"
+elif platform == "win32":
+    COMPOSITE_APP = "ExternalUtils\\ImageMagick\\composite"
+    MONTAGE_APP = "ExternalUtils\\ImageMagick\\montage"
+    IMGKAP_APP = "ExternalUtils\\imgkap\\imgkap"
+else:
+    assert(0)
+
+
+def _ProcessCmd(cmd):
     print("execure command: {}".format(cmd))
-    return_code = subprocess.call(cmd, shell=True)       
-        
-def MergePictures(self, SeaMapFilename, OSMFilename, ResultFilename):       
-    cmd = "ExternalUtils\\ImageMagick\\composite {} {} {}".format(SeaMapFilename, OSMFilename, ResultFilename)
-    _ProcessCmd(cmd)
-     
-def JoinPicture(xcnt, ycnt, filenamelist, filename):     
-    cmd = "ExternalUtils\\ImageMagick\\montage +frame +shadow +label -tile {}x{} -geometry 256x256+0+0 {} {}".format(xcnt, ycnt, filenamelist, filename)
-    _ProcessCmd(cmd)
-    
+    return_code = subprocess.call(cmd, shell=True)
+    return return_code
+
+
+def MergePictures(self, SeaMapFilename, OSMFilename, ResultFilename):
+    cmd = "{} {} {} {}".format(COMPOSITE_APP, SeaMapFilename, OSMFilename, ResultFilename)
+    ret = _ProcessCmd(cmd)
+    assert(ret == 0)
+
+
+def JoinPicture(xcnt, ycnt, filenamelist, filename):
+    cmd = "{} +frame +shadow +label -tile {}x{} -geometry 256x256+0+0 {} {}".format(MONTAGE_APP, xcnt, ycnt, filenamelist, filename)
+    ret = _ProcessCmd(cmd)
+    assert(ret == 0)
+
+
 def GenerateKapFile(filenamein, filenameout, ti):
-    
-    cmd = "ExternalUtils\\imgkap\\imgkap {} {} {} {} {} {}".format(filenamein, ti.NW_lat, ti.NW_lon, ti.SE_lat, ti.SE_lon, filenameout)   
-    _ProcessCmd(cmd)
-    
-    cmd = "ExternalUtils\\imgkap\\imgkap {} {} {} ".format(filenameout, filenameout+".export.txt", filenameout+"export.png")
-    _ProcessCmd(cmd)
+
+    cmd = "{} {} {} {} {} {} {} -t {}".format(IMGKAP_APP, filenamein, ti.NW_lat, ti.NW_lon, ti.SE_lat, ti.SE_lon, filenameout, ti.name)
+    ret = _ProcessCmd(cmd)
+    assert(ret == 0)
+
+    cmd = "{} {} {} {} ".format(IMGKAP_APP, filenameout, filenameout + ".export.txt", filenameout + "export.png")
+    ret = _ProcessCmd(cmd)
+    assert(ret == 0)
+
+
+def GenerateKapFileNew(filenamein, filenameout, ti):
+
+    # generate header
+    gen = KapGen()
+    header = gen.GenHeader(ti)
+
+    with open('temp.kap', "w") as f:
+        f.write(header)
+
+    cmd = "{} {} {} {} -t {}".format(IMGKAP_APP, filenamein, "temp.kap", filenameout, ti.name)
+    ret = _ProcessCmd(cmd)
+    assert(ret == 0)
+
+    cmd = "{} {} {} {} ".format(IMGKAP_APP, filenameout, filenameout + ".export.txt", filenameout + "export.png")
+    ret = _ProcessCmd(cmd)
+    assert(ret == 0)
+

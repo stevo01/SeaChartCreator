@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <catalog name="WDK-WeselDattelnKanal" size="3" version="2">
+    <Layer name="WDK_4" zoomLvl="16">
+      <Map lrc="51.621427133419886, 6.85546875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21758/34015" minTileCoordinate="21744/33968" name="WDK_4 16" number="162174433968" ulc="51.67255514839675, 6.591796875"/>
+    </Layer>
+    <Layer name="WDK_2" zoomLvl="16">
+      <Map lrc="51.67596163274075, 7.305908203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21742/34097" minTileCoordinate="21727/34050" name="WDK_2 16" number="162172734050" ulc="51.73043054294018, 7.042236328125"/>
+    </Layer>
+    <Layer name="WDK_3" zoomLvl="16">
+      <Map lrc="51.65211086156918, 7.086181640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21749/34057" minTileCoordinate="21738/34010" name="WDK_3 16" number="162173834010" ulc="51.692990211491846, 6.822509765625"/>
+    </Layer>
+  </catalog>

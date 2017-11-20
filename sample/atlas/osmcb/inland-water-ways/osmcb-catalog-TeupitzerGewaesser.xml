@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <catalog name="TeupitzerGewässer" size="3" version="2">
+    <Layer name="TeupitzerGewaesser_1" zoomLvl="16">
+      <Map lrc="52.126743859642886, 13.6614990234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21609/35254" minTileCoordinate="21600/35241" name="TeupitzerGewaesser_1 16" number="162160035241" ulc="52.160454557747045, 13.5845947265625"/>
+    </Layer>
+    <Layer name="TeupitzerGewaesser_2" zoomLvl="16">
+      <Map lrc="52.15371445951162, 13.721923828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21601/35265" minTileCoordinate="21586/35250" name="TeupitzerGewaesser_2 16" number="162158635250" ulc="52.20760667286522, 13.634033203125"/>
+    </Layer>
+    <Layer name="TeupitzerGewaesser_3" zoomLvl="16">
+      <Map lrc="52.19413974159753, 13.765869140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21589/35273" minTileCoordinate="21580/35260" name="TeupitzerGewaesser_3 16" number="162158035260" ulc="52.2277994188707, 13.68896484375"/>
+    </Layer>
+  </catalog>

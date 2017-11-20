@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+  <atlas name="StorkowerGewässer" outputFormat="PNGWorldfile" version="1">
+    <Layer name="StorkowerGewaesser_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9038848/5522176" minTileCoordinate="9032960/5520896" name="StorkowerGewaesser_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="StorkowerGewaesser_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9041408/5525760" minTileCoordinate="9037568/5521664" name="StorkowerGewaesser_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="StorkowerGewaesser_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9044480/5526272" minTileCoordinate="9040896/5519360" name="StorkowerGewaesser_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="StorkowerGewaesser_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9033728/5524224" minTileCoordinate="9030144/5520896" name="StorkowerGewaesser_4 16" zoom="16"/>
+    </Layer>
+  </atlas>

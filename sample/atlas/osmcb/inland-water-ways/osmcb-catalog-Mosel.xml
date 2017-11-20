@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+  <catalog name="Mosel" size="15" version="2">
+    <Layer name="Mosel_15" zoomLvl="16">
+      <Map lrc="50.27529861142517, 7.6300048828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22147/34156" minTileCoordinate="22116/34125" name="Mosel_15 16" number="162211634125" ulc="50.387507803003146, 7.4542236328125"/>
+    </Layer>
+    <Layer name="Mosel_5" zoomLvl="16">
+      <Map lrc="49.145783617750034, 6.21826171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22465/33899" minTileCoordinate="22402/33888" name="Mosel_5 16" number="162240233888" ulc="49.375220081436034, 6.15234375"/>
+    </Layer>
+    <Layer name="Mosel_14" zoomLvl="16">
+      <Map lrc="50.215579670037265, 7.569580078125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22164/34145" minTileCoordinate="22125/34118" name="Mosel_14 16" number="162212534118" ulc="50.35597574998604, 7.415771484375"/>
+    </Layer>
+    <Layer name="Mosel_11" zoomLvl="16">
+      <Map lrc="49.88047763874255, 7.1575927734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22259/34070" minTileCoordinate="22224/34031" name="Mosel_11 16" number="162222434031" ulc="50.00773901463686, 6.9378662109375"/>
+    </Layer>
+    <Layer name="Mosel_9" zoomLvl="16">
+      <Map lrc="49.69961489954274, 6.734619140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22310/33993" minTileCoordinate="22275/33950" name="Mosel_9 16" number="162227533950" ulc="49.82735281650853, 6.492919921875"/>
+    </Layer>
+    <Layer name="Mosel_4" zoomLvl="16">
+      <Map lrc="49.01985919086641, 6.21826171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22500/33899" minTileCoordinate="22461/33868" name="Mosel_4 16" number="162246133868" ulc="49.163746759588975, 6.04248046875"/>
+    </Layer>
+    <Layer name="Mosel_1" zoomLvl="16">
+      <Map lrc="48.61838518688487, 6.0589599609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22611/33870" minTileCoordinate="22572/33839" name="Mosel_1 16" number="162257233839" ulc="48.763431137917955, 5.8831787109375"/>
+    </Layer>
+    <Layer name="Mosel_6" zoomLvl="16">
+      <Map lrc="49.36448907111148, 6.39404296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22404/33931" minTileCoordinate="22365/33896" name="Mosel_6 16" number="162236533896" ulc="49.50737665842871, 6.1962890625"/>
+    </Layer>
+    <Layer name="Mosel_8" zoomLvl="16">
+      <Map lrc="49.59290945425263, 6.52587890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22340/33955" minTileCoordinate="22305/33932" name="Mosel_8 16" number="162230533932" ulc="49.720927926703325, 6.39404296875"/>
+    </Layer>
+    <Layer name="Mosel_7" zoomLvl="16">
+      <Map lrc="49.439556958940834, 6.4105224609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22383/33934" minTileCoordinate="22336/33923" name="Mosel_7 16" number="162233633923" ulc="49.610709938074216, 6.3446044921875"/>
+    </Layer>
+    <Layer name="Mosel_3" zoomLvl="16">
+      <Map lrc="48.87194147722911, 6.1029052734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22541/33878" minTileCoordinate="22498/33863" name="Mosel_3 16" number="162249833863" ulc="49.03066522571669, 6.0150146484375"/>
+    </Layer>
+    <Layer name="Mosel_12" zoomLvl="16">
+      <Map lrc="49.986552130506176, 7.239990234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22229/34085" minTileCoordinate="22186/34062" name="Mosel_12 16" number="162218634062" ulc="50.14170587960566, 7.108154296875"/>
+    </Layer>
+    <Layer name="Mosel_2" zoomLvl="16">
+      <Map lrc="48.741700879765396, 6.1578369140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22577/33888" minTileCoordinate="22538/33869" name="Mosel_2 16" number="162253833869" ulc="48.88639177703194, 6.0479736328125"/>
+    </Layer>
+    <Layer name="Mosel_13" zoomLvl="16">
+      <Map lrc="50.134664322166955, 7.4432373046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22187/34122" minTileCoordinate="22160/34071" name="Mosel_13 16" number="162216034071" ulc="50.23315183247224, 7.1575927734375"/>
+    </Layer>
+    <Layer name="Mosel_10" zoomLvl="16">
+      <Map lrc="49.78481090512662, 6.9708251953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22286/34036" minTileCoordinate="22255/33993" name="Mosel_10 16" number="162225533993" ulc="49.898172936240364, 6.7291259765625"/>
+    </Layer>
+  </catalog>

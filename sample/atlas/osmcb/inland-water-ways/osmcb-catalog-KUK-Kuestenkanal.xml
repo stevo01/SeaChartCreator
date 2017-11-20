@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+  <catalog name="OSM-UHW" size="6" version="2">
+    <Layer name="Kuestenkanal_2" zoomLvl="16">
+      <Map lrc="52.994950270267985, 7.6959228515625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21349/34168" minTileCoordinate="21342/34129" name="Kuestenkanal_2 16" number="162134234129" ulc="53.02139221293762, 7.4761962890625"/>
+    </Layer>
+    <Layer name="Kuestenkanal_5" zoomLvl="16">
+      <Map lrc="53.08412692217883, 8.2342529296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21322/34266" minTileCoordinate="21303/34231" name="Kuestenkanal_5 16" number="162130334231" ulc="53.15006482435785, 8.0364990234375"/>
+    </Layer>
+    <Layer name="Kuestenkanal_1" zoomLvl="16">
+      <Map lrc="52.9486378848832, 7.503662109375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21363/34133" minTileCoordinate="21344/34094" name="Kuestenkanal_1 16" number="162134434094" ulc="53.01478324585922, 7.283935546875"/>
+    </Layer>
+    <Layer name="Kuestenkanal_7" zoomLvl="16">
+      <Map lrc="53.166533500950905, 8.4979248046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21297/34314" minTileCoordinate="21270/34295" name="Kuestenkanal_7 16" number="162127034295" ulc="53.25864137348809, 8.3880615234375"/>
+    </Layer>
+    <Layer name="Kuestenkanal_3" zoomLvl="16">
+      <Map lrc="53.01147838269374, 7.8497314453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21344/34196" minTileCoordinate="21320/34165" name="Kuestenkanal_3 16" number="162132034165" ulc="53.09402405506325, 7.6739501953125"/>
+    </Layer>
+    <Layer name="Kuestenkanal_6" zoomLvl="16">
+      <Map lrc="53.12370179884571, 8.404541015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21310/34297" minTileCoordinate="21295/34262" name="Kuestenkanal_6 16" number="162129534262" ulc="53.17641167445937, 8.206787109375"/>
+    </Layer>
+  </catalog>

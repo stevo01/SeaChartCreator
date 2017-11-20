@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+  <atlas name="Spree" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Spree_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9031424/5513216" minTileCoordinate="9025536/5508352" name="Spree_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Spree_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9018368/5507072" minTileCoordinate="9014528/5503232" name="Spree_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Spree_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9011968/5502208" minTileCoordinate="9004032/5498880" name="Spree_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Spree_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9028608/5509376" minTileCoordinate="9021696/5506560" name="Spree_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Spree_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9016064/5504256" minTileCoordinate="9008640/5501440" name="Spree_4 16" zoom="16"/>
+    </Layer>
+  </atlas>

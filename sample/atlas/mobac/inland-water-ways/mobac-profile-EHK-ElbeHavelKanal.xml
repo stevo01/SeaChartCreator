@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+  <atlas name="EHK-ElbeHavelKanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="ElbeHavelKanal_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8956928/5512960" minTileCoordinate="8946944/5509120" name="ElbeHavelKanal_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="ElbeHavelKanal_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8948480/5519360" minTileCoordinate="8940544/5512448" name="ElbeHavelKanal_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="ElbeHavelKanal_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8942592/5523968" minTileCoordinate="8933632/5518080" name="ElbeHavelKanal_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="ElbeHavelKanal_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8966144/5513216" minTileCoordinate="8956160/5510144" name="ElbeHavelKanal_1 16" zoom="16"/>
+    </Layer>
+  </atlas>

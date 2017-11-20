@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+  <atlas name="Rhein" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Rhein_33">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8714752/5616896" minTileCoordinate="8705792/5603840" name="Rhein_33 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_26">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8749056/5679104" minTileCoordinate="8741120/5669120" name="Rhein_26 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_37">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8697600/5571840" minTileCoordinate="8686592/5559808" name="Rhein_37 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_21">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8784384/5713664" minTileCoordinate="8776960/5698560" name="Rhein_21 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8744704/5838848" minTileCoordinate="8739840/5824768" name="Rhein_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_24">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8759296/5692160" minTileCoordinate="8749312/5685248" name="Rhein_24 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_17">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8779264/5766144" minTileCoordinate="8769280/5753600" name="Rhein_17 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_25">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8753152/5686016" minTileCoordinate="8747264/5678080" name="Rhein_25 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_20">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8783616/5727744" minTileCoordinate="8777472/5712640" name="Rhein_20 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_23">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8773120/5692416" minTileCoordinate="8759040/5686528" name="Rhein_23 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8751872/5812224" minTileCoordinate="8745472/5797120" name="Rhein_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8765184/5864704" minTileCoordinate="8756224/5859840" name="Rhein_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_15">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8765952/5787136" minTileCoordinate="8753920/5775104" name="Rhein_15 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_31">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8724992/5640960" minTileCoordinate="8712960/5628928" name="Rhein_31 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8755456/5798400" minTileCoordinate="8749568/5785600" name="Rhein_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8742144/5853696" minTileCoordinate="8737280/5845760" name="Rhein_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_32">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8717824/5629696" minTileCoordinate="8711936/5616640" name="Rhein_32 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_35">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8703488/5595136" minTileCoordinate="8697600/5582080" name="Rhein_35 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8785408/5863168" minTileCoordinate="8774400/5857280" name="Rhein_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8743168/5846016" minTileCoordinate="8738304/5838080" name="Rhein_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_36">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8703744/5583616" minTileCoordinate="8694784/5570560" name="Rhein_36 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8756992/5864960" minTileCoordinate="8744960/5860096" name="Rhein_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_28">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8742400/5661440" minTileCoordinate="8733440/5655552" name="Rhein_28 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_29">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8734720/5660672" minTileCoordinate="8727808/5651712" name="Rhein_29 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_27">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8745728/5669632" minTileCoordinate="8739840/5660672" name="Rhein_27 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_19">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8785664/5741824" minTileCoordinate="8780800/5726720" name="Rhein_19 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8847104/5870336" minTileCoordinate="8802304/5841920" name="Rhein_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8793344/5863424" minTileCoordinate="8783360/5852416" name="Rhein_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_34">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8709120/5606400" minTileCoordinate="8700160/5593344" name="Rhein_34 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_38">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8689920/5561088" minTileCoordinate="8675840/5552128" name="Rhein_38 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_30">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8729856/5652992" minTileCoordinate="8722944/5640960" name="Rhein_30 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8747264/5864704" minTileCoordinate="8737280/5852672" name="Rhein_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8804096/5856768" minTileCoordinate="8791040/5852928" name="Rhein_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8771840/5777664" minTileCoordinate="8764416/5765120" name="Rhein_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8775168/5863168" minTileCoordinate="8764160/5857280" name="Rhein_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_18">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8784384/5754624" minTileCoordinate="8776960/5740800" name="Rhein_18 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8747776/5825024" minTileCoordinate="8740864/5811968" name="Rhein_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Rhein_22">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8779264/5699584" minTileCoordinate="8771840/5687040" name="Rhein_22 16" zoom="16"/>
+    </Layer>
+  </atlas>

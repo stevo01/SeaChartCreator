@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+  <atlas name="Albertkanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Albertkanal_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8652288/5626624" minTileCoordinate="8641280/5620736" name="Albertkanal_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Albertkanal_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8632576/5614592" minTileCoordinate="8622592/5607680" name="Albertkanal_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Albertkanal_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8623360/5608192" minTileCoordinate="8612352/5603328" name="Albertkanal_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Albertkanal_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8653824/5632256" minTileCoordinate="8651008/5625344" name="Albertkanal_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Albertkanal_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8623360/5608192" minTileCoordinate="8612352/5603328" name="Albertkanal_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Albertkanal_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8613120/5603840" minTileCoordinate="8603136/5601024" name="Albertkanal_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Albertkanal_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8603904/5601536" minTileCoordinate="8593920/5597952" name="Albertkanal_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Albertkanal_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8642560/5621760" minTileCoordinate="8631552/5613824" name="Albertkanal_3 16" zoom="16"/>
+    </Layer>
+  </atlas>

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+  <atlas name="Oder" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Oder_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9074432/5438720" minTileCoordinate="9063936/5427200" name="Oder_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9072384/5522432" minTileCoordinate="9065472/5510400" name="Oder_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9081344/5537536" minTileCoordinate="9073920/5533952" name="Oder_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9073664/5428224" minTileCoordinate="9066240/5414400" name="Oder_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9061376/5460992" minTileCoordinate="9054208/5447680" name="Oder_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9071872/5503744" minTileCoordinate="9064960/5493760" name="Oder_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9076480/5534464" minTileCoordinate="9071616/5521408" name="Oder_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9058560/5486336" minTileCoordinate="9046528/5478400" name="Oder_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9066752/5448960" minTileCoordinate="9059072/5434880" name="Oder_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9058048/5468928" minTileCoordinate="9047040/5459968" name="Oder_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9071104/5512448" minTileCoordinate="9063168/5501440" name="Oder_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9049856/5479680" minTileCoordinate="9046016/5467648" name="Oder_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Oder_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9069568/5495040" minTileCoordinate="9058560/5485056" name="Oder_6 16" zoom="16"/>
+    </Layer>
+  </atlas>

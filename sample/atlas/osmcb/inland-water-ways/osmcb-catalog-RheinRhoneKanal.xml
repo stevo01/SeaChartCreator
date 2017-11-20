@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+  <catalog name="RheinRhoneKanal" size="24" version="2">
+    <Layer name="Rhein_Rhone_Kanal_8" zoomLvl="16">
+      <Map lrc="47.16730970131577, 6.1248779296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23005/33882" minTileCoordinate="22974/33847" name="Rhein_Rhone_Kanal_8 16" number="162297433847" ulc="47.28668188876421, 5.9271240234375"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_7" zoomLvl="16">
+      <Map lrc="48.64379839242535, 6.6522216796875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22604/33978" minTileCoordinate="22593/33939" name="Rhein_Marne_Kanal_7 16" number="162259333939" ulc="48.68733411186308, 6.4324951171875"/>
+    </Layer>
+    <Layer name="Rhein+Rhone+Kanal_4" zoomLvl="16">
+      <Map lrc="47.48008846346321, 6.96533203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22921/34035" minTileCoordinate="22894/33998" name="Rhein+Rhone+Kanal_4 16" number="162289433998" ulc="47.583936619781355, 6.756591796875"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_13" zoomLvl="16">
+      <Map lrc="46.90899838277448, 5.372314453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23074/33745" minTileCoordinate="23065/33702" name="Rhein_Rhone_Kanal_13 16" number="162306533702" ulc="46.9465122958623, 5.130615234375"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_3" zoomLvl="16">
+      <Map lrc="47.56170075451972, 7.14111328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22899/34067" minTileCoordinate="22876/34032" name="Rhein_Rhone_Kanal_3 16" number="162287634032" ulc="47.65058757118734, 6.943359375"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_2" zoomLvl="16">
+      <Map lrc="47.63948497925489, 7.3388671875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22878/34103" minTileCoordinate="22855/34064" name="Rhein_Rhone_Kanal_2 16" number="162285534064" ulc="47.72823964536174, 7.119140625"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_7" zoomLvl="16">
+      <Map lrc="47.264320080254784, 6.3555908203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22979/33924" minTileCoordinate="22956/33881" name="Rhein_Rhone_Kanal_7 16" number="162295633881" ulc="47.35371061951362, 6.1138916015625"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_9" zoomLvl="16">
+      <Map lrc="47.126213417952265, 5.943603515625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23016/33849" minTileCoordinate="23001/33810" name="Rhein_Rhone_Kanal_9 16" number="162300133810" ulc="47.18597932702905, 5.723876953125"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_10" zoomLvl="16">
+      <Map lrc="48.67282638410035, 5.91064453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22596/33843" minTileCoordinate="22585/33800" name="Rhein_Marne_Kanal_10 16" number="162258533800" ulc="48.716337032605665, 5.6689453125"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_11" zoomLvl="16">
+      <Map lrc="46.99898763815461, 5.548095703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23050/33777" minTileCoordinate="23023/33754" name="Rhein_Rhone_Kanal_11 16" number="162302333754" ulc="47.10378387099161, 5.416259765625"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_12" zoomLvl="16">
+      <Map lrc="48.60385760823253, 5.712890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22615/33807" minTileCoordinate="22584/33784" name="Rhein_Marne_Kanal_12 16" number="162258433784" ulc="48.71996122264627, 5.5810546875"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_11" zoomLvl="16">
+      <Map lrc="48.625647408828506, 6.273193359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22609/33909" minTileCoordinate="22570/33878" name="Rhein_Marne_Kanal_11 16" number="162257033878" ulc="48.77067246880509, 6.097412109375"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_10" zoomLvl="16">
+      <Map lrc="47.07760411715963, 5.7403564453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23029/33812" minTileCoordinate="23010/33773" name="Rhein_Rhone_Kanal_10 16" number="162301033773" ulc="47.15236927446392, 5.5206298828125"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_8" zoomLvl="16">
+      <Map lrc="48.625647408828506, 6.448974609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22609/33941" minTileCoordinate="22602/33902" name="Rhein_Marne_Kanal_8 16" number="162260233902" ulc="48.65468584817256, 6.229248046875"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_6" zoomLvl="16">
+      <Map lrc="47.33137715779823, 6.5753173828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22961/33964" minTileCoordinate="22938/33921" name="Rhein_Rhone_Kanal_6 16" number="162293833921" ulc="47.4206543207132, 6.3336181640625"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_9" zoomLvl="16">
+      <Map lrc="48.625647408828506, 6.273193359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22609/33909" minTileCoordinate="22570/33878" name="Rhein_Marne_Kanal_9 16" number="162257033878" ulc="48.77067246880509, 6.097412109375"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_5" zoomLvl="16">
+      <Map lrc="47.405785290058695, 6.78955078125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22941/34003" minTileCoordinate="22920/33956" name="Rhein_Rhone_Kanal_5 16" number="162292033956" ulc="47.48751300895657, 6.52587890625"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_1" zoomLvl="16">
+      <Map lrc="48.58569225688663, 7.80029296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22620/34187" minTileCoordinate="22581/34164" name="Rhein_Marne_Kanal_1 16" number="162258134164" ulc="48.730832226135156, 7.66845703125"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_5" zoomLvl="16">
+      <Map lrc="48.68008077029287, 7.119140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22594/34063" minTileCoordinate="22583/34016" name="Rhein_Marne_Kanal_5 16" number="162258334016" ulc="48.723585151578504, 6.85546875"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_3" zoomLvl="16">
+      <Map lrc="48.723585151578504, 7.5201416015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22582/34136" minTileCoordinate="22571/34097" name="Rhein_Marne_Kanal_3 16" number="162257134097" ulc="48.7670519338875, 7.3004150390625"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_6" zoomLvl="16">
+      <Map lrc="48.665570953251375, 6.8939208984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22598/34022" minTileCoordinate="22587/33971" name="Rhein_Marne_Kanal_6 16" number="162258733971" ulc="48.70908786918211, 6.6082763671875"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_12" zoomLvl="16">
+      <Map lrc="46.916503267244835, 5.438232421875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23072/33757" minTileCoordinate="23045/33742" name="Rhein_Rhone_Kanal_12 16" number="162304533742" ulc="47.021461309117285, 5.350341796875"/>
+    </Layer>
+    <Layer name="Rhein_Marne_Kanal_2" zoomLvl="16">
+      <Map lrc="48.68370757165363, 7.7069091796875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22593/34170" minTileCoordinate="22574/34131" name="Rhein_Marne_Kanal_2 16" number="162257434131" ulc="48.756188762805515, 7.4871826171875"/>
+    </Layer>
+    <Layer name="Rhein_Rhone_Kanal_1" zoomLvl="16">
+      <Map lrc="47.691276886267545, 7.547607421875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22864/34141" minTileCoordinate="22841/34098" name="Rhein_Rhone_Kanal_1 16" number="162284134098" ulc="47.77994347064128, 7.305908203125"/>
+    </Layer>
+  </catalog>

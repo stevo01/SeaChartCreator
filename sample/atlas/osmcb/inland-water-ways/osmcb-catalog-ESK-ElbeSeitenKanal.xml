@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+  <catalog name="ESK-ElbeSeitenKanal" size="7" version="2">
+    <Layer name="ESK_2" zoomLvl="16">
+      <Map lrc="52.52958999943302, 10.7061767578125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21489/34716" minTileCoordinate="21450/34697" name="ESK_2 16" number="162145034697" ulc="52.66305767075935, 10.5963134765625"/>
+    </Layer>
+    <Layer name="ESK_7" zoomLvl="16">
+      <Map lrc="53.23234504341258, 10.5413818359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21277/34686" minTileCoordinate="21230/34675" name="ESK_7 16" number="162123034675" ulc="53.389880751560305, 10.4754638671875"/>
+    </Layer>
+    <Layer name="ESK1_ElbeSeitenKanal" zoomLvl="16">
+      <Map lrc="52.395715477302076, 10.7061767578125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21529/34716" minTileCoordinate="21490/34697" name="ESK1_ElbeSeitenKanal 16" number="162149034697" ulc="52.52958999943302, 10.5963134765625"/>
+    </Layer>
+    <Layer name="ESK_3" zoomLvl="16">
+      <Map lrc="52.6463964439847, 10.689697265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21454/34713" minTileCoordinate="21403/34698" name="ESK_3 16" number="162140334698" ulc="52.819363001597864, 10.601806640625"/>
+    </Layer>
+    <Layer name="ESK_6" zoomLvl="16">
+      <Map lrc="53.12370179884571, 10.5853271484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21310/34694" minTileCoordinate="21275/34675" name="ESK_6 16" number="162127534675" ulc="53.24220806091136, 10.4754638671875"/>
+    </Layer>
+    <Layer name="ESK_4" zoomLvl="16">
+      <Map lrc="52.80608223985885, 10.689697265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21406/34713" minTileCoordinate="21355/34690" name="ESK_4 16" number="162135534690" ulc="52.9784158294106, 10.557861328125"/>
+    </Layer>
+    <Layer name="ESK_5" zoomLvl="16">
+      <Map lrc="52.961875059076014, 10.6182861328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21359/34700" minTileCoordinate="21308/34685" name="ESK_5 16" number="162130834685" ulc="53.133589829244805, 10.5303955078125"/>
+    </Layer>
+  </catalog>

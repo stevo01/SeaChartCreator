@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+  <catalog name="Saone" size="14" version="2">
+    <Layer name="Saone_10" zoomLvl="16">
+      <Map lrc="46.886477423510236, 5.1580810546875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23080/33706" minTileCoordinate="23049/33679" name="Saone_10 16" number="162304933679" ulc="47.00647991252097, 5.0042724609375"/>
+    </Layer>
+    <Layer name="Saone_12" zoomLvl="16">
+      <Map lrc="46.626806395355175, 4.9713134765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23149/33672" minTileCoordinate="23102/33649" name="Saone_12 16" number="162310233649" ulc="46.807579571992385, 4.8394775390625"/>
+    </Layer>
+    <Layer name="Saone_16" zoomLvl="16">
+      <Map lrc="45.92822950933617, 4.8175048828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23333/33644" minTileCoordinate="23278/33625" name="Saone_16 16" number="162327833625" ulc="46.14178273759233, 4.7076416015625"/>
+    </Layer>
+    <Layer name="Saone_9" zoomLvl="16">
+      <Map lrc="46.98025235521882, 5.372314453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23055/33745" minTileCoordinate="23016/33698" name="Saone_9 16" number="162301633698" ulc="47.12995075666305, 5.108642578125"/>
+    </Layer>
+    <Layer name="Saone_7" zoomLvl="16">
+      <Map lrc="47.2531356322442, 5.55908203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22982/33779" minTileCoordinate="22939/33748" name="Saone_7 16" number="162293933748" ulc="47.416937456635445, 5.38330078125"/>
+    </Layer>
+    <Layer name="Saone_11" zoomLvl="16">
+      <Map lrc="46.78877728793223, 5.03173828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23106/33683" minTileCoordinate="23075/33656" name="Saone_11 16" number="162307533656" ulc="46.90899838277448, 4.8779296875"/>
+    </Layer>
+    <Layer name="Saone2" zoomLvl="16">
+      <Map lrc="47.77256035513371, 6.0205078125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22842/33863" minTileCoordinate="22818/33843" name="Saone2 16" number="162281833843" ulc="47.864773955792245, 5.9051513671875"/>
+    </Layer>
+    <Layer name="Saone_15" zoomLvl="16">
+      <Map lrc="46.12274903582431, 4.85595703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23282/33651" minTileCoordinate="23235/33636" name="Saone_15 16" number="162323533636" ulc="46.30520105581195, 4.76806640625"/>
+    </Layer>
+    <Layer name="Saone_5" zoomLvl="16">
+      <Map lrc="47.48751300895657, 5.8392333984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22919/33830" minTileCoordinate="22892/33795" name="Saone_5 16" number="162289233795" ulc="47.59134647679709, 5.6414794921875"/>
+    </Layer>
+    <Layer name="Saone_14" zoomLvl="16">
+      <Map lrc="46.282427701344695, 4.921875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23240/33663" minTileCoordinate="23193/33644" name="Saone_14 16" number="162319333644" ulc="46.46434940046114, 4.81201171875"/>
+    </Layer>
+    <Layer name="Saone1" zoomLvl="16">
+      <Map lrc="47.850030785458266, 6.0205078125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22821/33863" minTileCoordinate="22802/33844" name="Saone1 16" number="162280233844" ulc="47.923704717745686, 5.91064453125"/>
+    </Layer>
+    <Layer name="Saone_13" zoomLvl="16">
+      <Map lrc="46.44921240385257, 4.9658203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23196/33671" minTileCoordinate="23145/33660" name="Saone_13 16" number="162314533660" ulc="46.64566519258495, 4.89990234375"/>
+    </Layer>
+    <Layer name="Saone_3" zoomLvl="16">
+      <Map lrc="47.676484442213194, 6.064453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="22868/33871" minTileCoordinate="22841/33860" name="Saone_3 16" number="162284133860" ulc="47.77994347064128, 5.99853515625"/>
+    </Layer>
+    <Layer name="Saone_17" zoomLvl="16">
+      <Map lrc="45.729191061299915, 4.866943359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23385/33653" minTileCoordinate="23330/33634" name="Saone_17 16" number="162333033634" ulc="45.94351068030587, 4.757080078125"/>
+    </Layer>
+  </catalog>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+  <catalog name="Warthe" size="14" version="2">
+    <Layer name="Warthe_6" zoomLvl="16">
+      <Map lrc="52.629728867183566, 16.2432861328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21459/35724" minTileCoordinate="21436/35685" name="Warthe_6 16" number="162143635685" ulc="52.70967533219884, 16.0235595703125"/>
+    </Layer>
+    <Layer name="Warthe_9" zoomLvl="16">
+      <Map lrc="52.59303784115741, 15.677490234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21470/35621" minTileCoordinate="21459/35582" name="Warthe_9 16" number="162145935582" ulc="52.633062890594374, 15.457763671875"/>
+    </Layer>
+    <Layer name="Warthe_10" zoomLvl="16">
+      <Map lrc="52.596374659467045, 15.49072265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21469/35587" minTileCoordinate="21438/35568" name="Warthe_10 16" number="162143835568" ulc="52.70301871296325, 15.380859375"/>
+    </Layer>
+    <Layer name="Warthe_4" zoomLvl="16">
+      <Map lrc="52.653061696641174, 16.776123046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21452/35821" minTileCoordinate="21433/35770" name="Warthe_4 16" number="162143335770" ulc="52.7196583572198, 16.490478515625"/>
+    </Layer>
+    <Layer name="Warthe_1" zoomLvl="16">
+      <Map lrc="52.34876318198808, 16.9683837890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21543/35856" minTileCoordinate="21520/35845" name="Warthe_1 16" number="162152035845" ulc="52.42922227795512, 16.9024658203125"/>
+    </Layer>
+    <Layer name="Warthe_14" zoomLvl="16">
+      <Map lrc="52.57634993749886, 14.9798583984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21475/35494" minTileCoordinate="21452/35423" name="Warthe_14 16" number="162145235423" ulc="52.656393941988014, 14.5843505859375"/>
+    </Layer>
+    <Layer name="Warthe_3" zoomLvl="16">
+      <Map lrc="52.55965567958737, 16.973876953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21480/35857" minTileCoordinate="21449/35818" name="Warthe_3 16" number="162144935818" ulc="52.666389154200026, 16.754150390625"/>
+    </Layer>
+    <Layer name="Warthe_12" zoomLvl="16">
+      <Map lrc="52.649729197309426, 15.2655029296875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21453/35546" minTileCoordinate="21426/35528" name="Warthe_12 16" number="162142635528" ulc="52.74294319885714, 15.1611328125"/>
+    </Layer>
+    <Layer name="Warthe_5" zoomLvl="16">
+      <Map lrc="52.67638208083925, 16.4959716796875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21445/35770" minTileCoordinate="21430/35719" name="Warthe_5 16" number="162143035719" ulc="52.729639097837165, 16.2103271484375"/>
+    </Layer>
+    <Layer name="Warthe_11" zoomLvl="16">
+      <Map lrc="52.68970242806751, 15.435791015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21441/35577" minTileCoordinate="21426/35542" name="Warthe_11 16" number="162142635542" ulc="52.74294319885714, 15.238037109375"/>
+    </Layer>
+    <Layer name="Warthe_8" zoomLvl="16">
+      <Map lrc="52.606383589696414, 15.8587646484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21466/35654" minTileCoordinate="21455/35619" name="Warthe_8 16" number="162145535619" ulc="52.6463964439847, 15.6610107421875"/>
+    </Layer>
+    <Layer name="Warthe_7" zoomLvl="16">
+      <Map lrc="52.59303784115741, 16.0455322265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21470/35688" minTileCoordinate="21455/35649" name="Warthe_7 16" number="162145535649" ulc="52.6463964439847, 15.8258056640625"/>
+    </Layer>
+    <Layer name="Warthe_13" zoomLvl="16">
+      <Map lrc="52.613054939346796, 15.1885986328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21464/35532" minTileCoordinate="21445/35487" name="Warthe_13 16" number="162144535487" ulc="52.67971254851839, 14.9359130859375"/>
+    </Layer>
+    <Layer name="Warthe_2" zoomLvl="16">
+      <Map lrc="52.412472059624854, 16.995849609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21524/35861" minTileCoordinate="21477/35851" name="Warthe_2 16" number="162147735851" ulc="52.573011594288886, 16.9354248046875"/>
+    </Layer>
+  </catalog>

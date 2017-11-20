@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+  <catalog name="HOW-HavelOderWasserstrasse" size="6" version="2">
+    <Layer name="HOW_4" zoomLvl="16">
+      <Map lrc="52.666389154200026, 13.3758544921875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21448/35202" minTileCoordinate="21397/35175" name="HOW_4 16" number="162139735175" ulc="52.83927653705786, 13.2220458984375"/>
+    </Layer>
+    <Layer name="HOW_3" zoomLvl="16">
+      <Map lrc="52.82268255806929, 13.634033203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21401/35249" minTileCoordinate="21390/35190" name="HOW_3 16" number="162139035190" ulc="52.862497459709466, 13.304443359375"/>
+    </Layer>
+    <Layer name="HOW_6" zoomLvl="16">
+      <Map lrc="52.522905940278065, 13.29345703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21491/35187" minTileCoordinate="21460/35168" name="HOW_6 16" number="162146035168" ulc="52.629728867183566, 13.18359375"/>
+    </Layer>
+    <Layer name="HOW_2" zoomLvl="16">
+      <Map lrc="52.83595824834851, 13.974609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21397/35311" minTileCoordinate="21390/35240" name="HOW_2 16" number="162139035240" ulc="52.862497459709466, 13.5791015625"/>
+    </Layer>
+    <Layer name="HOW_1_Havel_Oder_Wasserstrasse" zoomLvl="16">
+      <Map lrc="52.83927653705786, 14.1778564453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21396/35348" minTileCoordinate="21385/35305" name="HOW_1_Havel_Oder_Wasserstrasse 16" number="162138535305" ulc="52.87907622876889, 13.9361572265625"/>
+    </Layer>
+    <Layer name="HOW_5" zoomLvl="16">
+      <Map lrc="52.58302586141648, 13.282470703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21473/35185" minTileCoordinate="21442/35170" name="HOW_5 16" number="162144235170" ulc="52.68970242806751, 13.194580078125"/>
+    </Layer>
+  </catalog>

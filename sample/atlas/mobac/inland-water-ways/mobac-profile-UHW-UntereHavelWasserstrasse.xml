@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+  <atlas name="UHW-UntereHavelWasserstrasse" outputFormat="PNGWorldfile" version="1">
+    <Layer name="UHW_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8962816/5491456" minTileCoordinate="8956928/5480448" name="UHW_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8957952/5481984" minTileCoordinate="8949760/5473280" name="UHW_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8973568/5513984" minTileCoordinate="8965632/5502976" name="UHW_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8958464/5481984" minTileCoordinate="8949504/5477120" name="UHW_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8988928/5508352" minTileCoordinate="8979712/5504768" name="UHW_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8979712/5511168" minTileCoordinate="8973824/5505280" name="UHW_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8964608/5501440" minTileCoordinate="8961792/5490432" name="UHW_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8998912/5517824" minTileCoordinate="8988416/5506048" name="UHW_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8966400/5504512" minTileCoordinate="8961536/5500672" name="UHW_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="UHW_1_HavelWannsee">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9005056/5511680" minTileCoordinate="8997120/5501696" name="UHW_1_HavelWannsee 16" zoom="16"/>
+    </Layer>
+  </atlas>

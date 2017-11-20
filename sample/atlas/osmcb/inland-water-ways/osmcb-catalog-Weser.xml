@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+  <catalog name="Weser" size="23" version="2">
+    <Layer name="Weser_1" zoomLvl="16">
+      <Map lrc="51.392350874982526, 9.700927734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21825/34533" minTileCoordinate="21790/34510" name="Weser_1 16" number="162179034510" ulc="51.51557978375592, 9.569091796875"/>
+    </Layer>
+    <Layer name="Weser_10" zoomLvl="16">
+      <Map lrc="52.187404745599686, 8.931884765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21591/34393" minTileCoordinate="21568/34374" name="Weser_10 16" number="162156834374" ulc="52.26815737376817, 8.822021484375"/>
+    </Layer>
+    <Layer name="Weser_6" zoomLvl="16">
+      <Map lrc="51.94426487902876, 9.5306396484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21663/34502" minTileCoordinate="21632/34475" name="Weser_6 16" number="162163234475" ulc="52.05249047600099, 9.3768310546875"/>
+    </Layer>
+    <Layer name="WeserSeaway_2" zoomLvl="16">
+      <Map lrc="53.16982647814065, 8.59130859375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21296/34331" minTileCoordinate="21254/34302" name="WeserSeaway_2 16" number="162125434302" ulc="53.31118556593908, 8.426513671875"/>
+    </Layer>
+    <Layer name="Weser_5" zoomLvl="16">
+      <Map lrc="51.82219818336938, 9.5306396484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21699/34502" minTileCoordinate="21660/34479" name="Weser_5 16" number="162166034479" ulc="51.95780738871553, 9.3988037109375"/>
+    </Layer>
+    <Layer name="WeserSeaway_4" zoomLvl="16">
+      <Map lrc="53.46189043285912, 8.701171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21207/34351" minTileCoordinate="21064/34272" name="WeserSeaway_4 16" number="162106434272" ulc="53.93021986394001, 8.26171875"/>
+    </Layer>
+    <Layer name="Weser_15" zoomLvl="16">
+      <Map lrc="52.77950854257623, 9.228515625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21414/34447" minTileCoordinate="21360/34430" name="Weser_15 16" number="162136034430" ulc="52.961875059076014, 9.129638671875"/>
+    </Layer>
+    <Layer name="Weser_12" zoomLvl="16">
+      <Map lrc="52.395715477302076, 9.129638671875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21529/34429" minTileCoordinate="21490/34398" name="Weser_12 16" number="162149034398" ulc="52.52958999943302, 8.953857421875"/>
+    </Layer>
+    <Layer name="Weser_2" zoomLvl="16">
+      <Map lrc="51.501904107618124, 9.635009765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21793/34521" minTileCoordinate="21750/34502" name="Weser_2 16" number="162175034502" ulc="51.65211086156918, 9.525146484375"/>
+    </Layer>
+    <Layer name="Weser_13" zoomLvl="16">
+      <Map lrc="52.512877944290004, 9.2230224609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21494/34446" minTileCoordinate="21455/34419" name="Weser_13 16" number="162145534419" ulc="52.6463964439847, 9.0692138671875"/>
+    </Layer>
+    <Layer name="Wesel_Dattel_Kanal_1" zoomLvl="16">
+      <Map lrc="51.65551888331031, 7.3773193359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21748/34110" minTileCoordinate="21729/34087" name="Wesel_Dattel_Kanal_1 16" number="162172934087" ulc="51.72362551505654, 7.2454833984375"/>
+    </Layer>
+    <Layer name="WeserSeaway_3" zoomLvl="16">
+      <Map lrc="53.30462107510271, 8.5418701171875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21255/34322" minTileCoordinate="21196/34307" name="WeserSeaway_3 16" number="162119634307" ulc="53.501117042943164, 8.4539794921875"/>
+    </Layer>
+    <Layer name="Weser_9" zoomLvl="16">
+      <Map lrc="52.160454557747045, 9.107666015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21599/34425" minTileCoordinate="21588/34378" name="Weser_9 16" number="162158834378" ulc="52.20087371733219, 8.843994140625"/>
+    </Layer>
+    <Layer name="Weser_14" zoomLvl="16">
+      <Map lrc="52.629728867183566, 9.239501953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21459/34449" minTileCoordinate="21412/34434" name="Weser_14 16" number="162141234434" ulc="52.78947558139887, 9.151611328125"/>
+    </Layer>
+    <Layer name="Weser_17" zoomLvl="16">
+      <Map lrc="52.9784158294106, 9.041748046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21354/34413" minTileCoordinate="21323/34366" name="Weser_17 16" number="162132334366" ulc="53.08412692217883, 8.778076171875"/>
+    </Layer>
+    <Layer name="WeserJade14" zoomLvl="16">
+      <Map lrc="53.48804553605621, 8.63525390625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21199/34339" minTileCoordinate="21076/34216" name="WeserJade14 16" number="162107634216" ulc="53.891391285752874, 7.9541015625"/>
+    </Layer>
+    <Layer name="WeserSeaway_1" zoomLvl="16">
+      <Map lrc="53.074227513102215, 8.7945556640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21325/34368" minTileCoordinate="21294/34325" name="WeserSeaway_1 16" number="162129434325" ulc="53.17970389360537, 8.5528564453125"/>
+    </Layer>
+    <Layer name="Weser_8" zoomLvl="16">
+      <Map lrc="52.1166256737882, 9.2999267578125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21612/34460" minTileCoordinate="21589/34421" name="Weser_8 16" number="162158934421" ulc="52.19750685699392, 9.0802001953125"/>
+    </Layer>
+    <Layer name="Weser_11" zoomLvl="16">
+      <Map lrc="52.264795612972044, 9.107666015625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21568/34425" minTileCoordinate="21529/34382" name="Weser_11 16" number="162152934382" ulc="52.3990673029333, 8.865966796875"/>
+    </Layer>
+    <Layer name="Weser_4" zoomLvl="16">
+      <Map lrc="51.665741411057134, 9.47021484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21745/34491" minTileCoordinate="21698/34472" name="Weser_4 16" number="162169834472" ulc="51.82898836366911, 9.3603515625"/>
+    </Layer>
+    <Layer name="Weser_3" zoomLvl="16">
+      <Map lrc="51.590722643120145, 9.580078125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21767/34511" minTileCoordinate="21744/34472" name="Weser_3 16" number="162174434472" ulc="51.67255514839675, 9.3603515625"/>
+    </Layer>
+    <Layer name="Weser_16" zoomLvl="16">
+      <Map lrc="52.9486378848832, 9.195556640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21363/34441" minTileCoordinate="21348/34410" name="Weser_16 16" number="162134834410" ulc="53.001562274591464, 9.019775390625"/>
+    </Layer>
+    <Layer name="Weser_7" zoomLvl="16">
+      <Map lrc="52.038976583076206, 9.4317626953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21635/34484" minTileCoordinate="21608/34460" name="Weser_7 16" number="162160834460" ulc="52.13348804077148, 9.29443359375"/>
+    </Layer>
+  </catalog>

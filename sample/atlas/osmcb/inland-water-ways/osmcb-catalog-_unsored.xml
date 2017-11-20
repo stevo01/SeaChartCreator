@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+  <catalog name="_unsored" size="16" version="2">
+    <Layer name="GenferSee_14" zoomLvl="16">
+      <Map lrc="46.17983040759435, 6.9873046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23267/34039" minTileCoordinate="23172/33880" name="GenferSee_14 16" number="162317233880" ulc="46.543749602738565, 6.1083984375"/>
+    </Layer>
+    <Layer name="BuesumHafen16" zoomLvl="16">
+      <Map lrc="54.11094294272431, 8.887939453125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21007/34385" minTileCoordinate="20999/34376" name="BuesumHafen16 16" number="162099934376" ulc="54.13991452083356, 8.8330078125"/>
+    </Layer>
+    <Layer name="NordfriesischeInseln14" zoomLvl="16">
+      <Map lrc="54.45726668093385, 8.96484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="20899/34399" minTileCoordinate="20708/34272" name="NordfriesischeInseln14 16" number="162070834272" ulc="55.06578688659171, 8.26171875"/>
+    </Layer>
+    <Layer name="Helgoland17" zoomLvl="16">
+      <Map lrc="54.165650031996904, 7.93212890625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="20990/34211" minTileCoordinate="20980/34198" name="Helgoland17 16" number="162098034198" ulc="54.20101023973888, 7.855224609375"/>
+    </Layer>
+    <Layer name="OstfriesischeInseln14" zoomLvl="16">
+      <Map lrc="53.422627546099946, 8.0419921875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21219/34231" minTileCoordinate="21100/33968" name="OstfriesischeInseln14 16" number="162110033968" ulc="53.81362579235235, 6.591796875"/>
+    </Layer>
+    <Layer name="BorkumHafen17" zoomLvl="16">
+      <Map lrc="53.54683559190012, 6.767578125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21181/33999" minTileCoordinate="21175/33994" name="BorkumHafen17 16" number="162117533994" ulc="53.56967636543386, 6.734619140625"/>
+    </Layer>
+    <Layer name="Juist16" zoomLvl="16">
+      <Map lrc="53.62183755254137, 7.0806884765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21158/34056" minTileCoordinate="21136/34007" name="Juist16 16" number="162113634007" ulc="53.69670647530323, 6.8060302734375"/>
+    </Layer>
+    <Layer name="EiderElbe" zoomLvl="16">
+      <Map lrc="53.994853965627684, 9.052734375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21043/34415" minTileCoordinate="20900/34320" name="EiderElbe 16" number="162090034320" ulc="54.45726668093385, 8.525390625"/>
+    </Layer>
+    <Layer name="Neuchateller_See" zoomLvl="16">
+      <Map lrc="46.739860599692676, 7.119140625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23119/34063" minTileCoordinate="23040/33968" name="Neuchateller_See 16" number="162304033968" ulc="47.04018214480666, 6.591796875"/>
+    </Layer>
+    <Layer name="Wollin_14" zoomLvl="16">
+      <Map lrc="53.787671844350285, 14.87548828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21107/35475" minTileCoordinate="21028/35348" name="Wollin_14 16" number="162102835348" ulc="54.046489113355754, 14.17236328125"/>
+    </Layer>
+    <Layer name="SenftenbergerSee_16" zoomLvl="16">
+      <Map lrc="51.471118826139474, 14.073486328125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21802/35329" minTileCoordinate="21787/35310" name="SenftenbergerSee_16 16" number="162178735310" ulc="51.52583384712258, 13.963623046875"/>
+    </Layer>
+    <Layer name="Zuerichsee_14" zoomLvl="16">
+      <Map lrc="47.15984001304431, 8.96484375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="23007/34399" minTileCoordinate="22944/34320" name="Zuerichsee_14 16" number="162294434320" ulc="47.398349200359256, 8.525390625"/>
+    </Layer>
+    <Layer name="BorkumJuistGreetsiel" zoomLvl="16">
+      <Map lrc="53.212612189941574, 7.44873046875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21283/34123" minTileCoordinate="21116/33972" name="BorkumJuistGreetsiel 16" number="162111633972" ulc="53.76170183021049, 6.61376953125"/>
+    </Layer>
+    <Layer name="SchwerinerSee_16" zoomLvl="16">
+      <Map lrc="53.59250480903937, 11.5521240234375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21167/34870" minTileCoordinate="21108/34839" name="SchwerinerSee_16 16" number="162110834839" ulc="53.787671844350285, 11.3763427734375"/>
+    </Layer>
+    <Layer name="Ruegen14" zoomLvl="16">
+      <Map lrc="54.20101023973888, 13.77685546875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="20979/35275" minTileCoordinate="20820/35132" name="Ruegen14 16" number="162082035132" ulc="54.71192884840614, 12.98583984375"/>
+    </Layer>
+    <Layer name="LausitzerSeen14" zoomLvl="16">
+      <Map lrc="51.303145259199056, 14.61181640625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21851/35427" minTileCoordinate="21752/35260" name="LausitzerSeen14 16" number="162175235260" ulc="51.6452940493054, 13.68896484375"/>
+    </Layer>
+  </catalog>

@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <atlas name="TeupitzerGewaesser" outputFormat="PNGWorldfile" version="1">
+    <Layer name="TeupitzerGewaesser_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9025024/5531904" minTileCoordinate="9021696/5529600" name="TeupitzerGewaesser_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="TeupitzerGewaesser_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9027840/5529856" minTileCoordinate="9024000/5526016" name="TeupitzerGewaesser_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="TeupitzerGewaesser_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9029888/5526784" minTileCoordinate="9026560/5524480" name="TeupitzerGewaesser_3 16" zoom="16"/>
+    </Layer>
+  </atlas>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+  <catalog name="ELK-ElbeLuebeckKanal" size="4" version="2">
+    <Layer name="ELK_1_ElbeLuebeckKanal" zoomLvl="16">
+      <Map lrc="53.35710874569602, 10.65673828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21239/34707" minTileCoordinate="21195/34688" name="ELK_1_ElbeLuebeckKanal 16" number="162119534688" ulc="53.50438429010248, 10.546875"/>
+    </Layer>
+    <Layer name="ELK_2" zoomLvl="16">
+      <Map lrc="53.47496999954854, 10.72265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21203/34719" minTileCoordinate="21160/34700" name="ELK_2 16" number="162116034700" ulc="53.61857936489517, 10.61279296875"/>
+    </Layer>
+    <Layer name="ELK_4" zoomLvl="16">
+      <Map lrc="53.735715745326374, 10.70068359375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21123/34715" minTileCoordinate="21080/34700" name="ELK_4 16" number="162108034700" ulc="53.878440403328824, 10.61279296875"/>
+    </Layer>
+    <Layer name="ELK_3" zoomLvl="16">
+      <Map lrc="53.60554409923799, 10.689697265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21163/34713" minTileCoordinate="21120/34702" name="ELK_3 16" number="162112034702" ulc="53.74871079689898, 10.623779296875"/>
+    </Layer>
+  </catalog>

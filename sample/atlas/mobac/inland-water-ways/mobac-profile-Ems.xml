@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+  <atlas name="Ems" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Ems_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8723456/5443328" minTileCoordinate="8709376/5436416" name="Ems_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Ems_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8737280/5454080" minTileCoordinate="8731392/5441024" name="Ems_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Ems_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8734208/5443328" minTileCoordinate="8723200/5436416" name="Ems_2 16" zoom="16"/>
+    </Layer>
+  </atlas>

@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+  <atlas name="Weser" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Weser_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8840448/5587200" minTileCoordinate="8834560/5578240" name="Weser_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8804608/5527296" minTileCoordinate="8799744/5521408" name="Weser_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8832512/5545728" minTileCoordinate="8825600/5537792" name="Weser_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="WeserSeaway_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8788736/5451776" minTileCoordinate="8781312/5441024" name="WeserSeaway_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8832512/5554944" minTileCoordinate="8826624/5544960" name="Weser_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="WeserSeaway_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8793856/5428992" minTileCoordinate="8773632/5392384" name="WeserSeaway_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_15">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8818432/5481984" minTileCoordinate="8814080/5468160" name="Weser_15 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8813824/5511424" minTileCoordinate="8805888/5501440" name="Weser_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8837376/5579008" minTileCoordinate="8832512/5568000" name="Weser_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8818176/5502464" minTileCoordinate="8811264/5492480" name="Weser_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Wesel_Dattel_Kanal_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8732160/5567488" minTileCoordinate="8726272/5562624" name="Wesel_Dattel_Kanal_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="WeserSeaway_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8786432/5441280" minTileCoordinate="8782592/5426176" name="WeserSeaway_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8812800/5529344" minTileCoordinate="8800768/5526528" name="Weser_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8818944/5493504" minTileCoordinate="8815104/5481472" name="Weser_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_17">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8809728/5466624" minTileCoordinate="8797696/5458688" name="Weser_17 16" zoom="16"/>
+    </Layer>
+    <Layer name="WeserJade14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8790784/5426944" minTileCoordinate="8759296/5395456" name="WeserJade14 16" zoom="16"/>
+    </Layer>
+    <Layer name="WeserSeaway_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8798208/5459200" minTileCoordinate="8787200/5451264" name="WeserSeaway_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8821760/5532672" minTileCoordinate="8811776/5526784" name="Weser_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8812800/5521408" minTileCoordinate="8801792/5511424" name="Weser_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8829696/5566720" minTileCoordinate="8824832/5554688" name="Weser_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8834816/5572352" minTileCoordinate="8824832/5566464" name="Weser_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_16">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8816896/5468928" minTileCoordinate="8808960/5465088" name="Weser_16 16" zoom="16"/>
+    </Layer>
+    <Layer name="Weser_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8827904/5538560" minTileCoordinate="8821760/5531648" name="Weser_7 16" zoom="16"/>
+    </Layer>
+  </atlas>

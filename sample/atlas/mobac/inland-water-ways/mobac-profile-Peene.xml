@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+  <atlas name="Peene" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Peene_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8995840/5398528" minTileCoordinate="8988416/5393664" name="Peene_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Peene_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9023488/5397760" minTileCoordinate="9013760/5392896" name="Peene_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Peene_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9004800/5394688" minTileCoordinate="8994816/5388800" name="Peene_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="PeeneStromAchterwasser14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9053952/5400320" minTileCoordinate="9019392/5367808" name="PeeneStromAchterwasser14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Peene_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9032960/5398528" minTileCoordinate="9022464/5396736" name="Peene_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Peene_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9014784/5394432" minTileCoordinate="9003776/5388544" name="Peene_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Peene_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8990720/5407744" minTileCoordinate="8982784/5397760" name="Peene_1 16" zoom="16"/>
+    </Layer>
+  </atlas>

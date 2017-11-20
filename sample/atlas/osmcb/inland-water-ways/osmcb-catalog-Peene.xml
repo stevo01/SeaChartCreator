@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+  <catalog name="Peene" size="7" version="2">
+    <Layer name="Peene_2" zoomLvl="16">
+      <Map lrc="53.849286246347326, 13.0352783203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21088/35140" minTileCoordinate="21069/35111" name="Peene_2 16" number="162106935111" ulc="53.91404567670526, 12.8704833984375"/>
+    </Layer>
+    <Layer name="Peene_5" zoomLvl="16">
+      <Map lrc="53.85900655610468, 13.6285400390625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21085/35248" minTileCoordinate="21066/35210" name="Peene_5 16" number="162106635210" ulc="53.923750941013886, 13.414306640625"/>
+    </Layer>
+    <Layer name="Peene_3" zoomLvl="16">
+      <Map lrc="53.89786522246521, 13.2275390625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21073/35175" minTileCoordinate="21050/35136" name="Peene_3 16" number="162105035136" ulc="53.97547425742952, 13.0078125"/>
+    </Layer>
+    <Layer name="PeeneStromAchterwasser14" zoomLvl="16">
+      <Map lrc="53.82659674299411, 14.2822265625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21095/35367" minTileCoordinate="20968/35232" name="PeeneStromAchterwasser14 16" number="162096835232" ulc="54.23955053156177, 13.53515625"/>
+    </Layer>
+    <Layer name="Peene_6" zoomLvl="16">
+      <Map lrc="53.849286246347326, 13.831787109375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21088/35285" minTileCoordinate="21081/35244" name="Peene_6 16" number="162108135244" ulc="53.875202055794965, 13.60107421875"/>
+    </Layer>
+    <Layer name="Peene_4" zoomLvl="16">
+      <Map lrc="53.90110181472826, 13.4417724609375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21072/35214" minTileCoordinate="21049/35171" name="Peene_4 16" number="162104935171" ulc="53.9787048350094, 13.2000732421875"/>
+    </Layer>
+    <Layer name="Peene_1" zoomLvl="16">
+      <Map lrc="53.73246635451263, 12.9254150390625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21124/35120" minTileCoordinate="21085/35089" name="Peene_1 16" number="162108535089" ulc="53.86224615767576, 12.7496337890625"/>
+    </Layer>
+  </catalog>

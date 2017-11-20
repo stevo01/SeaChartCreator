@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+  <catalog name="OSK-OderSpreeKanal" size="5" version="2">
+    <Layer name="OSK_3" zoomLvl="16">
+      <Map lrc="52.264795612972044, 14.3756103515625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21568/35384" minTileCoordinate="21545/35345" name="OSK_3 16" number="162154535345" ulc="52.34540753654634, 14.1558837890625"/>
+    </Layer>
+    <Layer name="OSK_2" zoomLvl="16">
+      <Map lrc="52.21097276807536, 14.58984375" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21584/35423" minTileCoordinate="21565/35380" name="OSK_2 16" number="162156535380" ulc="52.27824112681228, 14.34814453125"/>
+    </Layer>
+    <Layer name="OSK_4" zoomLvl="16">
+      <Map lrc="52.331982407533786, 14.161376953125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21548/35345" minTileCoordinate="21537/35312" name="OSK_4 16" number="162153735312" ulc="52.37224556866933, 13.974609375"/>
+    </Layer>
+    <Layer name="OSK_1Oder-Spree-Kanal" zoomLvl="16">
+      <Map lrc="52.12337138625386, 14.69970703125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21610/35443" minTileCoordinate="21583/35420" name="OSK_1Oder-Spree-Kanal 16" number="162158335420" ulc="52.21770419342145, 14.56787109375"/>
+    </Layer>
+    <Layer name="OSK_5" zoomLvl="16">
+      <Map lrc="52.32862548843018, 13.9910888671875" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21549/35314" minTileCoordinate="21534/35255" name="OSK_5 16" number="162153435255" ulc="52.382305628707854, 13.6614990234375"/>
+    </Layer>
+  </catalog>

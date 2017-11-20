@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+  <catalog name="Spree" size="5" version="2">
+    <Layer name="Spree_1" zoomLvl="16">
+      <Map lrc="52.37224556866933, 13.798828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21536/35279" minTileCoordinate="21517/35256" name="Spree_1 16" number="162151735256" ulc="52.43926935464697, 13.6669921875"/>
+    </Layer>
+    <Layer name="Spree_3" zoomLvl="16">
+      <Map lrc="52.45266189398768, 13.5186767578125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21512/35228" minTileCoordinate="21497/35213" name="Spree_3 16" number="162149735213" ulc="52.50619134203458, 13.4307861328125"/>
+    </Layer>
+    <Layer name="Spree_5" zoomLvl="16">
+      <Map lrc="52.51622086393074, 13.38134765625" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21493/35203" minTileCoordinate="21480/35172" name="Spree_5 16" number="162148035172" ulc="52.562995039558004, 13.20556640625"/>
+    </Layer>
+    <Layer name="Spree_2" zoomLvl="16">
+      <Map lrc="52.422522954239064, 13.7384033203125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21521/35268" minTileCoordinate="21510/35241" name="Spree_2 16" number="162151035241" ulc="52.462703626583746, 13.5845947265625"/>
+    </Layer>
+    <Layer name="Spree_4" zoomLvl="16">
+      <Map lrc="52.48947038534305, 13.46923828125" mapSource="AH OpenSeaMap - Mapnik" maxTileCoordinate="21501/35219" minTileCoordinate="21490/35190" name="Spree_4 16" number="162149035190" ulc="52.52958999943302, 13.304443359375"/>
+    </Layer>
+  </catalog>

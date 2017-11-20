@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+  <atlas name="Warthe" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Warthe_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9145344/5493504" minTileCoordinate="9135360/5487616" name="Warthe_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_9">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9118976/5496320" minTileCoordinate="9108992/5493504" name="Warthe_9 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_10">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9110272/5496064" minTileCoordinate="9105408/5488128" name="Warthe_10 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9170176/5491712" minTileCoordinate="9157120/5486848" name="Warthe_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9179136/5515008" minTileCoordinate="9176320/5509120" name="Warthe_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_14">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9086464/5497600" minTileCoordinate="9068288/5491712" name="Warthe_14 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9179392/5498880" minTileCoordinate="9169408/5490944" name="Warthe_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_12">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9099776/5491968" minTileCoordinate="9095168/5485056" name="Warthe_12 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9157120/5489920" minTileCoordinate="9144064/5486080" name="Warthe_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_11">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9107712/5488896" minTileCoordinate="9098752/5485056" name="Warthe_11 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_8">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9127424/5495296" minTileCoordinate="9118464/5492480" name="Warthe_8 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9136128/5496320" minTileCoordinate="9126144/5492480" name="Warthe_7 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_13">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9096192/5494784" minTileCoordinate="9084672/5489920" name="Warthe_13 16" zoom="16"/>
+    </Layer>
+    <Layer name="Warthe_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="9180416/5510144" minTileCoordinate="9177856/5498112" name="Warthe_2 16" zoom="16"/>
+    </Layer>
+  </atlas>
