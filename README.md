@@ -27,7 +27,7 @@ All loaded tiles and generated maps stay under following license:
 1 - Use Mobac [1] Software to select one or multiple areas for chart generation.
 * start the software
 * select a tile server e.g. OpenStreetMap 4UMaps.eu
-* select GridZoom 15 in upper area of the shown map
+* select GridZoom 16 in upper area of the shown map
 * Create New Atlas Content PNG + Worldwide (PNG & PWG)
 * Set Menue -> Selection -> Selection Mode -> Rectangle
 * Select "15" in zoom level dialog
