@@ -52,6 +52,11 @@ class AtlasGenerator(object):
                     # get tiles from db
                     tile = self.db.GetTile("OpenSeaMapMerged", ti.zoom, x, y)
 
+                    # check if tile exists
+                    if tile is None:
+                        self.logger.Error("tile with z={} x={} y={} not available in store\n")
+                        assert(0)
+
                     # write tile to local file
                     TileMerged = "{}{}-{}-{}.png".format(PathTempTiles, ti.zoom, y, x)
                     tile.StoreFile(TileMerged)

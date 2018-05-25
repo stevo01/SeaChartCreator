@@ -59,7 +59,4 @@ def main():
 
 
 if __name__ == "__main__":
-
-    path = sys.path[0] + '/../'
-    os.chdir(path)
     exit(main())

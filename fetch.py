@@ -36,6 +36,7 @@ WDIR = './work/'
 def main():
     parser = OptionParser()
     parser.add_option("-i", "--InFile", type="string", help="MOBAC Project File", dest="ProjectFile", default="./sample/atlas/mobac/mobac-profile-testprj.xml")
+    parser.add_option("-d", "--DatabaseDirectory", type="string", help="tile store directory", dest="DBDIR", default=DBDIR)
 
     options, arguments = parser.parse_args()
     arguments = arguments
@@ -52,7 +53,7 @@ def main():
     else:
         exit()
 
-    db = TileDB(DBDIR)
+    db = TileDB(options.DBDIR)
     tm = TileManager(WDIR, db)
 
     for singlemap in atlas:
@@ -65,7 +66,4 @@ def main():
 
 
 if __name__ == "__main__":
-
-    path = sys.path[0] + '/../'
-    os.chdir(path)
     exit(main())
