@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
 from optparse import OptionParser
-from Utils.Helper import area, TileInfo
+from Utils.Helper import area, ChartInfo
 from Utils.Mobac import ExtractMapsFromAtlas
 from Utils.DlMan import MapDownloadManager
 
@@ -61,31 +61,31 @@ if __name__ == "__main__":
     # get map from mobac projekt file
     elif options.ProjectFile is not None:
         # get list of chart areas from project file
-        atlas = ExtractMapsFromAtlas(options.ProjectFile)
+        atlas, name = ExtractMapsFromAtlas(options.ProjectFile)
     else:
         exit()
 
     dl = MapDownloadManager(options.DownloadPath, options.WorkingPath, __app_identifier__)
 
     for singlemap in atlas:
-        ti = TileInfo(singlemap)
-        print(ti)
+        ci = ChartInfo(singlemap)
+        print(ci)
 
         # check requested zoom level and number of tiles to meet the tile usage policy
-        if(ti.zoom >= 17):
+        if(ci.zoom >= 17):
             print("zoom level {} not supported. Please check https://operations.osmfoundation.org/policies/tiles/ for detailes ")
             continue
-        elif(ti.nr_of_tiles >= 3000):
+        elif(ci.nr_of_tiles >= 3000):
             print(singlemap)
             continue
 
-        dl.PrintInfo(ti)
+        dl.PrintInfo(ci)
 
-        dl.LoadTiles(ti)
+        dl.LoadTiles(ci)
 
-        dl.MergeTiles(ti)
+        dl.MergeTiles(ci)
 
-        dl.GenKapFile(ti)
+        dl.GenKapFile(ci)
         print(".")
 
     print("end")

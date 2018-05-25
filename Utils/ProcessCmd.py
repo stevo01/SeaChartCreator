@@ -24,10 +24,11 @@ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
 import subprocess
-from Utils.Helper import TileInfo
 
 from sys import platform
 from kap.gen import KapGen
+import logging
+from Utils.Helper import ensure_dir
 
 if platform == "linux" or platform == "linux2":
     COMPOSITE_APP = "composite"
@@ -42,12 +43,13 @@ else:
 
 
 def _ProcessCmd(cmd):
-    print("execure command: {}".format(cmd))
+    logger = logging.getLogger("main")
+    logger.debug("execure command: {}".format(cmd))
     return_code = subprocess.call(cmd, shell=True)
     return return_code
 
 
-def MergePictures(self, SeaMapFilename, OSMFilename, ResultFilename):
+def MergePictures(SeaMapFilename, OSMFilename, ResultFilename):
     cmd = "{} {} {} {}".format(COMPOSITE_APP, SeaMapFilename, OSMFilename, ResultFilename)
     ret = _ProcessCmd(cmd)
     assert(ret == 0)
@@ -60,14 +62,14 @@ def JoinPicture(xcnt, ycnt, filenamelist, filename):
 
 
 def GenerateKapFile(filenamein, filenameout, ti):
-
+    ensure_dir(filenameout)
     cmd = "{} {} {} {} {} {} {} -t {}".format(IMGKAP_APP, filenamein, ti.NW_lat, ti.NW_lon, ti.SE_lat, ti.SE_lon, filenameout, ti.name)
     ret = _ProcessCmd(cmd)
     assert(ret == 0)
 
-    cmd = "{} {} {} {} ".format(IMGKAP_APP, filenameout, filenameout + ".export.txt", filenameout + "export.png")
-    ret = _ProcessCmd(cmd)
-    assert(ret == 0)
+    #cmd = "{} {} {} {} ".format(IMGKAP_APP, filenameout, filenameout + ".export.txt", filenameout + "export.png")
+    #ret = _ProcessCmd(cmd)
+    #assert(ret == 0)
 
 
 def GenerateKapFileNew(filenamein, filenameout, ti):
@@ -86,4 +88,3 @@ def GenerateKapFileNew(filenamein, filenameout, ti):
     cmd = "{} {} {} {} ".format(IMGKAP_APP, filenameout, filenameout + ".export.txt", filenameout + "export.png")
     ret = _ProcessCmd(cmd)
     assert(ret == 0)
-

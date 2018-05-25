@@ -60,7 +60,7 @@ class area(object):
 
 
 # storege for tile informations for a given area
-class TileInfo(object):
+class ChartInfo(object):
 
     def __init__(self, area_info):
         self.xtile_nw, self.ytile_nw = deg2num(area_info.NW.lat, area_info.NW.lon, area_info.zoom)

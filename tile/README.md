@@ -23,6 +23,23 @@ The database contains following elements
   - last modified date (given from http server)
   - etag (given from http server)
 
+# Merge Tiles
+Input Data:
+ - database with tiles and meta data (date and etag)
+  
+Output Data:
+ - database with merged tile
+ 
+Process description:
+- Load Tile and check if update flag is set
+- if Update required: merge tiles and store it in database
+
+The database contains following elements
+  - the tile (png file)
+  - last modified date (given from http server)
+  - etag (given from http server)
+  
+
 # Stich Tiles
 Input Data:
  - atlas xml specification

@@ -22,12 +22,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from optparse import OptionParser
 from Utils.Mobac import ExtractMapsFromAtlas
-from Utils.Helper import ChartInfo
-from tile.manager import TileManager
 from tile.db import TileDB
 import logging
 import os
 import sys
+from atlas.generator import AtlasGenerator
 
 DBDIR = './work/database/'
 WDIR = './work/'
@@ -53,13 +52,8 @@ def main():
         exit()
 
     db = TileDB(DBDIR)
-    tm = TileManager(WDIR, db)
-
-    for singlemap in atlas:
-        ti = ChartInfo(singlemap)
-        logger.info('UpdateTiles')
-        tm.UpdateTiles(ti)
-        print(ti)
+    gen = AtlasGenerator(WDIR, db)
+    gen.GenerateKAP(atlas, name)
 
     return
 

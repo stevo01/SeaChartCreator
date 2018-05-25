@@ -25,31 +25,34 @@ from xml.dom import minidom
 from Utils.Helper import area
 from ExternalUtils.Conversions import num2deg
 
-# this function parses a mobac projekt file and returns list with tile information for each found map/chart 
+
+# this function parses a mobac projekt file and returns list with tile information for each found map/chart
 def ExtractMapsFromAtlas(filename):
     xmldoc = minidom.parse(filename)
-    itemlist = xmldoc.getElementsByTagName('Map') 
+
+    item = xmldoc.getElementsByTagName('atlas')[0]
+    atlasname = item.attributes['name'].value
+
+    itemlist = xmldoc.getElementsByTagName('Map')
     ret = list()
     for item in itemlist:
-        name =  item.attributes['name'].value
+        name = item.attributes['name'].value
         name = name.replace(" ", "_")
-        zoom =  int(item.attributes['zoom'].value)
-        
-        minTileCoordinate = item.attributes['minTileCoordinate'].value # NW
+        zoom = int(item.attributes['zoom'].value)
+
+        minTileCoordinate = item.attributes['minTileCoordinate'].value  # NW
         x_min, y_min = minTileCoordinate.split('/')
-        x_min = int(x_min)/256
-        y_min = int(y_min)/256
+        x_min = int(x_min) / 256
+        y_min = int(y_min) / 256
         lat_min, lon_min = num2deg(x_min, y_min, zoom)
-        
-        maxTileCoordinate = item.attributes['maxTileCoordinate'].value # SO
+
+        maxTileCoordinate = item.attributes['maxTileCoordinate'].value  # SO
         x_max, y_max = maxTileCoordinate.split('/')
-        x_max = (int(x_max)/256)
-        y_max = (int(y_max)/256)
+        x_max = (int(x_max) / 256)
+        y_max = (int(y_max) / 256)
         lat_max, lon_max = num2deg(x_max, y_max, zoom)
-        
-        a = area( lat_min, lon_min, lat_max, lon_max, name, zoom )
+
+        a = area(lat_min, lon_min, lat_max, lon_max, name, zoom)
         ret.append(a)
-        
-    return ret
-        
-    
+
+    return ret, atlasname

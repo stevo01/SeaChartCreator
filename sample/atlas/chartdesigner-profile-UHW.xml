@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+  <catalog name="UHW" size="10" version="2">
+    <Layer name="UHW_8" zoomLvl="16">
+      <Map lrc="52.656393942, 12.3266601562" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21451/35011" minTileCoordinate="21408/34988" name="UHW_8 16" number="162140834988" ulc="52.8027614154, 12.1948242188"/>
+    </Layer>
+    <Layer name="UHW_10" zoomLvl="16">
+      <Map lrc="52.7795085426, 12.2222900391" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21414/34992" minTileCoordinate="21380/34960" name="UHW_10 16" number="162138034960" ulc="52.8956486621, 12.041015625"/>
+    </Layer>
+    <Layer name="UHW_5" zoomLvl="16">
+      <Map lrc="52.3621832167, 12.5573730469" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21539/35053" minTileCoordinate="21496/35022" name="UHW_5 16" number="162149635022" ulc="52.5095347703, 12.3815917969"/>
+    </Layer>
+    <Layer name="UHW_9" zoomLvl="16">
+      <Map lrc="52.7795085426, 12.2332763672" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21414/34994" minTileCoordinate="21395/34959" name="UHW_9 16" number="162139534959" ulc="52.8459123539, 12.0355224609"/>
+    </Layer>
+    <Layer name="UHW_3" zoomLvl="16">
+      <Map lrc="52.4359205836, 12.8869628906" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21517/35113" minTileCoordinate="21503/35077" name="UHW_3 16" number="162150335077" ulc="52.4861254309, 12.6837158203"/>
+    </Layer>
+    <Layer name="UHW_4" zoomLvl="16">
+      <Map lrc="52.3990673029, 12.6892089844" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21528/35077" minTileCoordinate="21505/35054" name="UHW_4 16" number="162150535054" ulc="52.4794347589, 12.5573730469"/>
+    </Layer>
+    <Layer name="UHW_7" zoomLvl="16">
+      <Map lrc="52.526248097, 12.3651123047" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21490/35018" minTileCoordinate="21447/35007" name="UHW_7 16" number="162144735007" ulc="52.6730513592, 12.2991943359"/>
+    </Layer>
+    <Layer name="UHW_2" zoomLvl="16">
+      <Map lrc="52.3118370714, 13.1011962891" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21554/35152" minTileCoordinate="21508/35111" name="UHW_2 16" number="162150835111" ulc="52.4693968428, 12.8704833984"/>
+    </Layer>
+    <Layer name="UHW_6" zoomLvl="16">
+      <Map lrc="52.4861254309, 12.4035644531" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21502/35025" minTileCoordinate="21487/35006" name="UHW_6 16" number="162148735006" ulc="52.5396141811, 12.2937011719"/>
+    </Layer>
+    <Layer name="UHW_1_HavelWannsee" zoomLvl="16">
+      <Map lrc="52.3923633971, 13.2330322266" mapSource="AH OpenStreetMap Mapnik" maxTileCoordinate="21530/35176" minTileCoordinate="21491/35145" name="UHW_1_HavelWannsee 16" number="162149135145" ulc="52.526248097, 13.0572509766"/>
+    </Layer>
+  </catalog>

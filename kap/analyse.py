@@ -22,7 +22,7 @@ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 import re
 from kap.base import point, KapBase
 from Utils.Helper import area
-from Utils.Helper import TileInfo
+from Utils.Helper import ChartInfo
 
 
 class kapfile(KapBase):
@@ -221,11 +221,11 @@ class kapfile(KapBase):
         self.info()
 
     def GetTileInfo(self, zoom):
-        ti = TileInfo(area(float(self.REF_NW.lat) - 0.0001,
-                           float(self.REF_NW.lon) + 0.0001,
-                           float(self.REF_SE.lat) + 0.0001,
-                           float(self.REF_SE.lon) - 0.0001,
-                           self.NA, zoom))
+        ti = ChartInfo(area(float(self.REF_NW.lat) - 0.0001,
+                            float(self.REF_NW.lon) + 0.0001,
+                            float(self.REF_SE.lat) + 0.0001,
+                            float(self.REF_SE.lon) - 0.0001,
+                            self.NA, zoom))
         return ti
 
     def __str__(self):

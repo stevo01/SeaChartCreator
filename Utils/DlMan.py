@@ -148,7 +148,7 @@ class MapDownloadManager(object):
             print("skip: {}".format(urlOSeaMap))
 
         if(os.path.isfile(FileNameSeaMapMerged) is False):
-            MergePictures(self, FileNameSeaMap, FileNameOSM, FileNameSeaMapMerged)
+            MergePictures(FileNameSeaMap, FileNameOSM, FileNameSeaMapMerged)
 
         return FileNameSeaMapMerged
 
