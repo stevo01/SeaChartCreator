@@ -27,6 +27,7 @@ import io
 import yaml
 import hashlib
 import logging
+from Utils.glog import getlog
 
 
 class TileDB(object):
@@ -34,7 +35,7 @@ class TileDB(object):
     def __init__(self, workspace):
         ensure_dir(workspace)
         self.ws = workspace
-        self.logger = logging.getLogger("main")
+        self.logger = getlog()
 
     def StoreTile(self, tsname, tile, z, x, y):
         filenametile = "{}{}/{}/{}/{}.png".format(self.ws, tsname, z, x, y)

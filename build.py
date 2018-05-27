@@ -23,10 +23,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 from optparse import OptionParser
 from Utils.Mobac import ExtractMapsFromAtlas
 from tile.db import TileDB
-import logging
-import os
-import sys
 from atlas.generator import AtlasGenerator
+from Utils.glog import getlog, initlog
 
 DBDIR = './work/database/'
 WDIR = './work/'
@@ -39,8 +37,8 @@ def main():
     options, arguments = parser.parse_args()
     arguments = arguments
 
-    logging.basicConfig(level=logging.DEBUG)
-    logger = logging.getLogger("main")
+    initlog('build')
+    logger = getlog()
 
     logger.info('Start fetch tiles')
 
@@ -54,6 +52,7 @@ def main():
     db = TileDB(DBDIR)
     gen = AtlasGenerator(WDIR, db)
     gen.GenerateKAP(atlas, name)
+    logger.info('ready')
 
     return
 

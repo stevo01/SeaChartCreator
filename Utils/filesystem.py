@@ -23,22 +23,24 @@ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 import os
 import glob
 
-def GetFileList(path, filter=None):
+
+def GetFileList(path, filterval=None):
     filenamelist = os.listdir(path)
 
-    if filter:
+    if filterval:
         ret = list()
         for filename in filenamelist:
-            if filename.find(filter) != -1:
+            if filename.find(filterval) != -1:
                 ret.append(path + filename)
     else:
         ret = filenamelist
 
     return ret
 
-def _GetFileList(path, filter, recursive_value=True):
-    filenamelist=list()
-    for filename in  glob.iglob('{}**/*{}'.format(path, filter), recursive=recursive_value):
+
+def _GetFileList(path, filterval, recursive_value=True):
+    filenamelist = list()
+    for filename in  glob.iglob('{}**/*{}'.format(path, filterval), recursive=recursive_value):
         filenamelist.append(filename)
     
     return filenamelist

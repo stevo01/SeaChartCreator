@@ -25,6 +25,7 @@ from optparse import OptionParser
 from Utils.Helper import area, ChartInfo
 from Utils.Mobac import ExtractMapsFromAtlas
 from Utils.DlMan import MapDownloadManager
+from Utils.glog import initlog, getlog
 
 __app_identifier__ = "seamapcreator version 0.1"
 
@@ -35,6 +36,9 @@ if __name__ == "__main__":
     parser = OptionParser()
     usage = "usage: %prog [options] arg1 arg2"
     atlas = list()
+    
+    initlog('seamapcreator')
+    logger = getlog()
 
     parser.add_option("-d", "--DownloadPath", type="string", help="download path", dest="DownloadPath", default="./download")
     parser.add_option("-w", "--WorkingPath", type="string", help="working path", dest="WorkingPath", default="./work")

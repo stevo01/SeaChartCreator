@@ -25,9 +25,7 @@ from Utils.Mobac import ExtractMapsFromAtlas
 from Utils.Helper import ChartInfo
 from tile.manager import TileManager
 from tile.db import TileDB
-import logging
-import os
-import sys
+from Utils.glog import getlog, initlog
 
 DBDIR = './work/database/'
 WDIR = './work/'
@@ -41,8 +39,8 @@ def main():
     options, arguments = parser.parse_args()
     arguments = arguments
 
-    logging.basicConfig(level=logging.DEBUG)
-    logger = logging.getLogger("main")
+    initlog('fetch')
+    logger = getlog()
 
     logger.info('Start fetch tiles')
 
@@ -58,9 +56,9 @@ def main():
 
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
-        logger.info('UpdateTiles')
+        logger.info('UpdateTiles for map {}'.format(ti.name))
         tm.UpdateTiles(ti)
-        print(ti)
+        logger.info(ti)
 
     return
 

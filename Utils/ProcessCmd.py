@@ -27,7 +27,7 @@ import subprocess
 
 from sys import platform
 from kap.gen import KapGen
-import logging
+from Utils.glog import getlog
 from Utils.Helper import ensure_dir
 
 if platform == "linux" or platform == "linux2":
@@ -43,8 +43,8 @@ else:
 
 
 def _ProcessCmd(cmd):
-    logger = logging.getLogger("main")
-    logger.debug("execure command: {}".format(cmd))
+    logger = getlog()
+    logger.debug("execute command: {}".format(cmd))
     return_code = subprocess.call(cmd, shell=True)
     return return_code
 
@@ -52,13 +52,23 @@ def _ProcessCmd(cmd):
 def MergePictures(SeaMapFilename, OSMFilename, ResultFilename):
     cmd = "{} {} {} {}".format(COMPOSITE_APP, SeaMapFilename, OSMFilename, ResultFilename)
     ret = _ProcessCmd(cmd)
-    assert(ret == 0)
-
+    if ret is not 0:
+        logger = getlog()
+        logger.error("error occure: {}".format(cmd))
+    return ret
 
 def JoinPicture(xcnt, ycnt, filenamelist, filename):
-    cmd = "{} +frame +shadow +label -tile {}x{} -geometry 256x256+0+0 {} {}".format(MONTAGE_APP, xcnt, ycnt, filenamelist, filename)
+    options = ' '
+    #options += '-limit memory 0 '
+    options += '+frame '
+    options += '+shadow ' 
+    options += '+label '
+    cmd = "{} {} -tile {}x{} -geometry 256x256+0+0 {} {}".format(MONTAGE_APP, options, xcnt, ycnt, filenamelist, filename)
     ret = _ProcessCmd(cmd)
-    assert(ret == 0)
+    if ret is not 0:
+        logger = getlog()
+        logger.error("error occure: {}".format(cmd))
+    return ret
 
 
 def GenerateKapFile(filenamein, filenameout, ti):
@@ -67,12 +77,35 @@ def GenerateKapFile(filenamein, filenameout, ti):
     ret = _ProcessCmd(cmd)
     assert(ret == 0)
 
-    #cmd = "{} {} {} {} ".format(IMGKAP_APP, filenameout, filenameout + ".export.txt", filenameout + "export.png")
-    #ret = _ProcessCmd(cmd)
-    #assert(ret == 0)
 
+'''
+c:\data\OSM\50_SeaChartCreator\ExternalUtils\imgkap>imgkap.exe
+ERROR - Usage:\imgkap [option] [inputfile] [lat0 lon0 lat1 lon1 | headerfile] [outputfile]
+
+imgkap Version 1.11 by M'dJ
+
+Convert kap to img :
+        imgkap mykap.kap myimg.png : convert mykap into myimg.png
+        imgkap mykap.kap mheader.kap myimg.png : convert mykap into header myheader (only text header kap file) and myimg.png
+
+Convert img to kap :
+        imgkap myimg.png myheaderkap.kap : convert myimg.png into myimg.kap using myheader.kap for kap informations
+        imgkap myimg.png myheaderkap.kap myresult.kap : convert myimg.png into myresult.kap using myheader.kap for kap informations
+        imgkap mykap.png lat0 lon0 lat1 lon2 myresult.kap : convert myimg.png into myresult.kap using WGS84 positioning
+        imgkap -s 'LOWEST LOW WATER' myimg.png lat0 lon0 lat1 lon2 -f : convert myimg.png into myimg.kap using WGS84 positioning and options
+'''
+def GenerateKapFileH(filenamein, headerfilename, filenameout, ti):
+    ensure_dir(filenameout)
+    cmd = "{} {} {} {} -t {}".format(IMGKAP_APP, filenamein, headerfilename, filenameout, ti.name)
+    ret = _ProcessCmd(cmd)
+    if ret is not 0:
+        logger = getlog()
+        logger.error("error occure: {}".format(cmd))
+        assert(ret == 0)
+    return ret
 
 def GenerateKapFileNew(filenamein, filenameout, ti):
+    ensure_dir(filenameout)
 
     # generate header
     gen = KapGen()
@@ -85,6 +118,6 @@ def GenerateKapFileNew(filenamein, filenameout, ti):
     ret = _ProcessCmd(cmd)
     assert(ret == 0)
 
-    cmd = "{} {} {} {} ".format(IMGKAP_APP, filenameout, filenameout + ".export.txt", filenameout + "export.png")
-    ret = _ProcessCmd(cmd)
-    assert(ret == 0)
+    #cmd = "{} {} {}".format(IMGKAP_APP, filenameout, filenameout+'.png')
+    #ret = _ProcessCmd(cmd)
+    #assert(ret == 0)

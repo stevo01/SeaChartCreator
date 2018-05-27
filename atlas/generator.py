@@ -4,11 +4,11 @@ Created on 23.05.2018
 @author: stevo
 '''
 import os
-import glob
 import shutil
-import logging
 from Utils.Helper import ChartInfo
-from Utils.ProcessCmd import JoinPicture, GenerateKapFile
+from Utils.ProcessCmd import JoinPicture, GenerateKapFile, \
+    GenerateKapFileNew
+from Utils.glog import getlog
 
 STICHDIR = "StichDir"
 
@@ -16,7 +16,6 @@ STICHDIR = "StichDir"
 def RemoveDir(path):
     if os.path.isdir(path):
         shutil.rmtree(path)
-
 
 
 class AtlasGenerator(object):
@@ -30,42 +29,49 @@ class AtlasGenerator(object):
         '''
         self._WorkingDirectory = WorkingDirectory
         self.db = db
-        self.logger = logging.getLogger("main")
+        self.logger = getlog()
 
     def GenerateKAP(self, atlas, atlasname):
         self.atlas = atlas
 
+        self.logger.info("Cleanup Kap Directory")
+        kapdirname = "{}kap/{}/".format(self._WorkingDirectory, atlasname)
+        RemoveDir(kapdirname)
+
         for singlemap in atlas:
-            ti = ChartInfo(singlemap)
-            self.logger.info("Process Chart {}".format(ti.name))
+            ci = ChartInfo(singlemap)
+            self.logger.info("Process Chart {}".format(ci.name))
 
             # cleanup temp directories
-            PathTempTiles = self._WorkingDirectory + "{}/{}/{}/{}/".format(STICHDIR, atlasname, ti.name, ti.zoom)
+            self.logger.info("Cleanup Stitch Directory")
+            PathTempTiles = self._WorkingDirectory + "{}/{}/{}/{}/".format(STICHDIR, atlasname, ci.name, ci.zoom)
             RemoveDir(PathTempTiles)
-            kapdirname = "{}kap".format(self._WorkingDirectory)
-            kapfilename = "{}/{}/{}_{}.kap".format(kapdirname, atlasname, ti.name, ti.zoom)
-            RemoveDir(kapdirname)
+            kapfilename = "{}/{}_{}.kap".format(kapdirname, ci.name, ci.zoom)
+            kapheaderfilename = "{}/{}_{}.kap.header".format(kapdirname, ci.name, ci.zoom)
 
             # export tiles
-            for y in range(ti.ytile_nw, ti.ytile_se + 1):
-                for x in range(ti.xtile_nw, ti.xtile_se + 1):
+            self.logger.info("Export {} Tiles".format(ci.nr_of_tiles))
+            for y in range(ci.ytile_nw, ci.ytile_se + 1):
+                for x in range(ci.xtile_nw, ci.xtile_se + 1):
                     # get tiles from db
-                    tile = self.db.GetTile("OpenSeaMapMerged", ti.zoom, x, y)
+                    tile = self.db.GetTile("OpenSeaMapMerged", ci.zoom, x, y)
 
                     # check if tile exists
                     if tile is None:
-                        self.logger.Error("tile with z={} x={} y={} not available in store\n")
+                        self.logger.error("tile with z={} x={} y={} not available in store\n")
                         assert(0)
 
                     # write tile to local file
-                    TileMerged = "{}{}-{}-{}.png".format(PathTempTiles, ti.zoom, y, x)
+                    TileMerged = "{}{}-{}-{}.png".format(PathTempTiles, ci.zoom, y, x)
                     tile.StoreFile(TileMerged)
 
             # stich tiles
-            tempfilename = "{}{}_{}.png".format(PathTempTiles, ti.name, ti.zoom)
-            JoinPicture(ti.x_cnt, ti.y_cnt, "{}*.png".format(PathTempTiles), tempfilename)
+            self.logger.info("Stich {} tiles for map {}".format(ci.nr_of_tiles, ci.name))
+            tempfilename = "{}{}_{}.png".format(PathTempTiles, ci.name, ci.zoom)
+            JoinPicture(ci.x_cnt, ci.y_cnt, "{}*.png".format(PathTempTiles), tempfilename)
 
             # generate kap file
-            GenerateKapFile(tempfilename, kapfilename, ti)
+            self.logger.info("generate kap file {}".format(kapfilename))
+            #GenerateKapFile(tempfilename, kapfilename, ci)
+            GenerateKapFileNew(tempfilename, kapfilename, ci)
 
-        return

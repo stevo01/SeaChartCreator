@@ -20,7 +20,6 @@ along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
 
-
 class point():
 
     def __init__(self, Ref):
