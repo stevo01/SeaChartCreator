@@ -24,8 +24,11 @@ from optparse import OptionParser
 from Utils.Mobac import ExtractMapsFromAtlas
 from Utils.Helper import ChartInfo
 from tile.manager import TileManager
-from tile.db import TileDB
 from Utils.glog import getlog, initlog
+from tile.sqllitedb import TileSqlLiteDB
+from Utils.download import CheckExternelUtils
+import time
+
 
 DBDIR = './work/database/'
 WDIR = './work/'
@@ -33,13 +36,35 @@ WDIR = './work/'
 
 def main():
     parser = OptionParser()
-    parser.add_option("-i", "--InFile", type="string", help="MOBAC Project File", dest="ProjectFile", default="./sample/atlas/mobac/mobac-profile-testprj.xml")
-    parser.add_option("-d", "--DatabaseDirectory", type="string", help="tile store directory", dest="DBDIR", default=DBDIR)
+
+    parser.add_option("-i", "--InFile",
+                      type="string",
+                      help="MOBAC Project File",
+                      dest="ProjectFile",
+                      default="./sample/atlas/mobac/mobac-profile-testprj.xml")
+
+    parser.add_option("-d", "--DatabaseDirectory",
+                      type="string",
+                      help="tile store directory",
+                      dest="DBDIR",
+                      default=DBDIR)
+
+    parser.add_option("-u", "--update",
+                      action="store_false",
+                      dest="update",
+                      default=True,
+                      help="update tile if new version existes")
+
+    parser.add_option("-q", "--quite",
+                      action="store_false",
+                      dest="quite",
+                      default=True,
+                      help="set log level to info (instead debug)")
 
     options, arguments = parser.parse_args()
     arguments = arguments
 
-    initlog('fetch')
+    initlog('fetch', options.quite)
     logger = getlog()
 
     logger.info('Start fetch tiles')
@@ -48,18 +73,30 @@ def main():
     if options.ProjectFile is not None:
         # get list of chart areas from project file
         atlas, name = ExtractMapsFromAtlas(options.ProjectFile)
+        logger.info('atlas name={}'.format(name))
     else:
         exit()
 
-    db = TileDB(options.DBDIR)
+    CheckExternelUtils()
+
+    db = TileSqlLiteDB(options.DBDIR)
     tm = TileManager(WDIR, db)
 
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
-        logger.info('UpdateTiles for map {}'.format(ti.name))
-        tm.UpdateTiles(ti)
+        logger.info('Start UpdateTile for map:')
+        starttime = time.time()
         logger.info(ti)
+        tm.UpdateTiles(ti, options.update)
+        stoptime = time.time()
+        logger.info('time: {} s'.format(int(stoptime - starttime)))
+        logger.info('tiles skipped          {}'.format(tm.tileskipped))
+        logger.info('tiles merged           {}'.format(tm.tilemerged))
+        logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
+        logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
 
+    logger.info('ready')
+    db.CloseDB()
     return
 
 

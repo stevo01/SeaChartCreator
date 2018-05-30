@@ -22,9 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from optparse import OptionParser
 from Utils.Mobac import ExtractMapsFromAtlas
-from tile.db import TileDB
 from atlas.generator import AtlasGenerator
 from Utils.glog import getlog, initlog
+from tile.sqllitedb import TileSqlLiteDB
 
 DBDIR = './work/database/'
 WDIR = './work/'
@@ -33,6 +33,7 @@ WDIR = './work/'
 def main():
     parser = OptionParser()
     parser.add_option("-i", "--InFile", type="string", help="MOBAC Project File", dest="ProjectFile", default="./sample/atlas/mobac/mobac-profile-testprj.xml")
+    parser.add_option("-d", "--DatabaseDirectory", type="string", help="tile store directory", dest="DBDIR", default=DBDIR)
 
     options, arguments = parser.parse_args()
     arguments = arguments
@@ -49,10 +50,11 @@ def main():
     else:
         exit()
 
-    db = TileDB(DBDIR)
+    db = TileSqlLiteDB(options.DBDIR)
     gen = AtlasGenerator(WDIR, db)
     gen.GenerateKAP(atlas, name)
     logger.info('ready')
+    db.CloseDB()
 
     return
 

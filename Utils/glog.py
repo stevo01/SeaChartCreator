@@ -24,14 +24,17 @@ import logging
 logger = None
 
 
-def initlog(text=None):
+def initlog(text=None, quite=False):
     global logger
     logger = logging.getLogger(text)
     handler = logging.StreamHandler()
     formatter = logging.Formatter('%(asctime)s %(name)-12s %(levelname)-8s %(message)s')
     handler.setFormatter(formatter)
     logger.addHandler(handler)
-    logger.setLevel(logging.DEBUG)
+    if quite is True:
+        logger.setLevel(logging.DEBUG)
+    else:
+        logger.setLevel(logging.INFO)
 
 
 def getlog():

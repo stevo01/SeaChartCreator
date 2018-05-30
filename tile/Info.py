@@ -53,7 +53,7 @@ class TileInfo(object):
             self.md5 = tmp['md5']
             self.lastmodified = tmp['lastmodified']
             self.updated = tmp['updated']
-
+        
     def StoreFile(self, filename):
         ensure_dir(filename)
         with open(filename, 'wb') as f:

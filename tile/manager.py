@@ -22,12 +22,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import urllib.request
 
-from seamapcreator import __app_identifier__
+
 from tile.Info import TileInfo
 from Utils.glog import getlog
 from Utils.ProcessCmd import MergePictures
 
 MERGEDIR = 'Merge/'
+
+OpenSeaMapMerged = 'OpenSeaMapMerged'
+OpenStreetMap = 'OpenStreetMap'
+OpenSeaMap = 'OpenSeaMap'
+
+TileSourceList = [OpenSeaMap, OpenStreetMap, OpenSeaMapMerged]
 
 
 class TileServer():
@@ -48,20 +54,21 @@ class TileManager(object):
         '''
         self._WorkingDirectory = WorkingDirectory
         self.db = db
-        self.TSOpenStreetMap = TileServer("OpenStreetMap", "http://a.tile.openstreetmap.org")
-        self.TsOpenSeaMap = TileServer("OpenSeaMap", "http://tiles.openseamap.org/seamark")
+        self.TSOpenStreetMap = TileServer(OpenStreetMap, "http://a.tile.openstreetmap.org")
+        self.TsOpenSeaMap = TileServer(OpenSeaMap, "http://tiles.openseamap.org/seamark")
 
         self.logger = getlog()
 
         self.tile = 0
         self.tiledownloaded = 0
         self.tiledownloadskipped = 0
+        self.tileskipped = 0
         self.tilemerged = 0
 
-    def UpdateTiles(self, ti):
+    def UpdateTiles(self, ti, update):
         for y in range(ti.ytile_nw, ti.ytile_se + 1):
             for x in range(ti.xtile_nw, ti.xtile_se + 1):
-                self._UpdateTile(ti.zoom, x, y)
+                self._UpdateTile(ti.zoom, x, y, update)
 
     # load single file with http protocol
     def _HttpLoadFile(self, ts, z, x, y, tile=None):
@@ -108,32 +115,41 @@ class TileManager(object):
                       filename_in1,
                       filename_result1)
 
-        ret = TileInfo(filename_result1)
+        ret = TileInfo()
         ret.SetData(filename_result1)
         return ret
 
-    def _UpdateTile(self, z, x, y, sf=True):
+    def _UpdateTile(self, z, x, y, update):
+        '''
+        update - true  check if update of tile excists
+               - false skip update if file exists 
+        '''
         tile_osm1 = self.db.GetTile(self.TSOpenStreetMap.name, z, x, y)
-        if(tile_osm1 is not None) and (sf is True):
+        if(tile_osm1 is not None) and(update is True):
             self.logger.debug("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.TSOpenStreetMap.name))
+            self.tileskipped += 1
         else:
             tile_osm1 = self._HttpLoadFile(self.TSOpenStreetMap, z, x, y, tile_osm1)
-            self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm1, z, x, y)
+            if tile_osm1.updated is True:
+                self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm1, z, x, y)
 
         tile_osm2 = self.db.GetTile(self.TsOpenSeaMap.name, z, x, y)
-        if(tile_osm2 is not None) and (sf is True):
+        if(tile_osm2 is not None) and (update is True):
             self.logger.debug("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.TsOpenSeaMap.name))
+            self.tileskipped += 1
         else:
             tile_osm2 = self._HttpLoadFile(self.TsOpenSeaMap, z, x, y, tile_osm2)
-            self.db.StoreTile(self.TsOpenSeaMap.name, tile_osm2, z, x, y)
+            if tile_osm2.updated is True:
+                self.db.StoreTile(self.TsOpenSeaMap.name, tile_osm2, z, x, y)
 
-        tile_osm3 = self.db.GetTile("OpenSeaMapMerged", z, x, y)
+        tile_osm3 = self.db.GetTile(OpenSeaMapMerged, z, x, y)
         if (tile_osm1.updated is True) or (tile_osm2.updated is True) or (tile_osm3 is None):
             tile_merged = self.MergeTile(tile_osm1, tile_osm2)
-            self.db.StoreTile("OpenSeaMapMerged", tile_merged, z, x, y)
+            self.db.StoreTile(OpenSeaMapMerged, tile_merged, z, x, y)
 
             tile_osm1.updated = False
             self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm1, z, x, y)
+
             tile_osm2.updated = False
             self.db.StoreTile(self.TsOpenSeaMap.name, tile_osm2, z, x, y)
             self.tilemerged += 1
