@@ -75,9 +75,9 @@ class MapDownloadManager(object):
         # PathNameImageMagick = downloadPath + 'ImageMagick'
         # urlImageMagick = 'http://ftp.icm.edu.pl/packages/ImageMagick/binaries/ImageMagick-7.0.7-11-portable-Q16-x86.zip'
 
-        FileNameImageMagick = downloadPath + 'ImageMagick-7.0.7-35-portable-Q16-x64.zip'
+        FileNameImageMagick = downloadPath + 'ImageMagick-7.0.7-36-portable-Q16-x86.zip'
         PathNameImageMagick = downloadPath + 'ImageMagick'
-        urlImageMagick = 'https://www.imagemagick.org/download/binaries/ImageMagick-7.0.7-35-portable-Q16-x64.zip'
+        urlImageMagick = 'https://www.imagemagick.org/download/binaries/ImageMagick-7.0.7-36-portable-Q16-x86.zip'
 
 
         if platform == "linux" or platform == "linux2":

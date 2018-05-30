@@ -26,6 +26,7 @@ import urllib.request
 from tile.Info import TileInfo
 from Utils.glog import getlog
 from Utils.ProcessCmd import MergePictures
+from Utils import __app_identifier__
 
 MERGEDIR = 'Merge/'
 
