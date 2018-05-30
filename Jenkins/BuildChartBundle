@@ -2,46 +2,35 @@ node {
     stage('Prepare Build') 
     {
         sh"""#!/bin/bash
-        
-        rm -fr SeaChartCreator
-        
+        rm -fr SeaChartCreator       
         # clone SeaChartCreator 
         git clone https://github.com/stevo01/SeaChartCreator.git 
+        cd SeaChartCreator/
+ 		git checkout dev_stevo
+ 		"""
+	}
+ 	
+ 	stage('FetchTiles') 
+    {
+ 		sh"""#!/bin/bash
+ 		cd SeaChartCreator/
+        python3 fetch.py -q -i "./sample/atlas/mobac/inland-water-ways/mobac-profile-${params.BUNDLENAME}.xml" -d /var/lib/SeaChartCreator/work/database/
+ 	    """
+ 	}
         
-        # copy project files fo r inland water ways
-        cp SeaChartCreator/sample/atlas/osmcb/inland-water-ways/osmcb-catalog-${params.BUNDLENAME}.xml /var/lib/OSeaMChartBundler/OSeaM_Catalogs/
-    	        
-        # create link to jenkins working dir
-        ln -sf /var/lib/OSeaMChartBundler/OSeaM_Bundles/OpenCPN2-KAP $WORKSPACE
-        """
-    }
-    stage('Build chart bundle') {
-        sh"""#!/bin/bash
-        cd /var/lib/OSeaMChartBundler
-        java -Xms64m -XX:+UseParallelGC -Xmx5g -jar OSeaMChartBundler.jar -c=${params.BUNDLENAME} -f=OpenCPN2
-        """
-    }
-    stage('compress bundle') {
-        sh'''#!/bin/bash 
-    	cd /var/lib/OSeaMChartBundler/OSeaM_Bundles/OpenCPN2-KAP
-    	
-    	# create 7z for all subdirectorys
-    	for dir in *
-    	do
-    	  test -d "$dir" || continue
-    	  target=$dir.7z
-    	  echo compress directory: $dir
-    	  echo target file       : $target
-    	  mv $dir/*.json ./
-    	  7z a $target $dir
-    	done
-    	
-    	# move files to archive
-    	cp *.7z   /var/lib/OSeaMChartBundler/OSeaM_Archiv/
-    	cp *.json /var/lib/OSeaMChartBundler/OSeaM_Archiv/
-    	
-    	# cleanup
-    	rm -fr /var/lib/OSeaMChartBundler/OSeaM_Bundles/OpenCPN2-KAP
-        '''
-    }
+ 	stage('Build KAP Files') 
+    {
+ 		sh"""#!/bin/bash
+ 		cd SeaChartCreator/
+ 		python3 build.py -q -i "./sample/atlas/mobac/inland-water-ways/mobac-profile-${params.BUNDLENAME}.xml" -d /var/lib/SeaChartCreator/work/database/
+ 	    ls /var/lib/SeaChartCreator/work/database/ -l
+ 	    """
+ 	}
+ 	
+ 	stage('Deploy Files') 
+    {
+ 		sh"""#!/bin/bash
+ 		cd SeaChartCreator/
+ 		"""
+ 	}
 }
