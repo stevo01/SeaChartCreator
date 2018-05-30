@@ -52,6 +52,10 @@ def HttpLoadFile(url, filename):
 
 
 def CheckExternelUtils():
+    '''
+    note: libfreeimage is required to compile inux version of imgkap.
+          sample installation for debian: sudo apt install libfreeimage3
+    '''
     downloadPath = 'ExternalUtils/'
 
     FileNameImageMagick = downloadPath + 'ImageMagick-7.0.7-36-portable-Q16-x64.zip'

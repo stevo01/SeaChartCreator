@@ -55,16 +55,16 @@ def main():
                       default=True,
                       help="update tile if new version existes")
 
-    parser.add_option("-q", "--quite",
+    parser.add_option("-q", "--quiet",
                       action="store_false",
-                      dest="quite",
+                      dest="quiet",
                       default=True,
                       help="set log level to info (instead debug)")
 
     options, arguments = parser.parse_args()
     arguments = arguments
 
-    initlog('fetch', options.quite)
+    initlog('fetch', options.quiet)
     logger = getlog()
 
     logger.info('Start fetch tiles')

@@ -1,0 +1,8 @@
+OpenSeaMap Charts KAP Bundle 0.1
+This Charts bundle is useable for testing ONLY, it is in no way fit for navigational purposes.
+
+OpenSeaMap does not give any warranty, that the data shown in this map are current or correct.
+Even if you use it for testing, any damage resulting from this test will be solely your responsibility.
+By using this chart you acknowledge that you have read, understood
+and accepted the terms and conditions stated in the User Agreement:
+http://wiki.openseamap.org/wiki/OpenSeaMap-dev:Chart-Disclaimer
