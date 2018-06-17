@@ -81,10 +81,12 @@ def main():
 
     db = TileSqlLiteDB(options.DBDIR)
     tm = TileManager(WDIR, db)
+    mapcnt=1
 
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
-        logger.info('Start UpdateTile for map:')
+        logger.info('Start UpdateTile for map {} / {}:'.format(mapcnt,len(atlas)))
+        mapcnt+=1
         starttime = time.time()
         logger.info(ti)
         tm.UpdateTiles(ti, options.update)

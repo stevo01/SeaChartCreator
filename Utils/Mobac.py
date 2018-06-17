@@ -26,33 +26,88 @@ from Utils.Helper import area
 from ExternalUtils.Conversions import num2deg
 
 
+def DetectType(xmldoc):
+
+    try:
+        item = xmldoc.getElementsByTagName('atlas')[0]
+        return "atlas"
+    except:
+
+        try:
+            item = xmldoc.getElementsByTagName('catalog')[0]
+            return "catalog"
+        except:
+            pass
+
+    return "unknown"
+
+
 # this function parses a mobac projekt file and returns list with tile information for each found map/chart
 def ExtractMapsFromAtlas(filename):
     xmldoc = minidom.parse(filename)
 
-    item = xmldoc.getElementsByTagName('atlas')[0]
-    atlasname = item.attributes['name'].value
+    doctype = DetectType(xmldoc)
+    if doctype == "atlas":
+        item = xmldoc.getElementsByTagName('atlas')[0]
 
-    itemlist = xmldoc.getElementsByTagName('Map')
-    ret = list()
-    for item in itemlist:
-        name = item.attributes['name'].value
-        name = name.replace(" ", "_")
-        zoom = int(item.attributes['zoom'].value)
+        atlasname = item.attributes['name'].value
 
-        minTileCoordinate = item.attributes['minTileCoordinate'].value  # NW
-        x_min, y_min = minTileCoordinate.split('/')
-        x_min = int(x_min) / 256
-        y_min = int(y_min) / 256
-        lat_min, lon_min = num2deg(x_min, y_min, zoom)
+        itemlist = xmldoc.getElementsByTagName('Map')
+        ret = list()
+        for item in itemlist:
+            name = item.attributes['name'].value
+            name = name.replace(" ", "_")
+            zoom = int(item.attributes['zoom'].value)
 
-        maxTileCoordinate = item.attributes['maxTileCoordinate'].value  # SO
-        x_max, y_max = maxTileCoordinate.split('/')
-        x_max = (int(x_max) / 256)
-        y_max = (int(y_max) / 256)
-        lat_max, lon_max = num2deg(x_max, y_max, zoom)
+            minTileCoordinate = item.attributes['minTileCoordinate'].value  # NW
+            x_min, y_min = minTileCoordinate.split('/')
+            x_min = int(x_min) / 256
+            y_min = int(y_min) / 256
+            lat_min, lon_min = num2deg(x_min, y_min, zoom)
 
-        a = area(lat_min, lon_min, lat_max, lon_max, name, zoom)
-        ret.append(a)
+            maxTileCoordinate = item.attributes['maxTileCoordinate'].value  # SO
+            x_max, y_max = maxTileCoordinate.split('/')
+            x_max = (int(x_max) / 256)
+            y_max = (int(y_max) / 256)
+            lat_max, lon_max = num2deg(x_max, y_max, zoom)
+
+            a = area(lat_min, lon_min, lat_max, lon_max, name, zoom)
+            ret.append(a)
+
+    elif doctype == "catalog":
+        item = xmldoc.getElementsByTagName('catalog')[0]
+
+        atlasname = item.attributes['name'].value
+
+        layerlist = xmldoc.getElementsByTagName('Layer')
+
+        ret = list()
+
+        for layer in layerlist:
+
+            zoom = int(layer.attributes['zoomLvl'].value)
+
+            itemlist = xmldoc.getElementsByTagName('Map')
+
+            for item in itemlist:
+                name = item.attributes['name'].value
+                name = name.replace(" ", "_")
+
+                minTileCoordinate = item.attributes['minTileCoordinate'].value  # NW
+                y_min, x_min = minTileCoordinate.split('/')
+                x_min = int(x_min)  # / 256
+                y_min = int(y_min)  # / 256
+                lat_min, lon_min = num2deg(x_min, y_min, zoom)
+
+                maxTileCoordinate = item.attributes['maxTileCoordinate'].value  # SO
+                y_max, x_max = maxTileCoordinate.split('/')
+                x_max = int(x_max)  # / 256)
+                y_max = int(y_max)  # / 256)
+                lat_max, lon_max = num2deg(x_max, y_max, zoom)
+
+                a = area(lat_min, lon_min, lat_max, lon_max, name, zoom)
+                ret.append(a)
+    else:
+        assert(0)
 
     return ret, atlasname
