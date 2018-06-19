@@ -87,7 +87,7 @@ def ExtractMapsFromAtlas(filename):
 
             zoom = int(layer.attributes['zoomLvl'].value)
 
-            itemlist = xmldoc.getElementsByTagName('Map')
+            itemlist = layer.getElementsByTagName('Map')
 
             for item in itemlist:
                 name = item.attributes['name'].value

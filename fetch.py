@@ -72,7 +72,7 @@ def main():
     if options.ProjectFile is not None:
         # get list of chart areas from project file
         atlas, name = ExtractMapsFromAtlas(options.ProjectFile)
-        logger.info('atlas name={}'.format(name))
+        logger.info('atlas name={} number of maps={}'.format(name, len(atlas)))
     else:
         exit()
 

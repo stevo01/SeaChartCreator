@@ -67,7 +67,6 @@ class TileManager(object):
         self.tilemerged = 0
         self.tiledownloaderror = 0
 
-
     def UpdateTiles(self, ti, update):
         for y in range(ti.ytile_nw, ti.ytile_se + 1):
             for x in range(ti.xtile_nw, ti.xtile_se + 1):
