@@ -65,6 +65,8 @@ class TileManager(object):
         self.tiledownloadskipped = 0
         self.tileskipped = 0
         self.tilemerged = 0
+        self.tiledownloaderror = 0
+
 
     def UpdateTiles(self, ti, update):
         for y in range(ti.ytile_nw, ti.ytile_se + 1):
@@ -96,10 +98,16 @@ class TileManager(object):
             self.tiledownloaded += 1
         except urllib.error.HTTPError as err:
             self.logger.debug("HTTPError: {}".format(err.code))
-            tile.date = err.headers['Date']
-            ret = tile
-            ret.updated = False
-            self.tiledownloadskipped += 1
+            try:
+                tile.date = err.headers['Date']
+                ret = tile
+                ret.updated = False
+                self.tiledownloadskipped += 1
+            except:
+                self.tiledownloaderror += 1
+                ret = tile
+                ret.updated = False
+                pass
 
         return ret
 
@@ -123,7 +131,7 @@ class TileManager(object):
     def _UpdateTile(self, z, x, y, update):
         '''
         update - true  check if update of tile excists
-               - false skip update if file exists 
+               - false skip update if file exists
         '''
         tile_osm1 = self.db.GetTile(self.TSOpenStreetMap.name, z, x, y)
         if(tile_osm1 is not None) and(update is True):

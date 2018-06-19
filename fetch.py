@@ -29,7 +29,6 @@ from tile.sqllitedb import TileSqlLiteDB
 from Utils.download import CheckExternelUtils
 import time
 
-
 DBDIR = './work/database/'
 WDIR = './work/'
 
@@ -81,12 +80,12 @@ def main():
 
     db = TileSqlLiteDB(options.DBDIR)
     tm = TileManager(WDIR, db)
-    mapcnt=1
+    mapcnt = 1
 
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
-        logger.info('Start UpdateTile for map {} / {}:'.format(mapcnt,len(atlas)))
-        mapcnt+=1
+        logger.info('Start UpdateTile for map {} / {}:'.format(mapcnt, len(atlas)))
+        mapcnt += 1
         starttime = time.time()
         logger.info(ti)
         tm.UpdateTiles(ti, options.update)
@@ -96,6 +95,7 @@ def main():
         logger.info('tiles merged           {}'.format(tm.tilemerged))
         logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
         logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
+        logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
 
     logger.info('ready')
     db.CloseDB()
