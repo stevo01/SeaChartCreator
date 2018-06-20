@@ -75,6 +75,8 @@ class TileManager(object):
     # load single file with http protocol
     def _HttpLoadFile(self, ts, z, x, y, tile=None):
 
+        ret = None
+
         url = "{}/{}/{}/{}.png".format(ts.url, z, x, y)
 
         # set user agent to meet the tile usage policy
@@ -100,13 +102,14 @@ class TileManager(object):
             try:
                 tile.date = err.headers['Date']
                 ret = tile
-                ret.updated = False
+                if ret is not None:
+                    ret.updated = False
                 self.tiledownloadskipped += 1
             except:
                 self.tiledownloaderror += 1
                 ret = tile
-                ret.updated = False
-                pass
+                if ret is not None:
+                    ret.updated = False
 
         return ret
 
@@ -138,6 +141,8 @@ class TileManager(object):
             self.tileskipped += 1
         else:
             tile_osm1 = self._HttpLoadFile(self.TSOpenStreetMap, z, x, y, tile_osm1)
+            if tile_osm1 == None:
+                return
             if tile_osm1.updated is True:
                 self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm1, z, x, y)
 
@@ -147,6 +152,8 @@ class TileManager(object):
             self.tileskipped += 1
         else:
             tile_osm2 = self._HttpLoadFile(self.TsOpenSeaMap, z, x, y, tile_osm2)
+            if tile_osm2 == None:
+                return
             if tile_osm2.updated is True:
                 self.db.StoreTile(self.TsOpenSeaMap.name, tile_osm2, z, x, y)
 
