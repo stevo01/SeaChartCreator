@@ -21,10 +21,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 import os
 import shutil
-from Utils.Helper import ChartInfo
-from Utils.ProcessCmd import JoinPicture, GenerateKapFile, \
-    GenerateKapFileNew
+from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFileNew
 from Utils.glog import getlog
+import datetime
+from Utils.Helper import ChartInfo
 
 STICHDIR = "StichDir"
 
@@ -52,6 +52,7 @@ class AtlasGenerator(object):
 
         self.logger.info("Cleanup Kap Directory")
         kapdirname = "{}kap/{}/".format(self._WorkingDirectory, atlasname)
+
         RemoveDir(kapdirname)
 
         for singlemap in atlas:
@@ -91,3 +92,11 @@ class AtlasGenerator(object):
             #GenerateKapFile(tempfilename, kapfilename, ci)
             GenerateKapFileNew(tempfilename, kapfilename, ci)
 
+        #OSM-OpenCPN2-KAP-UHW-UntereHavelWasserstrasse-20180515-0638.7z
+
+        now = datetime.datetime.now()
+
+        atlasfilename = "{}kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(self._WorkingDirectory, 
+                                                                 atlasname,
+                                                                 now.strftime("%Y%m%d-%H%M"))
+        ZipFiles(kapdirname, atlasfilename)

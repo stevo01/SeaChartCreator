@@ -34,10 +34,12 @@ if platform == "linux" or platform == "linux2":
     COMPOSITE_APP = "composite"
     MONTAGE_APP = "montage"
     IMGKAP_APP = "ExternalUtils/imgkap/imgkap"
+    SEVEN_Z_APP = "7z"
 elif platform == "win32":
     COMPOSITE_APP = "ExternalUtils\\ImageMagick\\composite"
     MONTAGE_APP = "ExternalUtils\\ImageMagick\\montage"
     IMGKAP_APP = "ExternalUtils\\imgkap\\imgkap"
+    SEVEN_Z_APP = "\"C:\\Program Files\\7-Zip\\7z\""
 else:
     assert(0)
 
@@ -57,9 +59,10 @@ def MergePictures(SeaMapFilename, OSMFilename, ResultFilename):
         logger.error("error occure: {}".format(cmd))
     return ret
 
+
 def JoinPicture(xcnt, ycnt, filenamelist, filename):
     options = ' '
-    #options += '-limit memory 0 '
+    # options += '-limit memory 0 '
     options += '+frame '
     options += '+shadow ' 
     options += '+label '
@@ -94,6 +97,8 @@ Convert img to kap :
         imgkap mykap.png lat0 lon0 lat1 lon2 myresult.kap : convert myimg.png into myresult.kap using WGS84 positioning
         imgkap -s 'LOWEST LOW WATER' myimg.png lat0 lon0 lat1 lon2 -f : convert myimg.png into myimg.kap using WGS84 positioning and options
 '''
+
+
 def GenerateKapFileH(filenamein, headerfilename, filenameout, ti):
     ensure_dir(filenameout)
     cmd = "{} {} {} {} -t {}".format(IMGKAP_APP, filenamein, headerfilename, filenameout, ti.name)
@@ -103,6 +108,7 @@ def GenerateKapFileH(filenamein, headerfilename, filenameout, ti):
         logger.error("error occure: {}".format(cmd))
         assert(ret == 0)
     return ret
+
 
 def GenerateKapFileNew(filenamein, filenameout, ti):
     ensure_dir(filenameout)
@@ -118,6 +124,19 @@ def GenerateKapFileNew(filenamein, filenameout, ti):
     ret = _ProcessCmd(cmd)
     assert(ret == 0)
 
-    #cmd = "{} {} {}".format(IMGKAP_APP, filenameout, filenameout+'.png')
-    #ret = _ProcessCmd(cmd)
-    #assert(ret == 0)
+    # cmd = "{} {} {}".format(IMGKAP_APP, filenameout, filenameout+'.png')
+    # ret = _ProcessCmd(cmd)
+    # assert(ret == 0)
+
+
+def ZipFiles(dirname, archivfilename):
+    '''
+    7z a $target $dir
+    '''
+    options = 'a'
+    cmd = "{} {} {} {}".format(SEVEN_Z_APP, options, archivfilename, dirname)
+    ret = _ProcessCmd(cmd)
+    if ret is not 0:
+        logger = getlog()
+        logger.error("error occure: {}".format(cmd))
+    return ret

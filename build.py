@@ -25,6 +25,7 @@ from Utils.Mobac import ExtractMapsFromAtlas
 from atlas.generator import AtlasGenerator
 from Utils.glog import getlog, initlog
 from tile.sqllitedb import TileSqlLiteDB
+from Utils.download import CheckExternelUtils
 
 DBDIR = './work/database/'
 WDIR = './work/'
@@ -50,6 +51,8 @@ def main():
         atlas, name = ExtractMapsFromAtlas(options.ProjectFile)
     else:
         exit()
+
+    CheckExternelUtils()
 
     db = TileSqlLiteDB(options.DBDIR)
     gen = AtlasGenerator(WDIR, db)
