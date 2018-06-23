@@ -6,7 +6,6 @@ node {
         # clone SeaChartCreator 
         git clone https://github.com/stevo01/SeaChartCreator.git 
         cd SeaChartCreator/
- 		git checkout dev_stevo
  		"""
 	}
  	

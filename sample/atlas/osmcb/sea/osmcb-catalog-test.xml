@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalog name="20171128_1" size="9" version="2">
+    <Layer name="L16" zoomLvl="16">
+        <Map name="L16-21472-35168-8-16" mapSource="AH OpenStreetMap Mapnik" ulc="52.58970077, 13.18359375" lrc="52.56299504, 13.27148438" minTileCoordinate="21472/35168" maxTileCoordinate="21479/35183" number="16-21472-35168-8-16"/>
+    </Layer>
+    <Layer name="L15" zoomLvl="15">
+        <Map name="L15-10736-17584-8-8" mapSource="AH OpenStreetMap Mapnik" ulc="52.58970077, 13.18359375" lrc="52.53627304, 13.27148438" minTileCoordinate="10736/17584" maxTileCoordinate="10743/17591" number="15-10736-17584-8-8"/>
+    </Layer>
+    <Layer name="L14" zoomLvl="14">
+        <Map name="L14-5368-8792-8-8" mapSource="AH OpenStreetMap Mapnik" ulc="52.58970077, 13.18359375" lrc="52.48278022, 13.35937500" minTileCoordinate="5368/8792" maxTileCoordinate="5375/8799" number="14-5368-8792-8-8"/>
+    </Layer>
+    <Layer name="L13" zoomLvl="13">
+        <Map name="L13-2680-4392-8-8" mapSource="AH OpenStreetMap Mapnik" ulc="52.69636108, 13.00781250" lrc="52.48278022, 13.35937500" minTileCoordinate="2680/4392" maxTileCoordinate="2687/4399" number="13-2680-4392-8-8"/>
+    </Layer>
+    <Layer name="L12" zoomLvl="12">
+        <Map name="L12-1336-2192-8-8" mapSource="AH OpenStreetMap Mapnik" ulc="52.90890205, 12.65625000" lrc="52.48278022, 13.35937500" minTileCoordinate="1336/2192" maxTileCoordinate="1343/2199" number="12-1336-2192-8-8"/>
+    </Layer>
+    <Layer name="L11" zoomLvl="11">
+        <Map name="L11-664-1096-8-8" mapSource="AH OpenStreetMap Mapnik" ulc="53.33087298, 12.65625000" lrc="52.48278022, 14.06250000" minTileCoordinate="664/1096" maxTileCoordinate="671/1103" number="11-664-1096-8-8"/>
+    </Layer>
+    <Layer name="L10" zoomLvl="10">
+        <Map name="L10-328-544-8-8" mapSource="AH OpenStreetMap Mapnik" ulc="54.16243397, 11.25000000" lrc="52.48278022, 14.06250000" minTileCoordinate="328/544" maxTileCoordinate="335/551" number="10-328-544-8-8"/>
+    </Layer>
+    <Layer name="L09" zoomLvl="9">
+        <Map name="L9-160-272-8-8" mapSource="AH OpenStreetMap Mapnik" ulc="55.77657302, 11.25000000" lrc="52.48278022, 16.87500000" minTileCoordinate="160/272" maxTileCoordinate="167/279" number="9-160-272-8-8"/>
+    </Layer>
+    <Layer name="L08" zoomLvl="8">
+        <Map name="L8-80-136-8-8" mapSource="AH OpenStreetMap Mapnik" ulc="55.77657302, 11.25000000" lrc="48.92249926, 22.50000000" minTileCoordinate="80/136" maxTileCoordinate="87/143" number="8-80-136-8-8"/>
+    </Layer>
+</catalog>
