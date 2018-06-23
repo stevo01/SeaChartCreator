@@ -1,4 +1,4 @@
-#!/usr/bin/python33
+#!/usr/bin/python3
 # encoding: utf-8
 '''
 implements access to OMAC project file
@@ -29,12 +29,12 @@ from ExternalUtils.Conversions import num2deg
 def DetectType(xmldoc):
 
     try:
-        item = xmldoc.getElementsByTagName('atlas')[0]
+        xmldoc.getElementsByTagName('atlas')[0]
         return "atlas"
     except:
 
         try:
-            item = xmldoc.getElementsByTagName('catalog')[0]
+            xmldoc.getElementsByTagName('catalog')[0]
             return "catalog"
         except:
             pass

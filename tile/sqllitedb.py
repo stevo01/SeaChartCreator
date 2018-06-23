@@ -46,7 +46,7 @@ class TileSqlLiteDB(object):
             self.con = sqlite3.connect(self.FilenameDB)
             self.cur = self.con.cursor()
 
-        self.writecnt=0
+        self.writecnt = 0
 
     def InitDB(self):
         self.con = sqlite3.connect(self.FilenameDB)

@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 '''
-utils.conversions - this files includes several conversion routines taken from 
+utils.conversions - this files includes several conversion routines taken from
 http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Python
 '''
 

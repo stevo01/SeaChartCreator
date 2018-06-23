@@ -40,8 +40,7 @@ def GetFileList(path, filterval=None):
 
 def _GetFileList(path, filterval, recursive_value=True):
     filenamelist = list()
-    for filename in  glob.iglob('{}**/*{}'.format(path, filterval), recursive=recursive_value):
+    for filename in glob.iglob('{}**/*{}'.format(path, filterval), recursive=recursive_value):
         filenamelist.append(filename)
-    
+
     return filenamelist
-    

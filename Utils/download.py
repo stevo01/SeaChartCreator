@@ -29,7 +29,8 @@ from Utils.Helper import ensure_dir
 from Utils.ProcessCmd import _ProcessCmd
 from pip._vendor.distlib.compat import ZipFile
 import os
-from seamapcreator import __app_identifier__
+from Utils import __app_identifier__
+
 
 # load singlke file with http protocol
 def HttpLoadFile(url, filename):

@@ -92,10 +92,7 @@ class AtlasGenerator(object):
             #GenerateKapFile(tempfilename, kapfilename, ci)
             GenerateKapFileNew(tempfilename, kapfilename, ci)
 
-        #OSM-OpenCPN2-KAP-UHW-UntereHavelWasserstrasse-20180515-0638.7z
-
         now = datetime.datetime.now()
-
         atlasfilename = "{}kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(self._WorkingDirectory, 
                                                                  atlasname,
                                                                  now.strftime("%Y%m%d-%H%M"))

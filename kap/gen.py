@@ -35,7 +35,7 @@ class KapGen(KapBase):
         ti tileino
         '''
         self.SetHeaderFromTileInfo(ti)
-        
+
         '''
         VER/2.0
         CED/SE=1,RE=1,ED=27/05/2018
@@ -64,58 +64,57 @@ class KapGen(KapBase):
         ret += "KNP/SC={:.0f},GD={:s},PR={:s},PP={:s}\n".format(self.SC, self.GD, self.PR, self.PP)
         ret += "    PI={},SP={},SK={},TA={}\n".format(self.PI, self.SP, self.SK, self.TA)
         ret += "    UN={:s},SD={:s},DX={:.2f},DY={:.2f}\n".format(self.UN, self.SD, self.DX, self.DY)
-        
+
         '''
         # SW , unten links
         ret += "REF/1,{:d},{:d},{:.6f},{:.6f}\n".format(0, 0, self.PLY_SW.lat, self.PLY_SW.lon)
-        
+
         # NW, oben Links
         ret += "REF/2,{:d},{:d},{:.6f},{:.6f}\n".format(0, self.Pixel_y, self.PLY_NW.lat, self.PLY_NW.lon)
-        
+
         # NE, oben rechts
         ret += "REF/3,{:d},{:d},{:.6f},{:.6f}\n".format(self.Pixel_x, self.Pixel_y, self.PLY_NE.lat, self.PLY_NE.lon)
-        
+
         # SE, unten rechts
         ret += "REF/4,{:d},{:d},{:.6f},{:.6f}\n".format(self.Pixel_x, 0, self.PLY_SE.lat, self.PLY_SE.lon)
-        
+
         # SW , unten links
         ret += "PLY/1,{:.6f},{:.6f}\n".format(self.PLY_SW.lat, self.PLY_SW.lon)
-        
+
         # NW, oben Links
         ret += "PLY/2,{:.6f},{:.6f}\n".format(self.PLY_NW.lat, self.PLY_NW.lon)
-        
+
         # NE, oben rechts
         ret += "PLY/3,{:.6f},{:.6f}\n".format(self.PLY_NE.lat, self.PLY_NE.lon)
-        
+
         # SE, unten rechts
         ret += "PLY/4,{:.6f},{:.6f}\n".format(self.PLY_SE.lat, self.PLY_SE.lon)
         '''
-       
+
         # NW, oben Links
         ret += "REF/1,{:d},{:d},{:.6f},{:.6f}\n".format(0, 0, self.PLY_NW.lat, self.PLY_NW.lon)
 
         # NE, oben rechts
         ret += "REF/2,{:d},{:d},{:.6f},{:.6f}\n".format(self.Pixel_x, 0, self.PLY_NE.lat, self.PLY_NE.lon)
-        
+
         # SE, unten rechts
         ret += "REF/3,{:d},{:d},{:.6f},{:.6f}\n".format(self.Pixel_x, self.Pixel_y, self.PLY_SE.lat, self.PLY_SE.lon)
-        
+
         # SW , unten links
         ret += "REF/4,{:d},{:d},{:.6f},{:.6f}\n".format(0, self.Pixel_y, self.PLY_SW.lat, self.PLY_SW.lon)
-        
-        
+
         # NW, oben Links
         ret += "PLY/1,{:.6f},{:.6f}\n".format(self.PLY_NW.lat, self.PLY_NW.lon)
-        
+
         # NE, oben rechts
         ret += "PLY/2,{:.6f},{:.6f}\n".format(self.PLY_NE.lat, self.PLY_NE.lon)
-        
+
         # SE, unten rechts
         ret += "PLY/3,{:.6f},{:.6f}\n".format(self.PLY_SE.lat, self.PLY_SE.lon)
-        
+
         # SW , unten links
         ret += "PLY/4,{:.6f},{:.6f}\n".format(self.PLY_SW.lat, self.PLY_SW.lon)
-        
+
         ret += "DTM/0.000000,0.000000\n"
         #ret += "CPH/0\n"
         ret += "OST/1\n"

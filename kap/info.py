@@ -23,7 +23,7 @@ You should have received a copy of the GNU General Public License
 along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-from Utils.filesystem import GetFileList, _GetFileList
+from Utils.filesystem import _GetFileList
 from xml.dom.minidom import Document
 from optparse import OptionParser
 from kap.analyse import kapfile

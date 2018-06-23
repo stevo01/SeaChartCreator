@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import unittest
 from atlas.generator import RemoveDir
 from tile.sqllitedb import TileSqlLiteDB
-from tile.manager import OpenSeaMapMerged, OpenStreetMap
+from tile.manager import OpenStreetMap
 from Utils.glog import initlog, getlog
 from tile.filedb import TileFileDB
 

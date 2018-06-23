@@ -1,11 +1,12 @@
 # SeaChartCreator
 
 SeaChartCreator is based on python script. The script was developed and tested on system with
-- Windows 10 / 64 bit 
+- Windows 10 / 64 bit
+- Linux Ubuntu 16.04 / 64 bit 
 - python 3.5
 
 The need following externel librarys / applications:
-- ImageMagick 7.0.7-35
+- ImageMagick 7.0.8-1
 - imgkap Ver. 1.1
 
 SeaChartCreator use tiles from the OpenSeaMap Projekt and the Open Streetmap Projekt.
@@ -39,9 +40,13 @@ note: the atlas will be stored in a xml file located in the mobac software direc
     
 2 - call the python script and use the -i option to specify the mobac project file
 ```
-cd c:\tools\SeeChartCreator
-C:\tools\SeaChartCreator>c:\tools\Python35\python.exe seamapcreator.py -i "c:\tools\Mobile Atlas Creator 2.0.0\mobac-profile-newatlas.xml"
+cd ~/
+clone https://github.com/stevo01/SeaChartCreator
+cd SeaChartCreator
+python3 fetch.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
+python3 build.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
 ```
+the generated kap file is located in directory ./work/kap/
 
 ## bookmarks:
 [1] http://mobac.sourceforge.net/

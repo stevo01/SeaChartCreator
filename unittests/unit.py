@@ -1,8 +1,8 @@
-#!/usr/bin/python33
+#!/usr/bin/python3
 # encoding: utf-8
 
 '''
-@brief:  unit tests for
+@brief:  unit tests
 @author: steffen@volkmann.com
 
 Copyright (C) 2017  Steffen Volkmann

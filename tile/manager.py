@@ -141,7 +141,7 @@ class TileManager(object):
             self.tileskipped += 1
         else:
             tile_osm1 = self._HttpLoadFile(self.TSOpenStreetMap, z, x, y, tile_osm1)
-            if tile_osm1 == None:
+            if tile_osm1 is None:
                 return
             if tile_osm1.updated is True:
                 self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm1, z, x, y)
@@ -152,7 +152,7 @@ class TileManager(object):
             self.tileskipped += 1
         else:
             tile_osm2 = self._HttpLoadFile(self.TsOpenSeaMap, z, x, y, tile_osm2)
-            if tile_osm2 == None:
+            if tile_osm2 is None:
                 return
             if tile_osm2.updated is True:
                 self.db.StoreTile(self.TsOpenSeaMap.name, tile_osm2, z, x, y)
