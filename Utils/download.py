@@ -59,7 +59,7 @@ def CheckExternelUtils():
     '''
     downloadPath = 'ExternalUtils/'
 
-    ImageMagick_Filename = "ImageMagick-7.0.8-1-portable-Q16-x64.zip"
+    ImageMagick_Filename = "ImageMagick-7.0.8-3-portable-Q16-x86.zip"
     FileNameImageMagick = downloadPath + ImageMagick_Filename
     PathNameImageMagick = downloadPath + 'ImageMagick'
     urlImageMagick = 'https://www.imagemagick.org/download/binaries/{}'.format(ImageMagick_Filename)
