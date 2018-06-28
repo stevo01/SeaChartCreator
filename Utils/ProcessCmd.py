@@ -31,11 +31,13 @@ from Utils.glog import getlog
 from Utils.Helper import ensure_dir
 
 if platform == "linux" or platform == "linux2":
+    CONVERT_APP = "convert"
     COMPOSITE_APP = "composite"
     MONTAGE_APP = "montage"
     IMGKAP_APP = "ExternalUtils/imgkap/imgkap"
     SEVEN_Z_APP = "7z"
 elif platform == "win32":
+    CONVERT_APP = "ExternalUtils\\ImageMagick\\convert"
     COMPOSITE_APP = "ExternalUtils\\ImageMagick\\composite"
     MONTAGE_APP = "ExternalUtils\\ImageMagick\\montage"
     IMGKAP_APP = "ExternalUtils\\imgkap\\imgkap"
@@ -71,6 +73,15 @@ def JoinPicture(xcnt, ycnt, filenamelist, filename):
     if ret is not 0:
         logger = getlog()
         logger.error("error occure: {}".format(cmd))
+    return ret
+
+
+def ConvertPicture(infile, outfile, options=""):
+    cmd = "{} {} {} png8:{}".format(CONVERT_APP, infile, options, outfile)
+    ret = _ProcessCmd(cmd)
+    if ret is not 0:
+        logger = getlog()
+        logger.error("ConvertPicture error occure: {}".format(cmd))
     return ret
 
 

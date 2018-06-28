@@ -21,7 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 import os
 import shutil
-from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFileNew
+from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFileNew,\
+    ConvertPicture
 from Utils.glog import getlog
 import datetime
 from Utils.Helper import ChartInfo
@@ -87,10 +88,18 @@ class AtlasGenerator(object):
             tempfilename = "{}{}_{}.png".format(PathTempTiles, ci.name, ci.zoom)
             JoinPicture(ci.x_cnt, ci.y_cnt, "{}*.png".format(PathTempTiles), tempfilename)
 
+            '''
+            reduce png file to 8 bit toavoid error in imagekap procedure:
+
+            ERROR - internal GetPalette
+            ERROR - imgkap return 2
+            '''
+            tempfilereduced = "{}{}_{}_8.png".format(PathTempTiles, ci.name, ci.zoom)
+            ConvertPicture(tempfilename, tempfilereduced)
+
             # generate kap file
             self.logger.info("generate kap file {}".format(kapfilename))
-            #GenerateKapFile(tempfilename, kapfilename, ci)
-            GenerateKapFileNew(tempfilename, kapfilename, ci)
+            GenerateKapFileNew(tempfilereduced, kapfilename, ci)
 
         now = datetime.datetime.now()
         atlasfilename = "{}kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(self._WorkingDirectory, 

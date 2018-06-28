@@ -1,2 +1,24 @@
 <?xml version="1.0" ?>
-  <atlas name="
+  <atlas name="Kuestenkanal" outputFormat="PNGWorldfile" version="1">
+    <Layer name="Kuestenkanal_1">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8738048/5468928" minTileCoordinate="8728064/5464064" name="Kuestenkanal_1 16" zoom="16"/>
+    </Layer>
+    <Layer name="Kuestenkanal_2">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8747008/5465344" minTileCoordinate="8737024/5463552" name="Kuestenkanal_2 16" zoom="16"/>
+    </Layer>
+    <Layer name="Kuestenkanal_3">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8754176/5464064" minTileCoordinate="8746240/5457920" name="Kuestenkanal_3 16" zoom="16"/>
+    </Layer>
+    <Layer name="Kuestenkanal_4">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8763648/5459200" minTileCoordinate="8753664/5457408" name="Kuestenkanal_4 16" zoom="16"/>
+    </Layer>
+    <Layer name="Kuestenkanal_5">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8772096/5458432" minTileCoordinate="8763136/5453568" name="Kuestenkanal_5 16" zoom="16"/>
+    </Layer>
+    <Layer name="Kuestenkanal_6">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8780032/5455360" minTileCoordinate="8771072/5451520" name="Kuestenkanal_6 16" zoom="16"/>
+    </Layer>
+    <Layer name="Kuestenkanal_7">
+      <Map mapSource="OpenSeaMapTEST" maxTileCoordinate="8784384/5452032" minTileCoordinate="8779520/5445120" name="Kuestenkanal_7 16" zoom="16"/>
+    </Layer>
+  </atlas>
