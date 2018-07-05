@@ -441,9 +441,9 @@
     <Layer name="Rhein_19">
         <Map maxTileCoordinate="8785664/5741824" minTileCoordinate="8780800/5726720" mapSource="OpenSeaMapTEST" zoom="16" name="Rhein_19 16"/>
     </Layer>
-    <Layer name="Rhein_1">
+    <!-->Layer name="Rhein_1">
         <Map maxTileCoordinate="8847104/5870336" minTileCoordinate="8802304/5841920" mapSource="OpenSeaMapTEST" zoom="16" name="Rhein_1 16"/>
-    </Layer>
+    </Layer-->
     <Layer name="Rhein_3">
         <Map maxTileCoordinate="8793344/5863424" minTileCoordinate="8783360/5852416" mapSource="OpenSeaMapTEST" zoom="16" name="Rhein_3 16"/>
     </Layer>
