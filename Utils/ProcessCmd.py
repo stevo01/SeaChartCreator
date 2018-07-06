@@ -89,7 +89,10 @@ def GenerateKapFile(filenamein, filenameout, ti):
     ensure_dir(filenameout)
     cmd = "{} {} {} {} {} {} {} -t {}".format(IMGKAP_APP, filenamein, ti.NW_lat, ti.NW_lon, ti.SE_lat, ti.SE_lon, filenameout, ti.name)
     ret = _ProcessCmd(cmd)
-    assert(ret == 0)
+    if ret is not 0:
+        #assert(ret == 0)
+        logger = getlog()
+        logger.error("Kap File Generation failed: {}".format(cmd))        
 
 
 '''

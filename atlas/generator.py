@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 import os
 import shutil
-from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFileNew,\
+from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFileNew, \
     ConvertPicture
 from Utils.glog import getlog
 import datetime
@@ -48,7 +48,7 @@ class AtlasGenerator(object):
         self.db = db
         self.logger = getlog()
 
-    def GenerateKAP(self, atlas, atlasname):
+    def GenerateKAP(self, atlas, atlasname, reducecolors):
         self.atlas = atlas
 
         self.logger.info("Cleanup Kap Directory")
@@ -94,15 +94,18 @@ class AtlasGenerator(object):
             ERROR - internal GetPalette
             ERROR - imgkap return 2
             '''
-            tempfilereduced = "{}{}_{}_8.png".format(PathTempTiles, ci.name, ci.zoom)
-            ConvertPicture(tempfilename, tempfilereduced)
+            if reducecolors is True:
+                tempfilereduced = "{}{}_{}_8.png".format(PathTempTiles, ci.name, ci.zoom)
+                ConvertPicture(tempfilename, tempfilereduced)
+            else:
+                tempfilereduced = tempfilename 
 
             # generate kap file
             self.logger.info("generate kap file {}".format(kapfilename))
             GenerateKapFileNew(tempfilereduced, kapfilename, ci)
 
         now = datetime.datetime.now()
-        atlasfilename = "{}kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(self._WorkingDirectory, 
+        atlasfilename = "{}kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(self._WorkingDirectory,
                                                                  atlasname,
                                                                  now.strftime("%Y%m%d-%H%M"))
         ZipFiles(kapdirname, atlasfilename)

@@ -36,6 +36,7 @@ def main():
     parser.add_option("-i", "--InFile", type="string", help="MOBAC Project File", dest="ProjectFile", default="./sample/atlas/mobac/mobac-profile-testprj.xml")
     parser.add_option("-d", "--DatabaseDirectory", type="string", help="tile store directory", dest="DBDIR", default=DBDIR)
     parser.add_option("-q", "--quiet", action="store_false", dest="quiet", default=True, help="set log level to info (instead debug)")
+    parser.add_option("-r", "--reducecolors", action="store_true", dest="reducecolors", default=False, help="reduce colores before call of imgkap")
 
     options, arguments = parser.parse_args()
     arguments = arguments
@@ -56,7 +57,7 @@ def main():
 
     db = TileSqlLiteDB(options.DBDIR)
     gen = AtlasGenerator(WDIR, db)
-    gen.GenerateKAP(atlas, name)
+    gen.GenerateKAP(atlas, name, options.reducecolors)
     logger.info('ready')
     db.CloseDB()
 
