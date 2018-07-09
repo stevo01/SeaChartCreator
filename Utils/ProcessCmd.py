@@ -84,7 +84,7 @@ def ConvertPicture(infile, outfile, options=""):
         logger.error("ConvertPicture error occure: {}".format(cmd))
     return ret
 
-
+'''
 def GenerateKapFile(filenamein, filenameout, ti):
     ensure_dir(filenameout)
     cmd = "{} {} {} {} {} {} {} -t {}".format(IMGKAP_APP, filenamein, ti.NW_lat, ti.NW_lon, ti.SE_lat, ti.SE_lon, filenameout, ti.name)
@@ -92,8 +92,8 @@ def GenerateKapFile(filenamein, filenameout, ti):
     if ret is not 0:
         #assert(ret == 0)
         logger = getlog()
-        logger.error("Kap File Generation failed: {}".format(cmd))        
-
+        logger.error("Kap File Generation failed: {}".format(cmd))
+'''
 
 '''
 c:\data\OSM\50_SeaChartCreator\ExternalUtils\imgkap>imgkap.exe
@@ -111,20 +111,7 @@ Convert img to kap :
         imgkap mykap.png lat0 lon0 lat1 lon2 myresult.kap : convert myimg.png into myresult.kap using WGS84 positioning
         imgkap -s 'LOWEST LOW WATER' myimg.png lat0 lon0 lat1 lon2 -f : convert myimg.png into myimg.kap using WGS84 positioning and options
 '''
-
-
-def GenerateKapFileH(filenamein, headerfilename, filenameout, ti):
-    ensure_dir(filenameout)
-    cmd = "{} {} {} {} -t {}".format(IMGKAP_APP, filenamein, headerfilename, filenameout, ti.name)
-    ret = _ProcessCmd(cmd)
-    if ret is not 0:
-        logger = getlog()
-        logger.error("error occure: {}".format(cmd))
-        assert(ret == 0)
-    return ret
-
-
-def GenerateKapFileNew(filenamein, filenameout, ti):
+def GenerateKapFile(filenamein, filenameout, ti):
     ensure_dir(filenameout)
 
     # generate header
@@ -136,12 +123,9 @@ def GenerateKapFileNew(filenamein, filenameout, ti):
 
     cmd = "{} {} {} {} -t {}".format(IMGKAP_APP, filenamein, "temp.kap", filenameout, ti.name)
     ret = _ProcessCmd(cmd)
-    assert(ret == 0)
-
-    # cmd = "{} {} {}".format(IMGKAP_APP, filenameout, filenameout+'.png')
-    # ret = _ProcessCmd(cmd)
-    # assert(ret == 0)
-
+    if ret is not 0:
+        logger = getlog()
+        logger.error("error occure: {}".format(cmd))
 
 def ZipFiles(dirname, archivfilename):
     '''

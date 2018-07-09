@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 import os
 import shutil
-from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFileNew, \
+from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFile, \
     ConvertPicture
 from Utils.glog import getlog
 import datetime
@@ -102,7 +102,7 @@ class AtlasGenerator(object):
 
             # generate kap file
             self.logger.info("generate kap file {}".format(kapfilename))
-            GenerateKapFileNew(tempfilereduced, kapfilename, ci)
+            GenerateKapFile(tempfilereduced, kapfilename, ci)
 
         now = datetime.datetime.now()
         atlasfilename = "{}kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(self._WorkingDirectory,
