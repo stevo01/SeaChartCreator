@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<atlas version="1" name="InlandWaterways" outputFormat="PNGWorldfile">
+<atlas version="1" name="Europa 1" outputFormat="PNGWorldfile">
     <Layer name="Rhein_Rhone_Kanal_8">
         <Map maxTileCoordinate="8673792/5889280" minTileCoordinate="8664832/5881344" mapSource="OpenSeaMapTEST" zoom="16" name="Rhein_Rhone_Kanal_8 16"/>
     </Layer>
