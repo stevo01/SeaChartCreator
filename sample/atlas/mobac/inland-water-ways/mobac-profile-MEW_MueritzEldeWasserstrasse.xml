@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="MEW_MueritzEldeWasserstrasse" outputFormat="PNGWorldfile">
+    <Layer name="Mueritz">
+        <Map maxTileCoordinate="8984831/5437183" minTileCoordinate="8976896/5427968" mapSource="OpenSeaMapTEST" zoom="16" name="Mueritz_I 16"/>
+        <Map maxTileCoordinate="8976895/5432319" minTileCoordinate="8974848/5427968" mapSource="OpenSeaMapTEST" zoom="16" name="Mueritz_II 16"/>
+        <Map maxTileCoordinate="8982271/5441535" minTileCoordinate="8979456/5437184" mapSource="OpenSeaMapTEST" zoom="16" name="KleineMueritz 16"/>
+        <Map maxTileCoordinate="8980223/5427967" minTileCoordinate="8976640/5424640" mapSource="OpenSeaMapTEST" zoom="16" name="BinnenMueritz 16"/>
+    </Layer>
+    <Layer name="PlauerSee">
+        <Map maxTileCoordinate="8965375/5428479" minTileCoordinate="8960000/5423616" mapSource="OpenSeaMapTEST" zoom="16" name="PlauerSee2 16"/>
+        <Map maxTileCoordinate="8964095/5435135" minTileCoordinate="8960256/5428480" mapSource="OpenSeaMapTEST" zoom="16" name="temp 16"/>
+    </Layer>
+    <Layer name="Fleesensee">
+        <Map maxTileCoordinate="8968959/5429247" minTileCoordinate="8967424/5425664" mapSource="OpenSeaMapTEST" zoom="16" name="Fleesensee1 16"/>
+        <Map maxTileCoordinate="8967423/5429759" minTileCoordinate="8963840/5428480" mapSource="OpenSeaMapTEST" zoom="16" name="Fleesensee2 16"/>
+        <Map maxTileCoordinate="8971519/5426943" minTileCoordinate="8968704/5424128" mapSource="OpenSeaMapTEST" zoom="16" name="Fleesensee3 16"/>
+    </Layer>
+    <Layer name="Koelpinsee">
+        <Map maxTileCoordinate="8976639/5427967" minTileCoordinate="8973568/5424384" mapSource="OpenSeaMapTEST" zoom="16" name="Koelpinsee1 16"/>
+        <Map maxTileCoordinate="8974079/5424127" minTileCoordinate="8972032/5422848" mapSource="OpenSeaMapTEST" zoom="16" name="Koelpinsee2 16"/>
+        <Map maxTileCoordinate="8973567/5426943" minTileCoordinate="8971520/5424128" mapSource="OpenSeaMapTEST" zoom="16" name="Koelpinsee3 16"/>
+    </Layer>
+    <Layer name="MEW_1">
+        <Map maxTileCoordinate="8960255/5430015" minTileCoordinate="8951296/5426688" mapSource="OpenSeaMapTEST" zoom="16" name="MEW_1 16"/>
+    </Layer>
+    <Layer name="MEW_2">
+        <Map maxTileCoordinate="8951295/5434623" minTileCoordinate="8948224/5426688" mapSource="OpenSeaMapTEST" zoom="16" name="MEW_2 16"/>
+    </Layer>
+    <Layer name="MEW_3">
+        <Map maxTileCoordinate="8948223/5435135" minTileCoordinate="8939520/5432832" mapSource="OpenSeaMapTEST" zoom="16" name="MEW_3 16"/>
+    </Layer>
+    <Layer name="MEW_4">
+        <Map maxTileCoordinate="8941823/5432831" minTileCoordinate="8931840/5429760" mapSource="OpenSeaMapTEST" zoom="16" name="MEW_4 16"/>
+    </Layer>
+    <Layer name="MEW_5">
+        <Map maxTileCoordinate="8931839/5441791" minTileCoordinate="8928000/5427968" mapSource="OpenSeaMapTEST" zoom="16" name="MEW_5 16"/>
+    </Layer>
+    <Layer name="MEW_6">
+        <Map maxTileCoordinate="8928255/5445887" minTileCoordinate="8925184/5441792" mapSource="OpenSeaMapTEST" zoom="16" name="MEW 6"/>
+    </Layer>
+    <Layer name="MEW_7">
+        <Map maxTileCoordinate="8925183/5448447" minTileCoordinate="8919808/5444608" mapSource="OpenSeaMapTEST" zoom="16" name="MEW_6 16"/>
+    </Layer>
+    <Layer name="MEW_8">
+        <Map maxTileCoordinate="8920575/5450751" minTileCoordinate="8916224/5448448" mapSource="OpenSeaMapTEST" zoom="16" name="MEW_8 16"/>
+    </Layer>
+    <Layer name="MEW_9">
+        <Map maxTileCoordinate="8916735/5455103" minTileCoordinate="8912384/5450752" mapSource="OpenSeaMapTEST" zoom="16" name="MEW_9 16"/>
+    </Layer>
+</atlas>

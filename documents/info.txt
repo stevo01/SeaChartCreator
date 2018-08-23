@@ -1,0 +1,35 @@
+OpenSeaMap Charts 
+
+This KAP bundle was created by the OpenSeaMap Project. The charts are based on 
+data provided from openstreetmap [5] and openseamap project [1]. 
+You can use the openCPN application to show the charts on PC based hardware or 
+on android phone/tablet. Read openCPN documentation for installation procedure
+of the chart bundles [6]. 
+
+Please note that the maps may contain errors and are not always up-to-date. 
+Consider that good seamanship requires the use of official nautical charts. 
+OpenSeaMap is for use with other charts and cannot replace official charts. 
+Use is at your own risk.[7] 
+
+Please feel free to use the openseamap forum if you have questions or notes 
+according to the charts (https://forum.openseamap.org/). 
+
+License:
+  All the data in the OpenStreetMap database, including OpenSeaMap data, is under the ODbL. 
+  The chart tiles are under the "Creative Commons Attribution Share-Alike 2.0" license. 
+  In short, the license stipulates that any use of OSM data is permissible, even for 
+  commercial purposes, however OpenStreetMap must be attributed and the resulting data 
+  must be released under the same license.
+  see www.openstreetmap.org/copyright for details
+
+links:
+  [1] open seamap project: https://www.openseamap.org
+  [2] offline charts in kap format: https://ftp5.gwdg.de/pub/misc/openstreetmap/openseamap/charts/kap
+  [3] online charts: http://map.openseamap.org/
+  [4] forum: https://forum.openseamap.org/
+  [5] openstreetmap: https://www.openstreetmap.org
+  [6] chart installation procedure for opencpn: https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual:getting_started:chart_installation
+  [7] Disclaimer http://wiki.openseamap.org/wiki/OpenSeaMap-dev:Chart-Disclaimer#OpenSeaMap
+ 
+
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="MHW-MueritzHavelWasserstrasse" outputFormat="PNGWorldfile">
+    <Layer name="MHW_1">
+        <Map maxTileCoordinate="8993791/5452031" minTileCoordinate="8984320/5444864" mapSource="OpenSeaMapTEST" zoom="16" name="MHW 16"/>
+    </Layer>
+    <Layer name="MHW_2">
+        <Map maxTileCoordinate="8987135/5444863" minTileCoordinate="8982272/5435392" mapSource="OpenSeaMapTEST" zoom="16" name="MHW 16"/>
+    </Layer>
+</atlas>
