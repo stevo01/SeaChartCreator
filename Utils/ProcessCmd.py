@@ -76,8 +76,8 @@ def JoinPicture(xcnt, ycnt, filenamelist, filename):
     return ret
 
 
-def ConvertPicture(infile, outfile, options=""):
-    cmd = "{} {} {} png8:{}".format(CONVERT_APP, infile, options, outfile)
+def ConvertPicture(infile, outfile, options="+dither -colors 127 "):
+    cmd = "{} {} {} {}".format(CONVERT_APP, infile, options, outfile)
     ret = _ProcessCmd(cmd)
     if ret is not 0:
         logger = getlog()
@@ -118,10 +118,12 @@ def GenerateKapFile(filenamein, filenameout, ti):
     gen = KapGen()
     header = gen.GenHeader(ti)
 
-    with open('temp.kap', "w") as f:
+    kapheaderfilename = filenamein + ".header.kap"
+
+    with open(kapheaderfilename, "w") as f:
         f.write(header)
 
-    cmd = "{} {} {} {} -t {}".format(IMGKAP_APP, filenamein, "temp.kap", filenameout, ti.name)
+    cmd = "{} {} {} {} -t {}".format(IMGKAP_APP, filenamein, kapheaderfilename, filenameout, ti.name)
     ret = _ProcessCmd(cmd)
     if ret is not 0:
         logger = getlog()
