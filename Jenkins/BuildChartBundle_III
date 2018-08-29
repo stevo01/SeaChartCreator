@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
         string(name: 'BUNDLENAME', defaultValue: 'test', description: 'name of chart bundle')
-        string(name: 'BUNDLEPATH', defaultValue: './sample/atlas/osmcb/sea', description: 'name of chart bundle')
+        string(name: 'BUNDLEPATH', defaultValue: './sample/atlas/osmcb/sea', description: 'chart bundle path: ./sample/atlas/osmcb/sea , ./sample/atlas/mobac/inland-water-ways ')
     }
     
     stages {
