@@ -55,10 +55,12 @@ class AtlasGenerator(object):
         kapdirname = "{}kap/{}/".format(self._WorkingDirectory, atlasname)
 
         RemoveDir(kapdirname)
-
+        cnt=0
         for singlemap in atlas:
+            cnt = cnt + 1
             ci = ChartInfo(singlemap)
-            self.logger.info("Process Chart {}".format(ci.name))
+            self.logger.info("################################################################################")
+            self.logger.info("Process Chart {}, {}/{}".format(ci.name, cnt, len(atlas)))
 
             # cleanup temp directories
             self.logger.info("Cleanup Stitch Directory")
