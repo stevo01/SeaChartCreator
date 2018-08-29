@@ -26,6 +26,7 @@ from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFile, \
 from Utils.glog import getlog
 import datetime
 from Utils.Helper import ChartInfo
+import sys
 
 STICHDIR = "StichDir"
 
@@ -51,11 +52,14 @@ class AtlasGenerator(object):
     def GenerateKAP(self, atlas, atlasname, reducecolors):
         self.atlas = atlas
 
+        now = datetime.datetime.now()
+        creationtimestamp = now.strftime("%Y%m%d-%H%M")
+
         self.logger.info("Cleanup Kap Directory")
-        kapdirname = "{}kap/{}/".format(self._WorkingDirectory, atlasname)
+        kapdirname = "{}kap/OSM-OpenCPN2-KAP-{}-{}/".format(self._WorkingDirectory, atlasname, creationtimestamp)
 
         RemoveDir(kapdirname)
-        cnt=0
+        cnt = 0
         for singlemap in atlas:
             cnt = cnt + 1
             ci = ChartInfo(singlemap)
@@ -100,14 +104,26 @@ class AtlasGenerator(object):
                 tempfilereduced = "{}{}_{}_8.png".format(PathTempTiles, ci.name, ci.zoom)
                 ConvertPicture(tempfilename, tempfilereduced)
             else:
-                tempfilereduced = tempfilename 
+                tempfilereduced = tempfilename
 
             # generate kap file
             self.logger.info("generate kap file {}".format(kapfilename))
             GenerateKapFile(tempfilereduced, kapfilename, ci)
 
-        now = datetime.datetime.now()
-        atlasfilename = "{}kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(self._WorkingDirectory,
-                                                                 atlasname,
-                                                                 now.strftime("%Y%m%d-%H%M"))
+        # copy info.txt
+        shutil.copyfile("documents/info.txt", kapdirname + "info.txt")
+
+        atlasfilename = "{}history/kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(self._WorkingDirectory,
+                                                                         atlasname,
+                                                                         creationtimestamp)
+
         ZipFiles(kapdirname, atlasfilename)
+
+        if sys.platform != 'win32':
+
+            atlasfilename_latest = "./work/kap/OSM-OpenCPN2-KAP-{}.7z".format(atlasname)
+
+            ratlasfilename = "../history/kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(atlasname,
+                                                                               creationtimestamp)
+
+            os.symlink(ratlasfilename, atlasfilename_latest)
