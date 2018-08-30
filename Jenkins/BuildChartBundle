@@ -1,35 +1,81 @@
-node {
-    stage('Prepare Build') 
-    {
-        sh"""#!/bin/bash
-        rm -fr SeaChartCreator       
-        # clone SeaChartCreator 
-        git clone https://github.com/stevo01/SeaChartCreator.git 
-        cd SeaChartCreator/
- 		"""
-	}
- 	
- 	stage('FetchTiles') 
-    {
- 		sh"""#!/bin/bash
- 		cd SeaChartCreator/
-        python3 fetch.py -q -i "./sample/atlas/mobac/inland-water-ways/mobac-profile-${params.BUNDLENAME}.xml" -d /var/lib/SeaChartCreator/work/database/
- 	    """
- 	}
-        
- 	stage('Build KAP Files') 
-    {
- 		sh"""#!/bin/bash
- 		cd SeaChartCreator/
- 		python3 build.py -q -i "./sample/atlas/mobac/inland-water-ways/mobac-profile-${params.BUNDLENAME}.xml" -d /var/lib/SeaChartCreator/work/database/
- 	    ls /var/lib/SeaChartCreator/work/database/ -l
- 	    """
- 	}
- 	
- 	stage('Deploy Files') 
-    {
- 		sh"""#!/bin/bash
- 		cd SeaChartCreator/
- 		"""
- 	}
+pipeline {
+    agent any
+    parameters {
+        string(name: 'BUNDLENAME', defaultValue: 'test', description: 'name of chart bundle')
+        string(name: 'BUNDLEPATH', defaultValue: './sample/atlas/osmcb/sea', description: 'chart bundle path: ./sample/atlas/osmcb/sea , ./sample/atlas/mobac/inland-water-ways ')
+        booleanParam(name: 'DEPLOY',     defaultValue: true, description: 'deploy files if true')
+    }
+    
+    stages {
+    
+        stage('clone OSM_pmd4dl') 
+	    {
+	    	steps
+	    	{
+        	     checkout([$class: 'GitSCM', 
+	        		  branches: [[name: '*/master']], 
+	        		  doGenerateSubmoduleConfigurations: false, 
+	        		  extensions: [], 
+	        		  extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'OSM_pmd4dl']], 
+            		  submoduleCfg: [], 
+	        		  userRemoteConfigs: [[url: 'https://github.com/stevo01/OSM_pmd4dl.git'], 
+	        		 ]])
+	        }   
+	    }
+	    
+     	stage('fetch tiles') 
+        {
+            steps{
+     		  sh"""#!/bin/bash
+     		  cd SeaChartCreator/
+              python3 fetch.py -q -i ${params.BUNDLEPATH}/osmcb-catalog-${params.BUNDLENAME}.xml \
+                                  -d /var/lib/SeaChartCreator/work/database/
+              """
+            }   
+        }
+    
+     	stage('build KAP files') 
+        {
+            steps{
+             sh"""#!/bin/bash
+         	   cd SeaChartCreator/
+         	   rm -fr ./work/
+         	   python3 build.py -q -r -i ${params.BUNDLEPATH}/osmcb-catalog-${params.BUNDLENAME}.xml \
+         	                          -d /var/lib/SeaChartCreator/work/database/
+         	   ls /var/lib/SeaChartCreator/work/database/ -l
+         	   """
+            }
+                
+        }
+     	
+     	stage('generate geojson')
+     	{
+            steps{
+     	    sh """#!/bin/bash
+     		cd OSM_pmd4dl
+    		python3 kap2geojson.py -u https://ftp5.gwdg.de \
+    		                       -d /pub/misc/openstreetmap/openseamap/charts/history/kap \
+    		                       -f ./../SeaChartCreator/work/history/kap/ \
+    		                       -p ./../SeaChartCreator/sample/atlas/osmcb/sea/osmcb-catalog-${params.BUNDLENAME}.xml
+     		"""
+            }
+     	}
+     	
+     	stage('deploy files') 
+        {	
+        	when { 
+				expression { return params.DEPLOY } 
+			}
+     		
+     		steps{
+            sh """#!/bin/bash
+     		cd OSM_pmd4dl
+     		ls ./../SeaChartCreator/work/kap/
+     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/kap/*.7z osm-trans@golf.franken.de:charts/kap/
+     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.7z osm-trans@golf.franken.de:charts/history/kap/
+     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.geojson osm-trans@golf.franken.de:charts/history/kap/
+     		"""
+     		}
+     	} 	
+      }
 }
