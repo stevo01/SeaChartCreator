@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalog name="test" size="9" version="2">
+<catalog name="testiww" size="9" version="2">
     <Layer name="L16" zoomLvl="16">
         <Map name="L16-21472-35168-8-16" mapSource="AH OpenStreetMap Mapnik" ulc="52.58970077, 13.18359375" lrc="52.56299504, 13.27148438" minTileCoordinate="21472/35168" maxTileCoordinate="21479/35183" number="16-21472-35168-8-16"/>
     </Layer>
