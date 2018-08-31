@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="Bodensee" outputFormat="PNGWorldfile">
+    
+	<Layer name="Bodensee_1">
+        <Map maxTileCoordinate="8818943/5850879" minTileCoordinate="8814080/5847296" mapSource="OpenSeaMapTEST" zoom="16" name="Bodensee_1 16"/>
+    </Layer>
+ 	<Layer name="Bodensee_2">
+        <Map maxTileCoordinate="8818943/5857791" minTileCoordinate="8814080/5850880" mapSource="OpenSeaMapTEST" zoom="16" name="Bodensee_2 16"/>
+    </Layer>
+ 	<Layer name="Bodensee_3">
+        <Map maxTileCoordinate="8843263/5868799" minTileCoordinate="8823296/5860608" mapSource="OpenSeaMapTEST" zoom="16" name="Bodensee_3 16"/>
+    </Layer>
+ 	<Layer name="Bodensee_4">
+        <Map maxTileCoordinate="8834559/5860607" minTileCoordinate="8818944/5854720" mapSource="OpenSeaMapTEST" zoom="16" name="Bodensee_4 16"/>
+    </Layer>
+ 	<Layer name="Bodensee_5">
+        <Map maxTileCoordinate="8823551/5854719" minTileCoordinate="8818944/5851136" mapSource="OpenSeaMapTEST" zoom="16" name="Bodensee_5 16"/>
+    </Layer>
+ 	<Layer name="Bodensee_6">
+        <Map maxTileCoordinate="8814079/5855743" minTileCoordinate="8808704/5844480" mapSource="OpenSeaMapTEST" zoom="16" name="Bodensee_6 16"/>
+    </Layer>
+ 	<Layer name="Bodensee_7">
+        <Map maxTileCoordinate="8808703/5856767" minTileCoordinate="8804096/5849600" mapSource="OpenSeaMapTEST" zoom="16" name="Bodensee_7 16"/>
+    </Layer>
+
+</atlas>
