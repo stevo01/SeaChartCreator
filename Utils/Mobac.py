@@ -43,7 +43,7 @@ def DetectType(xmldoc):
 
 
 # this function parses a mobac projekt file and returns list with tile information for each found map/chart
-def ExtractMapsFromAtlas(filename):
+def ExtractMapsFromAtlas(filename, zoom_filter=[]):
     xmldoc = minidom.parse(filename)
 
     doctype = DetectType(xmldoc)
@@ -58,6 +58,9 @@ def ExtractMapsFromAtlas(filename):
             name = item.attributes['name'].value
             name = name.replace(" ", "_")
             zoom = int(item.attributes['zoom'].value)
+
+            if zoom_filter in zoom_filter:
+                continue
 
             minTileCoordinate = item.attributes['minTileCoordinate'].value  # NW
             x_min, y_min = minTileCoordinate.split('/')
@@ -86,6 +89,9 @@ def ExtractMapsFromAtlas(filename):
         for layer in layerlist:
 
             zoom = int(layer.attributes['zoomLvl'].value)
+
+            if zoom in zoom_filter:
+                continue
 
             itemlist = layer.getElementsByTagName('Map')
 

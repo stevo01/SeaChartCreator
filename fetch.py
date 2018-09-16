@@ -60,6 +60,11 @@ def main():
                       default=True,
                       help="set log level to info (instead debug)")
 
+    parser.add_option("-s", "--skip",
+                      action="store_true",
+                      dest="skip_os",
+                      help="skip odd zoom levels")
+
     options, arguments = parser.parse_args()
     arguments = arguments
 
@@ -68,10 +73,15 @@ def main():
 
     logger.info('Start fetch tiles')
 
+    if(options.skip_os is True):
+        zoom_filter = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+    else:
+        zoom_filter = []
+
     # get maps from mobac project file
     if options.ProjectFile is not None:
         # get list of chart areas from project file
-        atlas, name = ExtractMapsFromAtlas(options.ProjectFile)
+        atlas, name = ExtractMapsFromAtlas(options.ProjectFile, zoom_filter)
         logger.info('atlas name={} number of maps={}'.format(name, len(atlas)))
     else:
         exit()
