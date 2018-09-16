@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'BUNDLENAME', defaultValue: 'osmcb-catalog-test', description: 'name of chart bundle e.g. mobac-profile-Europa1, /osmcb-catalog-Baltic')
+        /*string(name: 'BUNDLENAME', defaultValue: 'osmcb-catalog-test', description: 'name of chart bundle e.g. mobac-profile-Europa1, /osmcb-catalog-Baltic')*/
         string(name: 'BUNDLEPATH', defaultValue: './sample/atlas/osmcb/sea', description: 'chart bundle path: ./sample/atlas/osmcb/sea , ./sample/atlas/mobac/inland-water-ways ')
         booleanParam(name: 'DEPLOY',     defaultValue: true, description: 'deploy files if true')
     }
@@ -28,8 +28,8 @@ pipeline {
             steps{
      		  sh"""#!/bin/bash
      		  cd SeaChartCreator/
-              python3 fetch.py -q -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
-                                  -d /var/lib/SeaChartCreator/work/database/
+              python3 fetch.py -q -i -s ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
+                                     -d /var/lib/SeaChartCreator/work/database/
               """
             }   
         }
@@ -40,8 +40,8 @@ pipeline {
              sh"""#!/bin/bash
          	   cd SeaChartCreator/
          	   rm -fr ./work/
-         	   python3 build.py -q -r -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
-         	                          -d /var/lib/SeaChartCreator/work/database/
+         	   python3 build.py -q -r -s -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
+         	                             -d /var/lib/SeaChartCreator/work/database/
          	   ls /var/lib/SeaChartCreator/work/database/ -l
          	   """
             }
