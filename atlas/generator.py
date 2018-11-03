@@ -27,6 +27,7 @@ from Utils.glog import getlog
 import datetime
 from Utils.Helper import ChartInfo
 import sys
+from tile.mbtilestore import MBTileStore
 
 STICHDIR = "StichDir"
 
@@ -35,6 +36,9 @@ def RemoveDir(path):
     if os.path.isdir(path):
         shutil.rmtree(path)
 
+def RemoveFile(filename):
+    if os.path.exists(filename):
+        os.remove(filename)
 
 class AtlasGenerator(object):
     '''
@@ -71,7 +75,6 @@ class AtlasGenerator(object):
             PathTempTiles = self._WorkingDirectory + "{}/{}/{}/{}/".format(STICHDIR, atlasname, ci.name, ci.zoom)
             RemoveDir(PathTempTiles)
             kapfilename = "{}/{}_{}.kap".format(kapdirname, ci.name, ci.zoom)
-            kapheaderfilename = "{}/{}_{}.kap.header".format(kapdirname, ci.name, ci.zoom)
 
             # export tiles
             self.logger.info("Export {} Tiles".format(ci.nr_of_tiles))
@@ -125,5 +128,72 @@ class AtlasGenerator(object):
 
             ratlasfilename = "../history/kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(atlasname,
                                                                                creationtimestamp)
+
+            os.symlink(ratlasfilename, atlasfilename_latest)
+
+    def generate_mbtile(self, atlas, atlasname):
+        '''
+        generate atlas in mbtile format
+        '''
+        self.atlas = atlas
+
+        now = datetime.datetime.now()
+        creationtimestamp = now.strftime("%Y%m%d-%H%M")
+
+        atlasdirname = "{}mbtiles/OSM-mbtile-{}-{}/".format(self._WorkingDirectory, atlasname, creationtimestamp)
+        mbtilefilename = "{}/{}.mbtiles".format(atlasdirname, atlasname)
+
+        self.logger.info("Cleanup tilestore Directory")
+        RemoveDir(atlasdirname)
+
+        tilestore = MBTileStore(mbtilefilename)
+        tilestore.SetMetadata("name", atlasname)
+        tilestore.SetMetadata("format", "png")
+
+        cnt = 0
+        for singlemap in atlas:
+            cnt = cnt + 1
+            ci = ChartInfo(singlemap)
+            self.logger.info("################################################################################")
+            self.logger.info("Process Chart {}, {}/{}".format(ci.name, cnt, len(atlas)))
+
+            # export tiles
+            self.logger.info("Export {} Tiles".format(ci.nr_of_tiles))
+            for y in range(ci.ytile_nw, ci.ytile_se + 1):
+                for x in range(ci.xtile_nw, ci.xtile_se + 1):
+                    # get tiles from db
+                    tile = self.db.GetTile("OpenSeaMapMerged", ci.zoom, x, y)
+                    # check if tile exists
+                    if tile is None:
+                        self.logger.error("tile with z={} x={} y={} not available in store\n")
+                        assert(0)
+                    tilestore.StoreTile(tile, ci.zoom, x, y)
+
+
+        tilestore.SetMetadata("bounds", 
+                              "{},{},{},{}".format(ci.SE_lat,
+                                                   ci.SE_lon,
+                                                   ci.NW_lat,
+                                                   ci.NW_lon))
+
+        # copy info.txt
+        shutil.copyfile("documents/info.txt", atlasdirname + "info.txt")
+
+        atlasfilename = "{}history/mbtiles/OSM-mbtile-{}-{}.7z".format(self._WorkingDirectory,
+                                                                            atlasname,
+                                                                            creationtimestamp)
+
+        tilestore.CloseDB()
+
+        ZipFiles(atlasdirname, atlasfilename)
+
+        if sys.platform != 'win32':
+
+            atlasfilename_latest = "./work/mbtiles/OSM-mbtile-{}.7z".format(atlasname)
+
+            ratlasfilename = "../history/mbtiles/OSM-mbtile-{}-{}.7z".format(atlasname,
+                                                                            creationtimestamp)
+
+            RemoveFile(atlasfilename_latest)
 
             os.symlink(ratlasfilename, atlasfilename_latest)
