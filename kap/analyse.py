@@ -102,8 +102,6 @@ class kapfile(KapBase):
 
     def AnalyseHeader(self):
 
-        kh = self.GetKapHeader()
-
         VER = self.ParseElement("VER\/.*")
         self.VER = VER[4:]
 

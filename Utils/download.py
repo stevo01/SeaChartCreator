@@ -85,7 +85,7 @@ def CheckExternelUtils():
     elif platform == "win32":
         if(os.path.isfile(FileNameImageMagick) is False):
             print("start download {}".format(urlImageMagick))
-            filename = HttpLoadFile(urlImageMagick, FileNameImageMagick)
+            #  filename = HttpLoadFile(urlImageMagick, FileNameImageMagick)
 
         if(os.path.isdir(PathNameImageMagick) is False):
             with ZipFile(FileNameImageMagick) as myzip:

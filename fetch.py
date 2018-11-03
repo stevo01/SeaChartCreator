@@ -33,7 +33,7 @@ DBDIR = './work/database/'
 WDIR = './work/'
 
 
-def main():  
+def main():
     parser = OptionParser()
 
     parser.add_option("-i", "--InFile",

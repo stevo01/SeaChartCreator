@@ -59,19 +59,19 @@ def WriteMobacProject(name, filename, maps, map_source="OpenSeaMapTEST"):
 
     doc.appendChild(root)
 
-    for map in maps:
+    for _map in maps:
 
         # Create Element
         tempChild = doc.createElement("Layer")
-        tempChild.setAttribute("name", map.name)
+        tempChild.setAttribute("name", _map.name)
         root.appendChild(tempChild)
 
         tempMap = doc.createElement("Map")
-        tempMap.setAttribute("maxTileCoordinate", "{}/{}".format(map.xtile_se * 256, map.ytile_se * 256))
-        tempMap.setAttribute("minTileCoordinate", "{}/{}".format(map.xtile_nw * 256, map.ytile_nw * 256))
+        tempMap.setAttribute("maxTileCoordinate", "{}/{}".format(_map.xtile_se * 256, _map.ytile_se * 256))
+        tempMap.setAttribute("minTileCoordinate", "{}/{}".format(_map.xtile_nw * 256, _map.ytile_nw * 256))
         tempMap.setAttribute("mapSource", map_source)
         tempMap.setAttribute("zoom", "{}".format(map.zoom))
-        tempMap.setAttribute("name", "{} {}".format(map.name, map.zoom))
+        tempMap.setAttribute("name", "{} {}".format(_map.name, _map.zoom))
 
         tempChild.appendChild(tempMap)
 
@@ -102,23 +102,23 @@ def WriteChartDesignerProject(name, filename, maps, map_source="AH OpenStreetMap
 
     doc.appendChild(root)
 
-    for map in maps:
+    for _map in maps:
 
         # Create Element
         tempChild = doc.createElement("Layer")
-        tempChild.setAttribute("name", map.name)
-        tempChild.setAttribute("zoomLvl", "{}".format(map.zoom))
+        tempChild.setAttribute("name", _map.name)
+        tempChild.setAttribute("zoomLvl", "{}".format(_map.zoom))
 
         root.appendChild(tempChild)
 
         tempMap = doc.createElement("Map")
-        tempMap.setAttribute("name", "{} {}".format(map.name, map.zoom))
+        tempMap.setAttribute("name", "{} {}".format(_map.name, _map.zoom))
         tempMap.setAttribute("mapSource", map_source)
-        tempMap.setAttribute("ulc", "{}, {}".format(map.NW_lat, map.NW_lon))
-        tempMap.setAttribute("lrc", "{}, {}".format(map.SE_lat, map.SE_lon))
-        tempMap.setAttribute("minTileCoordinate", "{}/{}".format(map.ytile_nw, map.xtile_nw))
-        tempMap.setAttribute("maxTileCoordinate", "{}/{}".format(map.ytile_se, map.xtile_se))
-        tempMap.setAttribute("number", "{}{}{}".format(map.zoom, map.ytile_nw, map.xtile_nw))
+        tempMap.setAttribute("ulc", "{}, {}".format(_map.NW_lat, _map.NW_lon))
+        tempMap.setAttribute("lrc", "{}, {}".format(_map.SE_lat, _map.SE_lon))
+        tempMap.setAttribute("minTileCoordinate", "{}/{}".format(_map.ytile_nw, _map.xtile_nw))
+        tempMap.setAttribute("maxTileCoordinate", "{}/{}".format(_map.ytile_se, _map.xtile_se))
+        tempMap.setAttribute("number", "{}{}{}".format(_map.zoom, _map.ytile_nw, _map.xtile_nw))
         tempChild.appendChild(tempMap)
 
     doc.writexml(open(filename, 'w'),

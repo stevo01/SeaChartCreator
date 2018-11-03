@@ -5,9 +5,11 @@ SeaChartCreator is based on python script. The script was developed and tested o
 - Linux Ubuntu 16.04 / 64 bit 
 - python 3.5
 
-The need following externel librarys / applications:
+The need following external librarys / applications:
 - ImageMagick 7.0.8-1
 - imgkap Ver. 1.1
+- FreeImage - https://kent.dl.sourceforge.net/project/freeimage/Source%20Distribution/3.18.0/FreeImage3180.zip
+- pyyaml
 
 SeaChartCreator use tiles from the OpenSeaMap Projekt and the Open Streetmap Projekt.
 

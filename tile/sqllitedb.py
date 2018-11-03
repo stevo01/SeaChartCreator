@@ -21,7 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 from Utils.Helper import ensure_dir
 from Utils.glog import getlog
-import hashlib
 from tile.Info import TileInfo
 import os
 import sqlite3

@@ -116,7 +116,7 @@ class KapGen(KapBase):
         ret += "PLY/4,{:.6f},{:.6f}\n".format(self.PLY_SW.lat, self.PLY_SW.lon)
 
         ret += "DTM/0.000000,0.000000\n"
-        #ret += "CPH/0\n"
+        #  ret += "CPH/0\n"
         ret += "OST/1\n"
         ret += "IFM/7\n"
 
@@ -150,7 +150,7 @@ class KapGen(KapBase):
         # DU - Drawing Units in pixels/inch (same as DPI resolution) e.g. 50, 150, 175, 254, 300
         self.DU = "{}".format(SCALING_VALUE)
 
-        a = 2 ** 2
+        #  a = 2 ** 2
 
         resolution = 156543.03 * math.cos(math.radians(ti.NW_lat)) / (2 ** ti.zoom)
         scaling = SCALING_VALUE * 39.37 * resolution

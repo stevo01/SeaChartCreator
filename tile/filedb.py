@@ -26,7 +26,6 @@ import os
 import io
 import yaml
 import hashlib
-import logging
 from Utils.glog import getlog
 
 

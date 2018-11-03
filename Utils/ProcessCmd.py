@@ -66,7 +66,7 @@ def JoinPicture(xcnt, ycnt, filenamelist, filename):
     options = ' '
     # options += '-limit memory 0 '
     options += '+frame '
-    options += '+shadow ' 
+    options += '+shadow '
     options += '+label '
     cmd = "{} {} -tile {}x{} -geometry 256x256+0+0 {} {}".format(MONTAGE_APP, options, xcnt, ycnt, filenamelist, filename)
     ret = _ProcessCmd(cmd)
@@ -83,6 +83,7 @@ def ConvertPicture(infile, outfile, options="+dither -colors 127 "):
         logger = getlog()
         logger.error("ConvertPicture error occure: {}".format(cmd))
     return ret
+
 
 '''
 def GenerateKapFile(filenamein, filenameout, ti):
@@ -111,6 +112,8 @@ Convert img to kap :
         imgkap mykap.png lat0 lon0 lat1 lon2 myresult.kap : convert myimg.png into myresult.kap using WGS84 positioning
         imgkap -s 'LOWEST LOW WATER' myimg.png lat0 lon0 lat1 lon2 -f : convert myimg.png into myimg.kap using WGS84 positioning and options
 '''
+
+
 def GenerateKapFile(filenamein, filenameout, ti):
     ensure_dir(filenameout)
 
@@ -128,6 +131,7 @@ def GenerateKapFile(filenamein, filenameout, ti):
     if ret is not 0:
         logger = getlog()
         logger.error("error occure: {}".format(cmd))
+
 
 def ZipFiles(dirname, archivfilename):
     '''

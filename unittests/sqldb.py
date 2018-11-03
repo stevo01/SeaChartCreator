@@ -65,7 +65,6 @@ class TestSQLliteDB(unittest.TestCase):
         self.assertEqual(tile1.md5, tile2.md5)
         self.assertEqual(tile1.updated, tile2.updated)
 
-
     def test_Tile_002(self):
         '''
         update tile
@@ -104,7 +103,6 @@ class TestSQLliteDB(unittest.TestCase):
         self.assertEqual(tile1.lastmodified, tile2.lastmodified)
         self.assertEqual(tile1.md5, tile2.md5)
         self.assertEqual(True, tile2.updated)
-
 
 
 if __name__ == "__main__":
