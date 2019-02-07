@@ -78,6 +78,8 @@ class AtlasGenerator(object):
 
             # export tiles
             self.logger.info("Export {} Tiles".format(ci.nr_of_tiles))
+
+            cnt=1
             for y in range(ci.ytile_nw, ci.ytile_se + 1):
                 for x in range(ci.xtile_nw, ci.xtile_se + 1):
                     # get tiles from db
@@ -89,8 +91,9 @@ class AtlasGenerator(object):
                         assert(0)
 
                     # write tile to local file
-                    TileMerged = "{}{}-{}-{}.png".format(PathTempTiles, ci.zoom, y, x)
+                    TileMerged = "{0:s}{1:d}-{2:05d}.png".format(PathTempTiles, ci.zoom, cnt)
                     tile.StoreFile(TileMerged)
+                    cnt = cnt + 1
 
             # stich tiles
             self.logger.info("Stich {} tiles for map {}".format(ci.nr_of_tiles, ci.name))
