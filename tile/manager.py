@@ -136,7 +136,7 @@ class TileManager(object):
                - false skip update if file exists
         '''
         tile_osm1 = self.db.GetTile(self.TSOpenStreetMap.name, z, x, y)
-        if(tile_osm1 is not None) and(update is True):
+        if(tile_osm1 is not None) and(update is False):
             self.logger.debug("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.TSOpenStreetMap.name))
             self.tileskipped += 1
         else:
@@ -147,7 +147,7 @@ class TileManager(object):
                 self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm1, z, x, y)
 
         tile_osm2 = self.db.GetTile(self.TsOpenSeaMap.name, z, x, y)
-        if(tile_osm2 is not None) and (update is True):
+        if(tile_osm2 is not None) and (update is False):
             self.logger.debug("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.TsOpenSeaMap.name))
             self.tileskipped += 1
         else:

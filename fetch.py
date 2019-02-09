@@ -49,9 +49,8 @@ def main():
                       default=DBDIR)
 
     parser.add_option("-u", "--update",
-                      action="store_false",
+                      action="store_true",
                       dest="update",
-                      default=True,
                       help="update tile if new version existes")
 
     parser.add_option("-q", "--quiet",
