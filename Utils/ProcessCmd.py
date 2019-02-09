@@ -46,10 +46,10 @@ else:
     assert(0)
 
 
-def _ProcessCmd(cmd):
+def _ProcessCmd(cmd, CWD="./"):
     logger = getlog()
     logger.debug("execute command: {}".format(cmd))
-    return_code = subprocess.call(cmd, shell=True)
+    return_code = subprocess.call(cmd, cwd=CWD, shell=True)
     return return_code
 
 
