@@ -25,7 +25,7 @@ from atlas.generator import RemoveDir
 from tile.sqllitedb import TileSqlLiteDB
 from tile.manager import OpenStreetMap
 from Utils.glog import initlog, getlog
-from tile.filedb import TileFileDB
+from tile.Info import TileInfo
 
 
 class TestSQLliteDB(unittest.TestCase):
@@ -35,7 +35,6 @@ class TestSQLliteDB(unittest.TestCase):
         self.logger = getlog()
         RemoveDir('./../sample/tilestoresql/')
         self.sqldb = TileSqlLiteDB('./../sample/tilestoresql/')
-        self.filedb = TileFileDB('./../sample/tilestorefile/')
 
     def tearDown(self):
         pass
@@ -45,9 +44,10 @@ class TestSQLliteDB(unittest.TestCase):
         write tile and read it back
         '''
 
-        # read tile from filedb
-        tile1 = self.filedb.GetTile(OpenStreetMap, 16, 34997, 21449)
-        self.assertNotEqual(tile1, None)
+        tile1 = TileInfo(bytes([0x13, 0x00, 0x00, 0x00, 0x08, 0x00]),
+                         None,
+                         None,
+                         None)
 
         # write tile to sqllite db
         self.sqldb.StoreTile(OpenStreetMap, tile1, 16, 34997, 21449)
@@ -55,7 +55,7 @@ class TestSQLliteDB(unittest.TestCase):
         self.sqldb.StoreTile(OpenStreetMap, tile1, 1, 2, 11)
 
         # read tile back from sqllite db
-        tile2 = self.sqldb.RestoreTile(OpenStreetMap, 16, 34997, 21449)
+        tile2 = self.sqldb.GetTile(OpenStreetMap, 16, 34997, 21449)
 
         # compare tile
         self.assertEqual(tile1.data, tile2.data)
@@ -70,15 +70,16 @@ class TestSQLliteDB(unittest.TestCase):
         update tile
         '''
 
-        # read tile from filedb
-        tile1 = self.filedb.GetTile(OpenStreetMap, 16, 34997, 21449)
-        self.assertNotEqual(tile1, None)
+        tile1 = TileInfo(bytes([0x13, 0x00, 0x00, 0x00, 0x08, 0x00]),
+                         None,
+                         None,
+                         None)
 
         # write tile to sqllite db
         self.sqldb.StoreTile(OpenStreetMap, tile1, 1, 2, 23)
 
         # read tile back from sqllite db
-        tile2 = self.sqldb.RestoreTile(OpenStreetMap, 1, 2, 23)
+        tile2 = self.sqldb.GetTile(OpenStreetMap, 1, 2, 23)
 
         # compare tile
         self.assertEqual(tile1.data, tile2.data)
@@ -94,7 +95,7 @@ class TestSQLliteDB(unittest.TestCase):
         self.sqldb.StoreTile(OpenStreetMap, tile1, 1, 2, 23)
 
         # read tile back from sqllite db
-        tile2 = self.sqldb.RestoreTile(OpenStreetMap, 1, 2, 23)
+        tile2 = self.sqldb.GetTile(OpenStreetMap, 1, 2, 23)
 
         # compare tile
         self.assertEqual(tile1.data, tile2.data)

@@ -1,1 +1,1 @@
-__app_identifier__ = "seamapcreator version 0.1"
+__app_identifier__ = "seamapcreator version 0.2"

@@ -28,7 +28,7 @@ from kap.gen import KapGen
 class TestAtlas(unittest.TestCase):
 
     def setUp(self):
-        self.maps, self.name = ExtractMapsFromAtlas("./../sample/atlas/mobac-profile-testprj.xml")
+        self.maps, self.name = ExtractMapsFromAtlas("./../sample/atlas/mobac/mobac-profile-testprj.xml")
         self.ti = ChartInfo(self.maps[0])
         pass
 
@@ -63,7 +63,7 @@ class TestAtlas(unittest.TestCase):
 class TestKapHederGen(unittest.TestCase):
 
     def setUp(self):
-        self.maps, self.name = ExtractMapsFromAtlas("./../sample/atlas/mobac-profile-testprj.xml")
+        self.maps, self.name = ExtractMapsFromAtlas("./../sample/atlas/mobac/mobac-profile-testprj.xml")
         self.ti = ChartInfo(self.maps[0])
         pass
 
@@ -109,8 +109,8 @@ class TestKapInfo(unittest.TestCase):
         self.assertEqual(self.kapfile.REF_SW.lat, 52.419173)
         self.assertEqual(self.kapfile.REF_SW.lon, 13.156128)
 
-        self.assertEqual(self.kapfile.Pixel_x, 2048)
-        self.assertEqual(self.kapfile.Pixel_y, 1283)
+        self.assertEqual(self.kapfile.Pixel_y, 2048)
+        self.assertEqual(self.kapfile.Pixel_x, 1283)
         self.assertEqual(self.kapfile.VER, "2.0")
 
 
@@ -145,8 +145,8 @@ class TestKapInfo_KleinerWannsee(unittest.TestCase):
         self.assertEqual(self.kapfile.REF_SW.lat, 52.409121)
         self.assertEqual(self.kapfile.REF_SW.lon, 13.145142)
 
-        self.assertEqual(self.kapfile.Pixel_x, 768)
-        self.assertEqual(self.kapfile.Pixel_y, 1540)
+        self.assertEqual(self.kapfile.Pixel_y, 768)
+        self.assertEqual(self.kapfile.Pixel_x, 1540)
         self.assertEqual(self.kapfile.VER, "2.0")
 
 
@@ -182,8 +182,8 @@ class TestKapInfo_GrosserWannsee(unittest.TestCase):
         self.assertEqual(self.kapfile.REF_SW.lat, 52.419173)
         self.assertEqual(self.kapfile.REF_SW.lon, 13.156128)
 
-        self.assertEqual(self.kapfile.Pixel_x, 2048)
-        self.assertEqual(self.kapfile.Pixel_y, 1283)
+        self.assertEqual(self.kapfile.Pixel_y, 2048)
+        self.assertEqual(self.kapfile.Pixel_x, 1283)
         self.assertEqual(self.kapfile.VER, "2.0")
 
 

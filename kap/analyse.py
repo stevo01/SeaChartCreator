@@ -30,6 +30,7 @@ class kapfile(KapBase):
     def __init__(self, filename):
         self.filename = filename
         self.header = None
+        self.GetKapHeader()
         self.AnalyseHeader()
 
     def GetKapHeader(self):

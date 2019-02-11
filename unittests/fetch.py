@@ -7,12 +7,20 @@ import unittest
 from Utils.ProcessCmd import _ProcessCmd
 from Utils.glog import initlog
 
-PYTHON = "C:\\tools\\Python35\\python.exe"
+PYTHON = "python3"
 
 
 class Test(unittest.TestCase):
 
-    def test_fetch(self):
+    def setUp(self):
+        "Hook method for setting up the test fixture before exercising it."
+        pass
+
+    def tearDown(self):
+        "Hook method for deconstructing the test fixture after testing it."
+        pass
+
+    def test_fetch_001(self):
         ret = _ProcessCmd("{} fetch.py -i ./sample/atlas/osmcb/sea/osmcb-catalog-test.xml".format(PYTHON), "./../")
         self.assertEqual(ret, 0)
 
@@ -27,5 +35,4 @@ class Test(unittest.TestCase):
 
 if __name__ == "__main__":
     initlog('unittest', False)
-    #import sys;sys.argv = ['', 'Test.test_fetch']
     unittest.main()
