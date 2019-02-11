@@ -68,9 +68,12 @@ class TileManager(object):
         self.tiledownloaderror = 0
 
     def UpdateTiles(self, ti, update):
+        cnt=0
         for y in range(ti.ytile_nw, ti.ytile_se + 1):
             for x in range(ti.xtile_nw, ti.xtile_se + 1):
                 self._UpdateTile(ti.zoom, x, y, update)
+                cnt += 1
+        return cnt
 
     # load single file with http protocol
     def _HttpLoadFile(self, ts, z, x, y, tile=None):
@@ -95,13 +98,15 @@ class TileManager(object):
             lastmodified = f.headers['Last-Modified']
             etag = f.headers['ETag']
             ret = TileInfo(data, etag, date, lastmodified)
-            ret.updated = True
+            ret.updated = True#
+            ret.date_updated = True#
             self.tiledownloaded += 1
         except urllib.error.HTTPError as err:
             self.logger.debug("HTTPError: {}".format(err.code))
             try:
                 tile.date = err.headers['Date']
                 ret = tile
+                ret.date_updated = True
                 if ret is not None:
                     ret.updated = False
                 self.tiledownloadskipped += 1
@@ -136,14 +141,14 @@ class TileManager(object):
                - false skip update if file exists
         '''
         tile_osm1 = self.db.GetTile(self.TSOpenStreetMap.name, z, x, y)
-        if(tile_osm1 is not None) and(update is False):
+        if(tile_osm1 is not None) and (update is False):
             self.logger.debug("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.TSOpenStreetMap.name))
             self.tileskipped += 1
         else:
             tile_osm1 = self._HttpLoadFile(self.TSOpenStreetMap, z, x, y, tile_osm1)
             if tile_osm1 is None:
                 return
-            if tile_osm1.updated is True:
+            if ( tile_osm1.updated is True ) or ( tile_osm1.date_updated is True):
                 self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm1, z, x, y)
 
         tile_osm2 = self.db.GetTile(self.TsOpenSeaMap.name, z, x, y)
@@ -154,7 +159,7 @@ class TileManager(object):
             tile_osm2 = self._HttpLoadFile(self.TsOpenSeaMap, z, x, y, tile_osm2)
             if tile_osm2 is None:
                 return
-            if tile_osm2.updated is True:
+            if ( tile_osm2.updated is True ) or ( tile_osm2.date_updated is True):
                 self.db.StoreTile(self.TsOpenSeaMap.name, tile_osm2, z, x, y)
 
         tile_osm3 = self.db.GetTile(OpenSeaMapMerged, z, x, y)

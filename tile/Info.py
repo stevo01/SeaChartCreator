@@ -35,7 +35,9 @@ class TileInfo(object):
         self.date = date
         self.lastmodified = lastmodified
         self.md5 = None
-        self.updated = False
+        self.updated = False # True indicates update of tile data
+        self.date_updated = False # True indicates update of download date
+
 
     def SetData(self, filename):
         with open(filename, 'rb') as f:

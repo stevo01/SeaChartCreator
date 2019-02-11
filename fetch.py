@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 '''
 
-from optparse import OptionParser
+import argparse
 from Utils.Mobac import ExtractMapsFromAtlas
 from Utils.Helper import ChartInfo
 from tile.manager import TileManager
@@ -34,60 +34,57 @@ WDIR = './work/'
 
 
 def main():
-    parser = OptionParser()
+    parser = argparse.ArgumentParser(description='fetch tiles')
 
-    parser.add_option("-i", "--InFile",
-                      type="string",
-                      help="MOBAC Project File",
-                      dest="ProjectFile",
-                      default="./sample/atlas/mobac/mobac-profile-testprj.xml")
+    parser.add_argument("-i",
+                        help="MOBAC Project File",
+                        dest="ProjectFile",
+                        default="./sample/atlas/mobac/mobac-profile-testprj.xml")
 
-    parser.add_option("-d", "--DatabaseDirectory",
-                      type="string",
-                      help="tile store directory",
-                      dest="DBDIR",
-                      default=DBDIR)
+    parser.add_argument("-d", "--DatabaseDirectory",
+                        help="tile store directory",
+                        dest="DBDIR",
+                        default=DBDIR)
 
-    parser.add_option("-u", "--update",
-                      action="store_true",
-                      dest="update",
-                      help="update tile if new version existes")
+    parser.add_argument("-u", "--update",
+                        action="store_true",
+                        dest="update",
+                        help="update tile if new version existes")
 
-    parser.add_option("-q", "--quiet",
-                      action="store_false",
-                      dest="quiet",
-                      default=True,
-                      help="set log level to info (instead debug)")
+    parser.add_argument("-q", "--quiet",
+                        action="store_false",
+                        dest="quiet",
+                        default=True,
+                        help="set log level to info (instead debug)")
 
-    parser.add_option("-s", "--skip",
-                      action="store_true",
-                      dest="skip_os",
-                      help="skip odd zoom levels")
+    parser.add_argument("-s", "--skip",
+                        action="store_true",
+                        dest="skip_os",
+                        help="skip odd zoom levels")
 
-    options, arguments = parser.parse_args()
-    arguments = arguments
+    args = parser.parse_args()
 
-    initlog('fetch', options.quiet)
+    initlog('fetch', args.quiet)
     logger = getlog()
 
     logger.info('Start fetch tiles')
 
-    if(options.skip_os is True):
+    if(args.skip_os is True):
         zoom_filter = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
     else:
         zoom_filter = []
 
     # get maps from mobac project file
-    if options.ProjectFile is not None:
+    if args.ProjectFile is not None:
         # get list of chart areas from project file
-        atlas, name = ExtractMapsFromAtlas(options.ProjectFile, zoom_filter)
+        atlas, name = ExtractMapsFromAtlas(args.ProjectFile, zoom_filter)
         logger.info('atlas name={} number of maps={}'.format(name, len(atlas)))
     else:
         exit()
 
     CheckExternelUtils()
 
-    db = TileSqlLiteDB(options.DBDIR)
+    db = TileSqlLiteDB(args.DBDIR)
     tm = TileManager(WDIR, db)
     mapcnt = 1
 
@@ -97,14 +94,16 @@ def main():
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
-        tm.UpdateTiles(ti, options.update)
+        cnt = tm.UpdateTiles(ti, args.update)
         stoptime = time.time()
+        runtime = int(stoptime - starttime)
         logger.info('time: {} s'.format(int(stoptime - starttime)))
         logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
         logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
         logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
         logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
+        logger.info('processsed tiles/s     {0:.2}'.format(cnt/runtime))
 
     logger.info('ready')
     db.CloseDB()

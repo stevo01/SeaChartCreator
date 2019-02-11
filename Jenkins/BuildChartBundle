@@ -28,8 +28,8 @@ pipeline {
             steps{
      		  sh"""#!/bin/bash
      		  cd SeaChartCreator/
-              python3 fetch.py -q -s -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
-                                     -d /var/lib/SeaChartCreator/work/database/
+              python3 fetch.py -q -s -u -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
+                                        -d /var/lib/SeaChartCreator/work/database/
               """
             }   
         }
