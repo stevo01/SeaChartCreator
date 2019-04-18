@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import argparse
 from Utils.Mobac import ExtractMapsFromAtlas
 from Utils.Helper import ChartInfo
-from tile.manager import TileManager
+from tile.manager import TileManager, OpenStreetMap, OpenSeaMap, TileServer
 from Utils.glog import getlog, initlog
 from tile.sqllitedb import TileSqlLiteDB
 from Utils.download import CheckExternelUtils
@@ -86,24 +86,68 @@ def main():
 
     db = TileSqlLiteDB(args.DBDIR)
     tm = TileManager(WDIR, db)
-    mapcnt = 1
 
+    #TSOpenStreetMap = TileServer(OpenStreetMap, "http://a.tile.openstreetmap.org")
+    TSOpenStreetMap = TileServer(OpenStreetMap, "http://stone:8001/tile")
+
+    TsOpenSeaMap = TileServer(OpenSeaMap, "http://tiles.openseamap.org/seamark")
+
+    logger.info('Fetch Open Sea Map tiles from {}'.format(TSOpenStreetMap.name))
+    mapcnt = 1
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
-        logger.info('Start UpdateTile for map {} / {}:'.format(mapcnt, len(atlas)))
+        logger.info('Start UpdateTile for street map {} / {}:'.format(mapcnt, len(atlas)))
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
-        cnt = tm.UpdateTiles(ti, args.update)
+        cnt = tm.UpdateTiles(TSOpenStreetMap, ti, args.update)
         stoptime = time.time()
-        runtime = int(stoptime - starttime)
+        runtime = (stoptime - starttime)
         logger.info('time: {} s'.format(int(stoptime - starttime)))
         logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
         logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
         logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
         logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
-        logger.info('processsed tiles/s     {0:.2}'.format(cnt/runtime))
+        logger.info('processsed tiles/s     {0:.2f}'.format(cnt / runtime))
+
+    logger.info('Fetch Open Sea Map tiles from {}'.format(TsOpenSeaMap.name))
+    mapcnt = 1
+    for singlemap in atlas:
+        ti = ChartInfo(singlemap)
+        logger.info('Start UpdateTile for sea map {} / {}:'.format(mapcnt, len(atlas)))
+        mapcnt += 1
+        starttime = time.time()
+        logger.info(ti)
+        cnt = tm.UpdateTiles(TsOpenSeaMap, ti, args.update)
+        stoptime = time.time()
+        runtime = (stoptime - starttime)
+        logger.info('time: {} s'.format(int(stoptime - starttime)))
+        logger.info('tiles skipped          {}'.format(tm.tileskipped))
+        logger.info('tiles merged           {}'.format(tm.tilemerged))
+        logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
+        logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
+        logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
+        logger.info('processsed tiles/s     {0:.2f}\n'.format(cnt / runtime))
+
+    logger.info('Merge Tiles')
+    for singlemap in atlas:
+        mapcnt = 1
+        ti = ChartInfo(singlemap)
+        logger.info('Start UpdateTile for sea map {} / {}:'.format(mapcnt, len(atlas)))
+        mapcnt += 1
+        starttime = time.time()
+        logger.info(ti)
+        cnt = tm.MergeTiles(TsOpenSeaMap, TSOpenStreetMap, ti)
+        stoptime = time.time()
+        runtime = (stoptime - starttime)
+        logger.info('time: {} s'.format(int(stoptime - starttime)))
+        logger.info('tiles skipped          {}'.format(tm.tileskipped))
+        logger.info('tiles merged           {}'.format(tm.tilemerged))
+        logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
+        logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
+        logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
+        logger.info('processsed tiles/s     {0:.2f}'.format(cnt / runtime))
 
     logger.info('ready')
     db.CloseDB()
