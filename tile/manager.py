@@ -29,6 +29,7 @@ from Utils.ProcessCmd import MergePictures
 from Utils import __app_identifier__
 import time
 import locale
+from random import *
 
 MERGEDIR = 'Merge/'
 
@@ -56,6 +57,8 @@ class TileManager(object):
         Constructor
         '''
         self._WorkingDirectory = WorkingDirectory
+        self._WorkingDirMerge = WorkingDirectory + "{}".format(randint(1, 0xffffffff))
+
         self.db = db
         self.logger = getlog()
 
@@ -64,6 +67,7 @@ class TileManager(object):
         self.tiledownloadskipped = 0
         self.tileskipped = 0
         self.tilemerged = 0
+        self.tilemergedskipped = 0
         self.tiledownloaderror = 0
 
     # load single file with http protocol
@@ -112,9 +116,9 @@ class TileManager(object):
 
     def MergeTile(self, tile1, tile2):
         # store tile  in file
-        filename_in1 = self._WorkingDirectory + MERGEDIR + 'file_openstreetmap.png'
-        filename_in2 = self._WorkingDirectory + MERGEDIR + 'file_openseamap.png'
-        filename_result1 = self._WorkingDirectory + MERGEDIR + 'file_merged.png'
+        filename_in1 = self._WorkingDirMerge + "/" + 'file_openstreetmap.png'
+        filename_in2 = self._WorkingDirMerge + "/" + 'file_openseamap.png'
+        filename_result1 = self._WorkingDirMerge + "/" + 'file_merged.png'
 
         tile1.StoreFile(filename_in1)
         tile2.StoreFile(filename_in2)
@@ -125,6 +129,7 @@ class TileManager(object):
 
         ret = TileInfo()
         ret.SetData(filename_result1)
+
         return ret
 
     '''
@@ -169,7 +174,7 @@ class TileManager(object):
 
         return retv
 
-    def UpdateTiles(self, tileserv, ti, update):
+    def UpdateTiles(self, tileserv, ti, force_download):
         cnt = 0
         for y in range(ti.ytile_nw, ti.ytile_se + 1):
             for x in range(ti.xtile_nw, ti.xtile_se + 1):
@@ -177,7 +182,7 @@ class TileManager(object):
                 tile_osm2 = self.db.GetTile(tileserv.name, z, x, y)
 
                 # skip download if tile is available
-                if(tile_osm2 is not None) and (update is False):
+                if(tile_osm2 is not None) and (force_download is False):
                     self.logger.debug("skip update of tile z={} x={} y={} from {}".format(z, x, y, tileserv.name))
                     self.tileskipped += 1
                 # skip download if tile is newer the 7 days
@@ -202,15 +207,17 @@ class TileManager(object):
                 tile_osm1 = self.db.GetTile(tileserv1.name, z, x, y)
                 tile_osm2 = self.db.GetTile(tileserv2.name, z, x, y)
                 tile_osm3 = self.db.GetTile(OpenSeaMapMerged, z, x, y)
-                if (tile_osm1.updated is True) or (tile_osm2.updated is True) or (tile_osm3 is None):
+                if (tile_osm1.updated is not 0) or (tile_osm2.updated is not 0) or (tile_osm3 is None):
                     tile_merged = self.MergeTile(tile_osm1, tile_osm2)
                     self.db.StoreTile(OpenSeaMapMerged, tile_merged, z, x, y)
 
                     tile_osm1.updated = False
-                    self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm1, z, x, y)
+                    self.db.StoreTile(tileserv1.name, tile_osm1, z, x, y)
 
                     tile_osm2.updated = False
-                    self.db.StoreTile(self.TsOpenSeaMap.name, tile_osm2, z, x, y)
+                    self.db.StoreTile(tileserv2.name, tile_osm2, z, x, y)
                     self.tilemerged += 1
+                else:
+                    self.tilemergedskipped += 1
                 cnt += 1
         return cnt

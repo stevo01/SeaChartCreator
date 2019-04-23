@@ -46,10 +46,10 @@ def main():
                         dest="DBDIR",
                         default=DBDIR)
 
-    parser.add_argument("-u", "--update",
+    parser.add_argument("-f", "--force",
                         action="store_true",
-                        dest="update",
-                        help="update tile if new version existes")
+                        dest="force_download",
+                        help="force download off tile")
 
     parser.add_argument("-q", "--quiet",
                         action="store_false",
@@ -100,12 +100,13 @@ def main():
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
-        cnt = tm.UpdateTiles(TSOpenStreetMap, ti, args.update)
+        cnt = tm.UpdateTiles(TSOpenStreetMap, ti, args.force_download)
         stoptime = time.time()
         runtime = (stoptime - starttime)
         logger.info('time: {} s'.format(int(stoptime - starttime)))
         logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
+        logger.info('tiles mergedskipped    {}'.format(tm.tilemergedskipped))
         logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
         logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
         logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
@@ -119,20 +120,21 @@ def main():
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
-        cnt = tm.UpdateTiles(TsOpenSeaMap, ti, args.update)
+        cnt = tm.UpdateTiles(TsOpenSeaMap, ti, args.force_download)
         stoptime = time.time()
         runtime = (stoptime - starttime)
         logger.info('time: {} s'.format(int(stoptime - starttime)))
         logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
+        logger.info('tiles mergedskipped    {}'.format(tm.tilemergedskipped))
         logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
         logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
         logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
         logger.info('processsed tiles/s     {0:.2f}\n'.format(cnt / runtime))
 
     logger.info('Merge Tiles')
+    mapcnt = 1
     for singlemap in atlas:
-        mapcnt = 1
         ti = ChartInfo(singlemap)
         logger.info('Start UpdateTile for sea map {} / {}:'.format(mapcnt, len(atlas)))
         mapcnt += 1
@@ -144,6 +146,7 @@ def main():
         logger.info('time: {} s'.format(int(stoptime - starttime)))
         logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
+        logger.info('tiles mergedskipped    {}'.format(tm.tilemergedskipped))
         logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
         logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
         logger.info('tiles download error   {}'.format(tm.tiledownloaderror))

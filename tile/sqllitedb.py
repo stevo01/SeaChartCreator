@@ -85,10 +85,8 @@ class TileSqlLiteDB(object):
             self.logger.error("Error Execute SQL Statement:{}".format(sqlcmd))
             self.logger.exception(e)
 
-        self.writecnt += 1
-        if self.writecnt >= 100:
-            self.con.commit()
-            self.writecnt = 0
+        self.con.commit()
+
 
     def GetTile(self, tablename, z, x, y):
 
