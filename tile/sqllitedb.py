@@ -24,7 +24,11 @@ from Utils.glog import getlog
 from tile.Info import TileInfo
 import os
 import sqlite3
-from tile.manager import TileSourceList
+OpenSeaMapMerged = 'OpenSeaMapMerged'
+OpenStreetMap = 'OpenStreetMap'
+OpenSeaMap = 'OpenSeaMap'
+
+TileSourceList = [OpenSeaMap, OpenStreetMap, OpenSeaMapMerged]
 
 FILENAMESQLLITEDB = "tilestore.sqllite"
 

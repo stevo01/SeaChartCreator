@@ -84,8 +84,7 @@ def main():
 
     CheckExternelUtils()
 
-    db = TileSqlLiteDB(args.DBDIR)
-    tm = TileManager(WDIR, db)
+    tm = TileManager(WDIR, args.DBDIR, args.force_download)
 
     #TSOpenStreetMap = TileServer(OpenStreetMap, "http://a.tile.openstreetmap.org")
     TSOpenStreetMap = TileServer(OpenStreetMap, "http://stone:8001/tile")
@@ -100,9 +99,11 @@ def main():
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
-        cnt = tm.UpdateTiles(TSOpenStreetMap, ti, args.force_download)
+        cnt = tm.UpdateTiles(TSOpenStreetMap, ti)
         stoptime = time.time()
         runtime = (stoptime - starttime)
+        if runtime == 0:
+            runtime = 0.001
         logger.info('time: {} s'.format(int(stoptime - starttime)))
         logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
@@ -120,9 +121,11 @@ def main():
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
-        cnt = tm.UpdateTiles(TsOpenSeaMap, ti, args.force_download)
+        cnt = tm.UpdateTiles(TsOpenSeaMap, ti)
         stoptime = time.time()
         runtime = (stoptime - starttime)
+        if runtime == 0:
+            runtime=0.001
         logger.info('time: {} s'.format(int(stoptime - starttime)))
         logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
@@ -143,6 +146,8 @@ def main():
         cnt = tm.MergeTiles(TsOpenSeaMap, TSOpenStreetMap, ti)
         stoptime = time.time()
         runtime = (stoptime - starttime)
+        if runtime == 0:
+            runtime=0.001
         logger.info('time: {} s'.format(int(stoptime - starttime)))
         logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
@@ -153,7 +158,7 @@ def main():
         logger.info('processsed tiles/s     {0:.2f}'.format(cnt / runtime))
 
     logger.info('ready')
-    db.CloseDB()
+
     return
 
 

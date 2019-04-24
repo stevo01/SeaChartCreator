@@ -20,24 +20,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 '''
 
-import urllib.request
-
-
 from tile.Info import TileInfo
 from Utils.glog import getlog
 from Utils.ProcessCmd import MergePictures
-from Utils import __app_identifier__
-import time
-import locale
 from random import *
+from tile.DownloadThread import DownloadThread
+from tile.sqllitedb import TileSqlLiteDB
 
 MERGEDIR = 'Merge/'
 
 OpenSeaMapMerged = 'OpenSeaMapMerged'
 OpenStreetMap = 'OpenStreetMap'
 OpenSeaMap = 'OpenSeaMap'
-
-TileSourceList = [OpenSeaMap, OpenStreetMap, OpenSeaMapMerged]
 
 
 class TileServer():
@@ -52,14 +46,14 @@ class TileManager(object):
     classdocs
     '''
 
-    def __init__(self, WorkingDirectory, db):
+    def __init__(self, WorkingDirectory, DBDIR, force_download):
         '''
         Constructor
         '''
         self._WorkingDirectory = WorkingDirectory
         self._WorkingDirMerge = WorkingDirectory + "{}".format(randint(1, 0xffffffff))
 
-        self.db = db
+        self.DBDIR = DBDIR
         self.logger = getlog()
 
         self.tile = 0
@@ -70,49 +64,11 @@ class TileManager(object):
         self.tilemergedskipped = 0
         self.tiledownloaderror = 0
 
-    # load single file with http protocol
-    def _HttpLoadFile(self, ts, z, x, y, tile=None):
+        self.force_download=force_download
 
-        ret = None
-
-        url = "{}/{}/{}/{}.png".format(ts.url, z, x, y)
-
-        # set user agent to meet the tile usage policy
-        # https://operations.osmfoundation.org/policies/tiles/
-        self.logger.debug("HttpLoadFile open {}".format(url))
-
-        req = urllib.request.Request(url, data=None, headers={'User-Agent': __app_identifier__})
-
-        if(tile is not None):
-            req.add_header('If-None-Match', tile.etag)
-
-        try:
-            f = urllib.request.urlopen(req)
-            data = f.read()
-            date = f.headers['Date']
-            lastmodified = f.headers['Last-Modified']
-            etag = f.headers['ETag']
-            ret = TileInfo(data, etag, date, lastmodified)
-            ret.updated = True
-            ret.date_updated = True
-            self.tiledownloaded += 1
-        except urllib.error.HTTPError as err:
-            self.logger.debug("HTTPError: {}".format(err.code))
-            try:
-                tile.date = err.headers['Date']
-                ret = tile
-                ret.date_updated = True
-                if ret is not None:
-                    ret.updated = False
-                self.tiledownloadskipped += 1
-            except Exception as e:
-                self.logger.debug("Exception: {}".format(e))
-                self.tiledownloaderror += 1
-                ret = tile
-                if ret is not None:
-                    ret.updated = False
-
-        return ret
+        # just enshure that db excists
+        db = TileSqlLiteDB(self.DBDIR)
+        db.CloseDB()
 
     def MergeTile(self, tile1, tile2):
         # store tile  in file
@@ -132,53 +88,34 @@ class TileManager(object):
 
         return ret
 
-    '''
-     @brief This method returns
-            - True if Tile requires update
-            - False if Tile requires no update
-
-     @param tile - tile
-     @param max_timespan - max time span (in hours)
-    '''
-    def CheckTimespan(self, tile, max_timespan):
-        last_update = tile.date  # sample format Thu, 18 Apr 2019 07:01:25 GMT
-        retv = True
-
-        try:
-            locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
-        except Exception as e:
-            print('Error:', e)
-
-        # https://www.journaldev.com/23365/python-string-to-datetime-strptime
-        # %a Weekday as locale’s abbreviated name.                / Sun, Mon, …, Sat (en_US)
-        # %d    Day of the month as a zero-padded decimal number. / 01, 02, …, 31
-        # %b    Month as locale’s abbreviated name.               / Jan, Feb, …, Dec (en_US)
-        # %H    Hour (24-hour clock) as a zero-padded decimal number.    01, 02, … , 23
-        # %M    Minute as a zero-padded decimal number.    01, 02, … , 59
-        # %S    Second as a zero-padded decimal number.    01, 02, … , 59
-        # %m Month as a zero-padded decimal number.    01, 02 … 12
-        # %Z    Time zone name (empty string if the object is naive).    (empty), UTC, IST, CST
-
-        try:
-            last_update = time.strptime(last_update, "%a, %d %b %Y %H:%M:%S %Z")
-        except ValueError as e:
-            print('ValueError:', e)
-            return True
-
-        diff = (time.time() - time.mktime(last_update)) / 3600
-
-        if diff < max_timespan:
-            retv = False
-        else:
-            retv = True
-
-        return retv
-
-    def UpdateTiles(self, tileserv, ti, force_download):
+    def UpdateTiles(self, tileserv, ti):
         cnt = 0
+        self.joblist = list()
         for y in range(ti.ytile_nw, ti.ytile_se + 1):
             for x in range(ti.xtile_nw, ti.xtile_se + 1):
                 z = ti.zoom
+                self.joblist.append([cnt, x, y, z])
+                cnt += 1
+
+        # create download threads
+        self.threadlist = list()
+
+        for thread in range (10):
+            self.threadlist.append(DownloadThread(self, self.force_download, self.DBDIR ))
+
+        # create download threads
+        for threadrunner in self.threadlist:
+            threadrunner.SetTileSrv(tileserv)
+            threadrunner.start()
+
+        # wait until all threads are ready
+        for threadrunner in self.threadlist:
+            threadrunner.join()
+
+        print("ready")
+
+
+        '''
                 tile_osm2 = self.db.GetTile(tileserv.name, z, x, y)
 
                 # skip download if tile is available
@@ -197,6 +134,7 @@ class TileManager(object):
                         self.db.StoreTile(tileserv.name, tile_osm2, z, x, y)
                 self.tile += 1
                 cnt += 1
+        '''
         return cnt
 
     def MergeTiles(self, tileserv1, tileserv2, ti):
