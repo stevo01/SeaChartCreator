@@ -21,13 +21,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 import os
 import shutil
-from Utils.ProcessCmd import ZipFiles, JoinPicture, GenerateKapFile, \
-    ConvertPicture
+from Utils.ProcessCmd import ZipFiles, StitchPicture, GenerateKapFile
 from Utils.glog import getlog
 import datetime
-from Utils.Helper import ChartInfo
-import sys
+from Utils.Helper import ChartInfo, ensure_dir
 from tile.mbtilestore import MBTileStore
+from config import OpenStreetMap, OpenSeaMap, OpenSeaMapMerged
+from tile.MergeThread import _MergePictures
 
 STICHDIR = "StichDir"
 
@@ -36,9 +36,11 @@ def RemoveDir(path):
     if os.path.isdir(path):
         shutil.rmtree(path)
 
+
 def RemoveFile(filename):
     if os.path.exists(filename):
         os.remove(filename)
+
 
 class AtlasGenerator(object):
     '''
@@ -52,6 +54,39 @@ class AtlasGenerator(object):
         self._WorkingDirectory = WorkingDirectory
         self.db = db
         self.logger = getlog()
+
+    # @param ci - chart information for single map
+    def StichTiles(self, ci, atlasname, tablename):
+            # cleanup temp directories
+            self.logger.info("Cleanup Stitch Directory")
+            PathTempTiles = self._WorkingDirectory + "{}/{}/{}/{}/{}/".format(STICHDIR, tablename, atlasname, ci.name, ci.zoom)
+            RemoveDir(PathTempTiles)
+
+            # export tiles
+            self.logger.info("Export {} Tiles".format(ci.nr_of_tiles))
+
+            cnt = 1
+            for y in range(ci.ytile_nw, ci.ytile_se + 1):
+                for x in range(ci.xtile_nw, ci.xtile_se + 1):
+                    # get tiles from db
+                    tile = self.db.GetTile(tablename, ci.zoom, x, y)
+
+                    # check if tile exists
+                    if tile is None:
+                        self.logger.error("tile with z={} x={} y={} not available in store\n".format(ci.zoom, x, y))
+                        assert(0)
+
+                    # write tile to local file
+                    TileMerged = "{0:s}{1:d}-{2:05d}.png".format(PathTempTiles, ci.zoom, cnt)
+                    tile.StoreFile(TileMerged)
+                    cnt = cnt + 1
+
+            # stich tiles
+            self.logger.info("Stich {} tiles for map {}".format(ci.nr_of_tiles, ci.name))
+            tempfilename = "{}{}_{}.png".format(PathTempTiles, ci.name, ci.zoom)
+            StitchPicture(ci.x_cnt, ci.y_cnt, "{}*.png".format(PathTempTiles), tempfilename)
+
+            return tempfilename
 
     def GenerateKAP(self, atlas, atlasname, reducecolors):
         self.atlas = atlas
@@ -69,48 +104,34 @@ class AtlasGenerator(object):
             ci = ChartInfo(singlemap)
             self.logger.info("################################################################################")
             self.logger.info("Process Chart {}, {}/{}".format(ci.name, cnt, len(atlas)))
-
-            # cleanup temp directories
-            self.logger.info("Cleanup Stitch Directory")
-            PathTempTiles = self._WorkingDirectory + "{}/{}/{}/{}/".format(STICHDIR, atlasname, ci.name, ci.zoom)
-            RemoveDir(PathTempTiles)
             kapfilename = "{}/{}_{}.kap".format(kapdirname, ci.name, ci.zoom)
 
-            # export tiles
-            self.logger.info("Export {} Tiles".format(ci.nr_of_tiles))
+            # Stitch tiles to single map file
+            tempfilename_street = self.StichTiles(ci, atlasname, OpenStreetMap)
+            tempfilename_sea = self.StichTiles(ci, atlasname, OpenSeaMap)
 
-            cnt=1
-            for y in range(ci.ytile_nw, ci.ytile_se + 1):
-                for x in range(ci.xtile_nw, ci.xtile_se + 1):
-                    # get tiles from db
-                    tile = self.db.GetTile("OpenSeaMapMerged", ci.zoom, x, y)
-
-                    # check if tile exists
-                    if tile is None:
-                        self.logger.error("tile with z={} x={} y={} not available in store\n")
-                        assert(0)
-
-                    # write tile to local file
-                    TileMerged = "{0:s}{1:d}-{2:05d}.png".format(PathTempTiles, ci.zoom, cnt)
-                    tile.StoreFile(TileMerged)
-                    cnt = cnt + 1
-
-            # stich tiles
-            self.logger.info("Stich {} tiles for map {}".format(ci.nr_of_tiles, ci.name))
+            PathTempTiles = self._WorkingDirectory + "{}/{}/{}/{}/{}/".format(STICHDIR, OpenSeaMapMerged, atlasname, ci.name, ci.zoom)
+            RemoveDir(PathTempTiles)
+            ensure_dir(PathTempTiles)
             tempfilename = "{}{}_{}.png".format(PathTempTiles, ci.name, ci.zoom)
-            JoinPicture(ci.x_cnt, ci.y_cnt, "{}*.png".format(PathTempTiles), tempfilename)
+
+            # merge files
+            _MergePictures(tempfilename_street, tempfilename_sea, tempfilename)
+            # MergePictures(tempfilename_sea, tempfilename_street, tempfilename+".2.png")
 
             '''
-            reduce png file to 8 bit toavoid error in imagekap procedure:
+            reduce png file to 8 bit to avoid error in imagekap procedure:
 
             ERROR - internal GetPalette
             ERROR - imgkap return 2
             '''
-            if reducecolors is True:
-                tempfilereduced = "{}{}_{}_8.png".format(PathTempTiles, ci.name, ci.zoom)
-                ConvertPicture(tempfilename, tempfilereduced)
-            else:
-                tempfilereduced = tempfilename
+            #if reducecolors is True:
+            #    tempfilereduced = "{}{}_{}_8.png".format(PathTempTiles, ci.name, ci.zoom)
+            #    ConvertPicture(tempfilename, tempfilereduced)
+            #else:
+            #    tempfilereduced = tempfilename
+
+            tempfilereduced = tempfilename
 
             # generate kap file
             self.logger.info("generate kap file {}".format(kapfilename))
@@ -125,14 +146,12 @@ class AtlasGenerator(object):
 
         ZipFiles(kapdirname, atlasfilename)
 
-        if sys.platform != 'win32':
-
-            atlasfilename_latest = "./work/kap/OSM-OpenCPN2-KAP-{}.7z".format(atlasname)
-
-            ratlasfilename = "../history/kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(atlasname,
-                                                                               creationtimestamp)
-
-            os.symlink(ratlasfilename, atlasfilename_latest)
+        atlasfilename_latest = "./work/kap/OSM-OpenCPN2-KAP-{}.7z".format(atlasname)
+        
+        ratlasfilename = "../history/kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(atlasname,
+                                                                          creationtimestamp)
+        
+        os.symlink(ratlasfilename, atlasfilename_latest)
 
     def generate_mbtile(self, atlas, atlasname):
         '''
@@ -165,15 +184,14 @@ class AtlasGenerator(object):
             for y in range(ci.ytile_nw, ci.ytile_se + 1):
                 for x in range(ci.xtile_nw, ci.xtile_se + 1):
                     # get tiles from db
-                    tile = self.db.GetTile("OpenSeaMapMerged", ci.zoom, x, y)
+                    tile = self.db.GetTile(OpenSeaMapMerged, ci.zoom, x, y)
                     # check if tile exists
                     if tile is None:
                         self.logger.error("tile with z={} x={} y={} not available in store\n")
                         assert(0)
                     tilestore.StoreTile(tile, ci.zoom, x, y)
 
-
-        tilestore.SetMetadata("bounds", 
+        tilestore.SetMetadata("bounds",
                               "{},{},{},{}".format(ci.SE_lat,
                                                    ci.SE_lon,
                                                    ci.NW_lat,
@@ -183,20 +201,18 @@ class AtlasGenerator(object):
         shutil.copyfile("documents/info.txt", atlasdirname + "info.txt")
 
         atlasfilename = "{}history/mbtiles/OSM-mbtile-{}-{}.7z".format(self._WorkingDirectory,
-                                                                            atlasname,
-                                                                            creationtimestamp)
+                                                                       atlasname,
+                                                                       creationtimestamp)
 
         tilestore.CloseDB()
 
         ZipFiles(atlasdirname, atlasfilename)
 
-        if sys.platform != 'win32':
+        atlasfilename_latest = "./work/mbtiles/OSM-mbtile-{}.7z".format(atlasname)
 
-            atlasfilename_latest = "./work/mbtiles/OSM-mbtile-{}.7z".format(atlasname)
+        ratlasfilename = "../history/mbtiles/OSM-mbtile-{}-{}.7z".format(atlasname,
+                                                                         creationtimestamp)
 
-            ratlasfilename = "../history/mbtiles/OSM-mbtile-{}-{}.7z".format(atlasname,
-                                                                            creationtimestamp)
+        RemoveFile(atlasfilename_latest)
 
-            RemoveFile(atlasfilename_latest)
-
-            os.symlink(ratlasfilename, atlasfilename_latest)
+        os.symlink(ratlasfilename, atlasfilename_latest)

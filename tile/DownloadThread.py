@@ -105,6 +105,10 @@ class DownloadThread(threading.Thread):
                 ret = tile
                 if ret is not None:
                     ret.updated = False
+        except urllib.error.URLError as err:
+            print("URLError: {}".format(err.reason))
+            print("url: {}".format(url))
+            self.tileman.tiledownloaderror += 1
 
         return ret
 

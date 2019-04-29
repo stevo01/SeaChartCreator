@@ -42,11 +42,11 @@ note: the atlas will be stored in a xml file located in the mobac software direc
     
 2 - call the python script and use the -i option to specify the mobac project file
 ```
-cd ~/
-clone https://github.com/stevo01/SeaChartCreator
-cd SeaChartCreator
-python3 fetch.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
-python3 build.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
+  cd ~/
+  clone https://github.com/stevo01/SeaChartCreator
+  cd SeaChartCreator
+  python3 fetch.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
+  python3 build.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
 ```
 the generated kap file is located in directory ./work/kap/
 

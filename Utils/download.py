@@ -27,7 +27,6 @@ import urllib
 from sys import platform
 from Utils.Helper import ensure_dir
 from Utils.ProcessCmd import _ProcessCmd
-from pip._vendor.distlib.compat import ZipFile
 import os
 from Utils import __app_identifier__
 
@@ -69,34 +68,18 @@ def CheckExternelUtils():
         FileName_imgkap_src = PathName_imgkap + 'imgkap.c'
         FileName_imgkap_exe = PathName_imgkap + 'imgkap'
 
-        url_imgkap = 'http://www.dacust.com/inlandwaters/imgkap/v00.01.11/imgkap.c'
+        # url_imgkap = 'http://www.dacust.com/inlandwaters/imgkap/v00.01.11/imgkap.c'
+        url_imgkap = 'https://raw.githubusercontent.com/stevo01/imgkap/master/imgkap.c'
 
         ensure_dir(PathName_imgkap)
 
         if(os.path.isfile(FileName_imgkap_src) is False):
             print("start download {}".format(url_imgkap))
-            HttpLoadFile(url_imgkap, FileName_imgkap_src)
+            #HttpLoadFile(url_imgkap, FileName_imgkap_src)
+            _ProcessCmd("wget {} -O {}".format(url_imgkap, FileName_imgkap_src))
 
         if(os.path.isfile(FileName_imgkap_exe) is False):
             print("compile {}".format(FileName_imgkap_src))
             _ProcessCmd("cd {}; gcc imgkap.c -O3 -s -lm -lfreeimage -o imgkap".format(PathName_imgkap))
 
         pass
-    elif platform == "win32":
-        if(os.path.isfile(FileNameImageMagick) is False):
-            print("start download {}".format(urlImageMagick))
-            #  filename = HttpLoadFile(urlImageMagick, FileNameImageMagick)
-
-        if(os.path.isdir(PathNameImageMagick) is False):
-            with ZipFile(FileNameImageMagick) as myzip:
-                myzip.extractall(path=PathNameImageMagick)
-
-        PathName_imgkap = downloadPath + 'imgkap/'
-        FileName_imgkap = PathName_imgkap + 'imgkap.exe'
-        url_imgkap = 'http://www.dacust.com/inlandwaters/imgkap/v00.01.11/imgkap.exe'
-
-        ensure_dir(PathName_imgkap)
-
-        if(os.path.isfile(FileName_imgkap) is False):
-            print("start download {}".format(url_imgkap))
-            HttpLoadFile(url_imgkap, FileName_imgkap)

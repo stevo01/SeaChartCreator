@@ -24,6 +24,8 @@ from Utils.glog import getlog
 from tile.Info import TileInfo
 import os
 import sqlite3
+from _sqlite3 import OperationalError
+import time
 OpenSeaMapMerged = 'OpenSeaMapMerged'
 OpenStreetMap = 'OpenStreetMap'
 OpenSeaMap = 'OpenSeaMap'
@@ -83,11 +85,22 @@ class TileSqlLiteDB(object):
         sqlcmd += '(z, x, y, data, date, lastmodified, etag, updated, md5)'
         sqlcmd += 'values (?,?,?,?,?,?,?,?,?)'
 
-        try:
-            self.cur.execute(sqlcmd, (z, x, y, sqlite3.Binary(tile.data), tile.date, tile.lastmodified, tile.etag, tile.updated, tile.md5))
-        except Exception as e:
-            self.logger.error("Error Execute SQL Statement:{}".format(sqlcmd))
-            self.logger.exception(e)
+        retry_cnt = 0
+        while retry_cnt < 100:
+            try:
+                self.cur.execute(sqlcmd, (z, x, y, sqlite3.Binary(tile.data), tile.date, tile.lastmodified, tile.etag, tile.updated, tile.md5))
+                break
+            except OperationalError as e:
+                #self.logger.error("Error Execute SQL Statement:{}".format(sqlcmd))
+                #self.logger.error(e.args[0])
+                time.sleep(0.1)
+                retry_cnt += 1
+            except Exception as e:
+                self.logger.error("Error Execute SQL Statement:{}".format(sqlcmd))
+                self.logger.exception(e)
+                break
+        if retry_cnt >= 99:
+            assert(False)
 
         self.con.commit()
 

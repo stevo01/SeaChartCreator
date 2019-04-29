@@ -28,7 +28,7 @@ pipeline {
             steps{
      		  sh"""#!/bin/bash
      		  cd SeaChartCreator/
-              python3 fetch.py -q -s -u -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
+              python3 fetch.py -q -s -f -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
                                         -d /var/lib/SeaChartCreator/work/database/
               """
             }   
@@ -68,14 +68,14 @@ pipeline {
 			}
      		
      		steps{
-            sh """#!/bin/bash
-     		cd OSM_pmd4dl
-     		ls ./../SeaChartCreator/work/kap/
-     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/kap/*.7z osm-trans@golf.franken.de:charts/kap/
-     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.7z osm-trans@golf.franken.de:charts/history/kap/
-     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.geojson osm-trans@golf.franken.de:charts/history/kap/
-     		"""
-     		}
+	            sh """#!/bin/bash
+	     		cd OSM_pmd4dl
+	     		ls ./../SeaChartCreator/work/kap/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/kap/*.7z osm-trans@golf.franken.de:charts/kap/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.7z osm-trans@golf.franken.de:charts/history/kap/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.geojson osm-trans@golf.franken.de:charts/history/kap/
+	     		"""
+	     		}
      	} 	
       }
 }
