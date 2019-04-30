@@ -4,7 +4,6 @@
 import threading
 from tile.sqllitedb import TileSqlLiteDB
 from random import *
-from Utils.ProcessCmd import MergePictures
 from tile.Info import TileInfo
 import hashlib
 import shutil

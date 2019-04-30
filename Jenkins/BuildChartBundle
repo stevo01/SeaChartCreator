@@ -29,7 +29,8 @@ pipeline {
      		  sh"""#!/bin/bash
      		  cd SeaChartCreator/
               python3 fetch.py -q -s -f -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
-                                        -d /var/lib/SeaChartCreator/work/database/
+                                        -d /var/lib/SeaChartCreator/work/database/ \
+                                        -m /var/lib/SeaChartCreator/mapsource/mp-OpenSeaMap.yaml
               """
             }   
         }
@@ -40,7 +41,7 @@ pipeline {
              sh"""#!/bin/bash
          	   cd SeaChartCreator/
          	   rm -fr ./work/
-         	   python3 build.py -q -r -s -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
+         	   python3 build.py -q -s -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
          	                             -d /var/lib/SeaChartCreator/work/database/
          	   ls /var/lib/SeaChartCreator/work/database/ -l
          	   """

@@ -1,24 +1,7 @@
 #!/usr/bin/python3
 # encoding: utf-8
 
-'''
 
-Copyright (C) 2017  Steffen Volkmann
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-'''
 import os
 import shutil
 from Utils.ProcessCmd import ZipFiles, StitchPicture, GenerateKapFile
@@ -26,8 +9,8 @@ from Utils.glog import getlog
 import datetime
 from Utils.Helper import ChartInfo, ensure_dir
 from tile.mbtilestore import MBTileStore
-from config import OpenStreetMap, OpenSeaMap, OpenSeaMapMerged
 from tile.MergeThread import _MergePictures
+from tile.sqllitedb import OpenStreetMap, OpenSeaMap, OpenSeaMapMerged
 
 STICHDIR = "StichDir"
 
@@ -88,7 +71,7 @@ class AtlasGenerator(object):
 
             return tempfilename
 
-    def GenerateKAP(self, atlas, atlasname, reducecolors):
+    def GenerateKAP(self, atlas, atlasname):
         self.atlas = atlas
 
         now = datetime.datetime.now()
@@ -119,18 +102,6 @@ class AtlasGenerator(object):
             _MergePictures(tempfilename_street, tempfilename_sea, tempfilename)
             # MergePictures(tempfilename_sea, tempfilename_street, tempfilename+".2.png")
 
-            '''
-            reduce png file to 8 bit to avoid error in imagekap procedure:
-
-            ERROR - internal GetPalette
-            ERROR - imgkap return 2
-            '''
-            #if reducecolors is True:
-            #    tempfilereduced = "{}{}_{}_8.png".format(PathTempTiles, ci.name, ci.zoom)
-            #    ConvertPicture(tempfilename, tempfilereduced)
-            #else:
-            #    tempfilereduced = tempfilename
-
             tempfilereduced = tempfilename
 
             # generate kap file
@@ -147,10 +118,10 @@ class AtlasGenerator(object):
         ZipFiles(kapdirname, atlasfilename)
 
         atlasfilename_latest = "./work/kap/OSM-OpenCPN2-KAP-{}.7z".format(atlasname)
-        
+
         ratlasfilename = "../history/kap/OSM-OpenCPN2-KAP-{}-{}.7z".format(atlasname,
-                                                                          creationtimestamp)
-        
+                                                                           creationtimestamp)
+
         os.symlink(ratlasfilename, atlasfilename_latest)
 
     def generate_mbtile(self, atlas, atlasname):

@@ -1,0 +1,12 @@
+{
+	"basic_layer": {
+		"url": "http://a.tile.openstreetmap.org",
+		"name": "OpenStreetMap",
+		"descr": "Open Streetmap Tile Server for basis layer"
+	},
+	"seamark_layer": {
+		"url": "http://tiles.openseamap.org/seamark",
+		"name": "OpenSeaMap",
+		"descr": "Open Sea Map Tile Server for seamarks"
+	}
+}

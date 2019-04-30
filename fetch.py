@@ -1,34 +1,15 @@
 #!/usr/bin/python3
 # encoding: utf-8
 
-'''
-
-Copyright (C) 2017  Steffen Volkmann
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-'''
 
 import argparse
+import time
+import os
+import json
 from Utils.Mobac import ExtractMapsFromAtlas
 from Utils.Helper import ChartInfo
 from tile.manager import TileManager, TileServer
 from Utils.glog import getlog, initlog
-from Utils.download import CheckExternelUtils
-import time
-import os
-from config import OpenStreetMap, OpenSeaMap, OpenStreetMap_url, OpenSeaMap_url
 
 
 def main():
@@ -61,6 +42,12 @@ def main():
                         dest="skip_os",
                         help="skip odd zoom levels")
 
+    parser.add_argument("-m", "--mapsource",
+                        help="map server configuration file",
+                        dest="MapSrcFile",
+                        default="./sample/mapsource/mp-OpenSeaMap.yaml")
+
+
     args = parser.parse_args()
 
     initlog('fetch', args.quiet)
@@ -81,11 +68,24 @@ def main():
     else:
         exit()
 
-    CheckExternelUtils()
     tm = TileManager(WDIR, args.DBDIR, args.force_download)
 
-    TSOpenStreetMap = TileServer(OpenStreetMap, OpenStreetMap_url)
-    TsOpenSeaMap = TileServer(OpenSeaMap, OpenSeaMap_url)
+    with open(args.MapSrcFile) as json_file:
+        data = json.load(json_file)
+
+    logger.info('')
+    logger.info('server info:')
+    logger.info('{} url={}'.format(data['basic_layer']['name'], data['basic_layer']['url']))
+    logger.info('{} url={}'.format(data['seamark_layer']['name'], data['seamark_layer']['url']))
+    logger.info('')
+    logger.info('database info:')
+    logger.info('{}'.format(args.DBDIR))
+    logger.info('')
+    logger.info('project info:')
+    logger.info('{}'.format(args.ProjectFile))
+
+    TSOpenStreetMap = TileServer(data['basic_layer']['name'], data['basic_layer']['url'])
+    TsOpenSeaMap = TileServer(data['seamark_layer']['name'], data['seamark_layer']['url'])
 
     logger.info('Fetch Open Sea Map tiles from {}'.format(TSOpenStreetMap.name))
     mapcnt = 1
@@ -106,7 +106,11 @@ def main():
         logger.info('tiles mergedskipped    {}'.format(tm.tilemergedskipped))
         logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
         logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
-        logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
+        logger.info('tiles download error   {}'.format(tm.downloaderror))
+        logger.info('http status 304        {}'.format(tm.Error_304))
+        logger.info('http status 502        {}'.format(tm.Error_502))
+        logger.info('http status 404        {}'.format(tm.Error_404))
+        logger.info('http url error         {}'.format(tm.Error_url))
         logger.info('processsed tiles/s     {0:.2f}'.format(cnt / runtime))
 
     logger.info('Fetch Open Sea Map tiles from {}'.format(TsOpenSeaMap.name))
@@ -128,7 +132,11 @@ def main():
         logger.info('tiles mergedskipped    {}'.format(tm.tilemergedskipped))
         logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
         logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
-        logger.info('tiles download error   {}'.format(tm.tiledownloaderror))
+        logger.info('tiles download error   {}'.format(tm.downloaderror))
+        logger.info('http status 304        {}'.format(tm.Error_304))
+        logger.info('http status 502        {}'.format(tm.Error_502))
+        logger.info('http status 404        {}'.format(tm.Error_404))
+        logger.info('http url error         {}'.format(tm.Error_url))
         logger.info('processsed tiles/s     {0:.2f}\n'.format(cnt / runtime))
 
     logger.info('\n\nready')

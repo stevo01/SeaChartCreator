@@ -1,31 +1,12 @@
 #!/usr/bin/python3
 # encoding: utf-8
 
-'''
-
-Copyright (C) 2017  Steffen Volkmann
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-'''
 
 from optparse import OptionParser
 from Utils.Mobac import ExtractMapsFromAtlas
 from atlas.generator import AtlasGenerator
 from Utils.glog import getlog, initlog
 from tile.sqllitedb import TileSqlLiteDB
-from Utils.download import CheckExternelUtils
 
 DBDIR = './work/database/'
 WDIR = './work/'
@@ -36,7 +17,6 @@ def main():
     parser.add_option("-i", "--InFile", type="string", help="MOBAC Project File", dest="ProjectFile", default="./sample/atlas/mobac/mobac-profile-testprj.xml")
     parser.add_option("-d", "--DatabaseDirectory", type="string", help="tile store directory", dest="DBDIR", default=DBDIR)
     parser.add_option("-q", "--quiet", action="store_false", dest="quiet", default=True, help="set log level to info (instead debug)")
-    parser.add_option("-r", "--reducecolors", action="store_true", dest="reducecolors", default=False, help="reduce colors before call of imgkap")
     parser.add_option("-s", "--skip", action="store_true", dest="skip_os", help="skip odd zoom levels")
     parser.add_option("-t", "--Type", type="string", help="atlas type (kap or mbtile)", dest="AtlasType", default="kap")
 
@@ -60,13 +40,11 @@ def main():
     else:
         exit()
 
-    CheckExternelUtils()
-
     db = TileSqlLiteDB(options.DBDIR)
     gen = AtlasGenerator(WDIR, db)
 
     if options.AtlasType.find("kap") == 0:
-        gen.GenerateKAP(atlas, name, options.reducecolors)
+        gen.GenerateKAP(atlas, name)
     elif options.AtlasType.find("mbtile") == 0:
         gen.generate_mbtile(atlas, name)
     else:

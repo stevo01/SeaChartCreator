@@ -6,26 +6,27 @@ import urllib.request
 from tile.sqllitedb import TileSqlLiteDB
 from Utils import __app_identifier__
 from tile.Info import TileInfo
-from Utils.glog import getlog
 import time
 import locale
 
 
 class DownloadThread(threading.Thread):
 
-    def __init__(self, tileman, force_download, DBDIR):
+    def __init__(self, tileman, lock, force_download, DBDIR):
         threading.Thread.__init__(self)
         self.tileman = tileman
+        self.lock = lock
 
         self.force_download = force_download
         self.DBDIR = DBDIR
         self.stop = False
+        self.cnt = 0
 
     def SetTileSrv(self, tileserv):
         self.tileserv = tileserv
 
     def run(self):
-        #log = getlog()
+        # log = getlog()
         self.db = TileSqlLiteDB(self.DBDIR)
 
         while(self.stop is False):
@@ -40,31 +41,37 @@ class DownloadThread(threading.Thread):
             y = job[2]
             z = job[3]
 
+            self.lock.acquire()
             tile_osm2 = self.db.GetTile(self.tileserv.name, z, x, y)
+            self.lock.release()
 
             # skip download if tile is available
             if(tile_osm2 is not None) and (self.force_download is False):
-                #print("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.tileserv.name))
+                # print("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.tileserv.name))
                 self.tileman.tileskipped += 1
             # skip download if tile is newer the 7 days
             elif(tile_osm2 is not None) and (self.CheckTimespan(tile_osm2, 7 * 24) is False):
-                #print("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.tileserv.name))
+                # print("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.tileserv.name))
                 self.tileman.tileskipped += 1
             else:
                 tile_osm2 = self._HttpLoadFile(self.tileserv, z, x, y, tile_osm2)
                 if tile_osm2 is None:
                     return
                 if (tile_osm2.updated is True) or (tile_osm2.date_updated is True):
+                    self.lock.acquire()
                     self.db.StoreTile(self.tileserv.name, tile_osm2, z, x, y)
+                    self.lock.release()
             self.tileman.tile += 1
+            self.cnt += 1
         self.db.CloseDB()
 
     # load single file with http protocol
     def _HttpLoadFile(self, ts, z, x, y, tile=None):
-        log = getlog()
+        # log = getlog()
 
         ret = None
-
+        timeout = 0.1
+        starttime = time.time()
         url = "{}/{}/{}/{}.png".format(ts.url, z, x, y)
 
         # set user agent to meet the tile usage policy
@@ -76,39 +83,61 @@ class DownloadThread(threading.Thread):
         if(tile is not None):
             req.add_header('If-None-Match', tile.etag)
 
-        try:
-            f = urllib.request.urlopen(req)
-            data = f.read()
-            date = f.headers['Date']
-            lastmodified = f.headers['Last-Modified']
-            etag = f.headers['ETag']
-            ret = TileInfo(data, etag, date, lastmodified)
-            ret.updated = True
-            ret.date_updated = True
-            self.tileman.tiledownloaded += 1
-        except urllib.error.HTTPError as err:
-            print("HTTPError: {}".format(err.code))
-
-            if(err.code == 404):
-                print("Error 404 / Not Found / url: {}".format(url))
+        while(ret is None):
 
             try:
-                tile.date = err.headers['Date']
-                ret = tile
+                f = urllib.request.urlopen(req)
+                data = f.read()
+                date = f.headers['Date']
+                lastmodified = f.headers['Last-Modified']
+                etag = f.headers['ETag']
+                ret = TileInfo(data, etag, date, lastmodified)
+                ret.updated = True
                 ret.date_updated = True
-                if ret is not None:
-                    ret.updated = False
-                self.tileman.tiledownloadskipped += 1
-            except Exception as e:
-                print("Exception: {}".format(e))
-                self.tileman.tiledownloaderror += 1
-                ret = tile
-                if ret is not None:
-                    ret.updated = False
-        except urllib.error.URLError as err:
-            print("URLError: {}".format(err.reason))
-            print("url: {}".format(url))
-            self.tileman.tiledownloaderror += 1
+                self.tileman.tiledownloaded += 1
+            except urllib.error.HTTPError as err:
+                if(err.code == 404):
+                    print("Error 404 / Not Found / url: {}".format(url))
+                    time.sleep(timeout)
+                    timeout = timeout * 2
+                    self.tileman.Error_304 += 1
+
+                elif(err.code == 502):
+                    print("Error 502 / Bad Gateway/ url: {}".format(url))
+                    time.sleep(timeout)
+                    timeout = timeout * 2
+                    self.tileman.Error_502 += 1
+
+                elif (err.code == 304):  # Not Modified
+                    self.tileman.tiledownloadskipped += 1
+                    self.tileman.Error_304 += 1
+                    try:
+                        tile.date = err.headers['Date']
+                        ret = tile
+                        ret.date_updated = True
+                        if ret is not None:
+                            ret.updated = False
+                    except Exception as e:
+                        print("Exception: {}".format(e))
+                        ret = tile
+                        if ret is not None:
+                            ret.updated = False
+                else:
+                    print("HTTPError: {}".format(err.code))
+                    time.sleep(timeout)
+                    timeout = timeout * 2
+
+            except urllib.error.URLError as err:
+                print("URLError: {}".format(err.reason))
+                print("url: {}".format(url))
+                time.sleep(timeout)
+                timeout = timeout * 2
+                self.tileman.Error_url += 1
+
+            if((time.time() - starttime) > 60):
+                self.tileman.downloaderror+=1
+                print("download error detected")
+                break
 
         return ret
 

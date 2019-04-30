@@ -30,6 +30,3 @@ links:
   [5] openstreetmap: https://www.openstreetmap.org
   [6] chart installation procedure for opencpn: https://opencpn.org/wiki/dokuwiki/doku.php?id=opencpn:opencpn_user_manual:getting_started:chart_installation
   [7] Disclaimer http://wiki.openseamap.org/wiki/OpenSeaMap-dev:Chart-Disclaimer#OpenSeaMap
- 
-
-
