@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # encoding: utf-8
 
-
 import os
 import shutil
 from Utils.ProcessCmd import ZipFiles, StitchPicture, GenerateKapFile
@@ -9,8 +8,8 @@ from Utils.glog import getlog
 import datetime
 from Utils.Helper import ChartInfo, ensure_dir
 from tile.mbtilestore import MBTileStore
-from tile.MergeThread import _MergePictures
 from tile.sqllitedb import OpenStreetMap, OpenSeaMap, OpenSeaMapMerged
+from tile.MergeThread import _MergePictures
 
 STICHDIR = "StichDir"
 
@@ -22,6 +21,8 @@ def RemoveDir(path):
 
 def RemoveFile(filename):
     if os.path.exists(filename):
+        os.remove(filename)
+    elif os.path.lexists(filename):
         os.remove(filename)
 
 
@@ -140,8 +141,6 @@ class AtlasGenerator(object):
         RemoveDir(atlasdirname)
 
         tilestore = MBTileStore(mbtilefilename)
-        tilestore.SetMetadata("name", atlasname)
-        tilestore.SetMetadata("format", "png")
 
         cnt = 0
         for singlemap in atlas:
@@ -162,28 +161,39 @@ class AtlasGenerator(object):
                         assert(0)
                     tilestore.StoreTile(tile, ci.zoom, x, y)
 
+        # set mandatory attributes
+        tilestore.SetMetadata("name", atlasname)
+        tilestore.SetMetadata("format", "png")
+
+        # set optional attributes
+        tilestore.SetMetadata("type", "baselayer")
+
+        # left, bottom, right, top
         tilestore.SetMetadata("bounds",
-                              "{},{},{},{}".format(ci.SE_lat,
-                                                   ci.SE_lon,
-                                                   ci.NW_lat,
-                                                   ci.NW_lon))
+                              "{}, {}, {}, {}".format(ci.NW_lon,
+                                                      ci.NW_lat,
+                                                      ci.SE_lon,
+                                                      ci.SE_lat))
 
         # copy info.txt
-        shutil.copyfile("documents/info.txt", atlasdirname + "info.txt")
-
-        atlasfilename = "{}history/mbtiles/OSM-mbtile-{}-{}.7z".format(self._WorkingDirectory,
-                                                                       atlasname,
-                                                                       creationtimestamp)
+        # shutil.copyfile("documents/info.txt", atlasdirname + "info.txt")
 
         tilestore.CloseDB()
 
-        ZipFiles(atlasdirname, atlasfilename)
+        atlasfilename = "{}history/mbtiles/OSM-OpenCPN2-{}-{}.mbtile".format(self._WorkingDirectory,
+                                                                             atlasname,
+                                                                             creationtimestamp)
 
-        atlasfilename_latest = "./work/mbtiles/OSM-mbtile-{}.7z".format(atlasname)
+        ensure_dir(atlasfilename)
+        shutil.copyfile(mbtilefilename, atlasfilename)
+        RemoveFile(mbtilefilename)
+        RemoveDir(atlasdirname)
 
-        ratlasfilename = "../history/mbtiles/OSM-mbtile-{}-{}.7z".format(atlasname,
-                                                                         creationtimestamp)
+        atlasfilename_latest = "./work/mbtiles/OSM-OpenCPN2-{}.mbtile".format(atlasname)
+        ratlasfilename = "../history/mbtiles/OSM-OpenCPN2-{}-{}.mbtile".format(atlasname, creationtimestamp)
 
+        print("remove file {}".format(atlasfilename_latest))
         RemoveFile(atlasfilename_latest)
 
+        print("create link src {} <- dst {}".format(ratlasfilename, atlasfilename_latest))
         os.symlink(ratlasfilename, atlasfilename_latest)

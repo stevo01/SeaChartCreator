@@ -37,6 +37,11 @@ def main():
                         dest="skip_os",
                         help="skip odd zoom levels")
 
+    parser.add_argument("-m", "--mapsource",
+                        help="map server configuration file",
+                        dest="MapSrcFile",
+                        default="./sample/mapsource/mp-OpenSeaMap.yaml")
+
     args = parser.parse_args()
 
     initlog('fetch', args.quiet)

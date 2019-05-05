@@ -29,11 +29,12 @@ def _MergePictures(background_file, overlay_file, result_file):
 
 class MergeThread(threading.Thread):
 
-    def __init__(self, tileman, DBDIR):
+    def __init__(self, tileman, lock, DBDIR):
         threading.Thread.__init__(self)
         self.tileman = tileman
         self.DBDIR = DBDIR
         self.stop = False
+        self.lock = lock
         self._WorkingDirMerge = self.tileman._WorkingDirectory + "{}".format(randint(1, 0xffffffff))
 
     def SetTileSrv(self, TsOpenSeaMap, TSOpenStreetMap):
@@ -42,7 +43,6 @@ class MergeThread(threading.Thread):
 
     def CleanupWorkingDir(self):
         if os.path.exists(self._WorkingDirMerge):
-            print("rmtree " + self._WorkingDirMerge)
             shutil.rmtree(self._WorkingDirMerge)
 
     def run(self):
@@ -62,9 +62,11 @@ class MergeThread(threading.Thread):
             y = job[2]
             z = job[3]
 
+            self.lock.acquire()
             tile_osm_street = self.db.GetTile(self.TSOpenStreetMap.name, z, x, y)
             tile_osm_sea = self.db.GetTile(self.TsOpenSeaMap.name, z, x, y)
             tile_osm3 = self.db.GetTile(OpenSeaMapMerged, z, x, y)
+            self.lock.release()
 
             # stop processing if tile is not available
             if tile_osm_street is None or tile_osm_sea is None:
@@ -73,13 +75,15 @@ class MergeThread(threading.Thread):
 
             if (tile_osm_street.updated is not 0) or (tile_osm_sea.updated is not 0) or (tile_osm3 is None):
                 tile_merged = self.MergeTile(tile_osm_street, tile_osm_sea)
-                self.db.StoreTile(OpenSeaMapMerged, tile_merged, z, x, y)
-
                 tile_osm_street.updated = False
-                self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm_street, z, x, y)
-
                 tile_osm_sea.updated = False
+
+                self.lock.acquire()
+                self.db.StoreTile(OpenSeaMapMerged, tile_merged, z, x, y)
+                self.db.StoreTile(self.TSOpenStreetMap.name, tile_osm_street, z, x, y)
                 self.db.StoreTile(self.TsOpenSeaMap.name, tile_osm_sea, z, x, y)
+                self.lock.release()
+
                 self.tileman.tilemerged += 1
             else:
                 self.tileman.tilemergedskipped += 1
@@ -103,9 +107,14 @@ class MergeThread(threading.Thread):
             tile_osm_street.StoreFile(filename_in1)
             tile_osm_sea.StoreFile(filename_in2)
 
-            _MergePictures(filename_in2,
-                           filename_in1,
-                           filename_result1)
+            background = Image.open(filename_in1)
+            overlay = Image.open(filename_in2)
+
+            background = background.convert("RGBA")
+            overlay = overlay.convert("RGBA") 
+
+            new_img = Image.alpha_composite(background, overlay)
+            new_img.save(filename_result1, "PNG")
 
         ret = TileInfo()
         ret.SetData(filename_result1)

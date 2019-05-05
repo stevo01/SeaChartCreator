@@ -91,12 +91,15 @@ class TileManager(object):
                 self.joblist.append([cnt, x, y, z])
                 cnt += 1
 
-        # create download threads
+        # create merge threads
         self.threadlist = list()
+
+        # creating a lock
+        lock = threading.Lock()
 
         for thread in range(10):
             thread = thread
-            self.threadlist.append(MergeThread(self, self.DBDIR))
+            self.threadlist.append(MergeThread(self, lock, self.DBDIR))
 
         # create download threads
         for threadrunner in self.threadlist:

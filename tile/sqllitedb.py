@@ -34,6 +34,8 @@ class TileSqlLiteDB(object):
         else:
             self.con = sqlite3.connect(self.FilenameDB)
             self.cur = self.con.cursor()
+            self.cur.execute("""PRAGMA journal_mode = WAL""")
+            self.cur.execute("""PRAGMA synchronous = NORMAL""")
 
         self.writecnt = 0
 
@@ -77,8 +79,8 @@ class TileSqlLiteDB(object):
             except OperationalError as e:
                 print("Error Execute SQL Statement:{}".format(sqlcmd))
                 print(e.args[0])
-                #self.logger.error("Error Execute SQL Statement:{}".format(sqlcmd))
-                #self.logger.error(e.args[0])
+                self.logger.error("Error Execute SQL Statement:{}".format(sqlcmd))
+                self.logger.error(e.args[0])
                 time.sleep(0.1) 
                 retry_cnt += 1
             except Exception as e:
@@ -89,6 +91,12 @@ class TileSqlLiteDB(object):
             assert(False)
 
         self.con.commit()
+
+        #if(self.writecnt > 1000):
+        #    self.con.commit()
+        #    self.writecnt=0
+        #else:
+        #    self.writecnt += 1
 
 
     def GetTile(self, tablename, z, x, y):
