@@ -49,20 +49,6 @@ pipeline {
                 
         }
         
-        stage('build mbtile files') 
-        {
-            steps{
-             sh"""#!/bin/bash
-         	   cd SeaChartCreator/
-         	   rm -fr ./work/
-         	   python3 build.py -q -s -t kap -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
-         	                             -d /var/lib/SeaChartCreator/work/database/ 
-         	   ls /var/lib/SeaChartCreator/work/database/ -l 
-         	   """
-            }
-                
-        }
-     	
      	stage('generate geojson for kap file')
      	{
             steps{
@@ -75,13 +61,27 @@ pipeline {
      		"""
             }
      	}
+
+        stage('build mbtile files') 
+        {
+            steps{
+             sh"""#!/bin/bash
+         	   cd SeaChartCreator/
+         	   rm -fr ./work/
+         	   python3 build.py -q -s -t mbtiles -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
+         	                             -d /var/lib/SeaChartCreator/work/database/ 
+         	   ls /var/lib/SeaChartCreator/work/database/ -l 
+         	   """
+            }
+                
+        }
      	
      	stage('generate geojson for mbtile file')
      	{
             steps{
      	    sh """#!/bin/bash
      		cd OSM_pmd4dl
-    		python3 kap2geojson.py -u https://ftp5.gwdg.de \
+    		python3 mbtile2geojson.py -u https://ftp5.gwdg.de \
     		                       -d /pub/misc/openstreetmap/openseamap/charts/history/mbtiles \
     		                       -f ./../SeaChartCreator/work/history/mbtiles/ \
     		                       -p ./../SeaChartCreator/${params.BUNDLEPATH}/${params.BUNDLENAME}.xml
@@ -102,6 +102,10 @@ pipeline {
 	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/kap/*.7z osm-trans@golf.franken.de:charts/kap/
 	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.7z osm-trans@golf.franken.de:charts/history/kap/
 	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.geojson osm-trans@golf.franken.de:charts/history/kap/
+
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/mbtiles/*.mbtile osm-trans@golf.franken.de:charts/mbtiles/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/mbtiles/*.mbtile osm-trans@golf.franken.de:charts/history/mbtiles/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/mbtiles/*.geojson osm-trans@golf.franken.de:charts/history/mbtiles/
 	     		"""
 	     		}
      	} 	
