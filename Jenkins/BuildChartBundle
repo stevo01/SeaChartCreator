@@ -103,8 +103,8 @@ pipeline {
 	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.7z osm-trans@golf.franken.de:charts/history/kap/
 	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.geojson osm-trans@golf.franken.de:charts/history/kap/
 
-	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/mbtiles/*.mbtile osm-trans@golf.franken.de:charts/mbtiles/
-	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/mbtiles/*.mbtile osm-trans@golf.franken.de:charts/history/mbtiles/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/mbtiles/*.mbtiles osm-trans@golf.franken.de:charts/mbtiles/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/mbtiles/*.mbtiles osm-trans@golf.franken.de:charts/history/mbtiles/
 	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/mbtiles/*.geojson osm-trans@golf.franken.de:charts/history/mbtiles/
 	     		"""
 	     		}

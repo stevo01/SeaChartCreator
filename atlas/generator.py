@@ -142,6 +142,11 @@ class AtlasGenerator(object):
 
         tilestore = MBTileStore(mbtilefilename)
 
+        minlon = None
+        maxlon = None
+        minlat = None
+        maxlat = None
+
         cnt = 0
         for singlemap in atlas:
             cnt = cnt + 1
@@ -161,6 +166,32 @@ class AtlasGenerator(object):
                         assert(0)
                     tilestore.StoreTile(tile, ci.zoom, x, y)
 
+            # determine min lon
+            if minlon is None:
+                minlon = ci.NW_lon
+            else:
+                if minlon > ci. NW_lon:
+                    minlon = ci.NW_lon
+
+            # determine max lon
+            if maxlon is None:
+                maxlon = ci.SE_lon
+            else:
+                if maxlon < ci. SE_lon:
+                    maxlon = ci.SE_lon
+
+            if minlat is None:
+                minlat = ci.NW_lat
+            else:
+                if minlat > ci. NW_lat:
+                    minlat = ci.NW_lat
+
+            if maxlat is None:
+                maxlat = ci.SE_lat
+            else:
+                if maxlat < ci. SE_lat:
+                    maxlat = ci.SE_lat
+
         # set mandatory attributes
         tilestore.SetMetadata("name", atlasname)
         tilestore.SetMetadata("format", "png")
@@ -170,27 +201,27 @@ class AtlasGenerator(object):
 
         # left, bottom, right, top
         tilestore.SetMetadata("bounds",
-                              "{}, {}, {}, {}".format(ci.NW_lon,
-                                                      ci.NW_lat,
-                                                      ci.SE_lon,
-                                                      ci.SE_lat))
+                              "{}, {}, {}, {}".format(minlon,
+                                                      minlat,
+                                                      maxlon,
+                                                      maxlat))
 
         # copy info.txt
         # shutil.copyfile("documents/info.txt", atlasdirname + "info.txt")
 
         tilestore.CloseDB()
 
-        atlasfilename = "{}history/mbtiles/OSM-OpenCPN2-{}-{}.mbtile".format(self._WorkingDirectory,
-                                                                             atlasname,
-                                                                             creationtimestamp)
+        atlasfilename = "{}history/mbtiles/OSM-OpenCPN2-{}-{}.mbtiles".format(self._WorkingDirectory,
+                                                                              atlasname,
+                                                                              creationtimestamp)
 
         ensure_dir(atlasfilename)
         shutil.copyfile(mbtilefilename, atlasfilename)
         RemoveFile(mbtilefilename)
         RemoveDir(atlasdirname)
 
-        atlasfilename_latest = "./work/mbtiles/OSM-OpenCPN2-{}.mbtile".format(atlasname)
-        ratlasfilename = "../history/mbtiles/OSM-OpenCPN2-{}-{}.mbtile".format(atlasname, creationtimestamp)
+        atlasfilename_latest = "./work/mbtiles/OSM-OpenCPN2-{}.mbtiles".format(atlasname)
+        ratlasfilename = "../history/mbtiles/OSM-OpenCPN2-{}-{}.mbtiles".format(atlasname, creationtimestamp)
 
         print("remove file {}".format(atlasfilename_latest))
         RemoveFile(atlasfilename_latest)
