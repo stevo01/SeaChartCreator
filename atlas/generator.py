@@ -162,7 +162,7 @@ class AtlasGenerator(object):
                     tile = self.db.GetTile(OpenSeaMapMerged, ci.zoom, x, y)
                     # check if tile exists
                     if tile is None:
-                        self.logger.error("tile with z={} x={} y={} not available in store\n")
+                        self.logger.error("tile with z={} x={} y={} not available in store\n".format(ci.zoom, x, y))
                         assert(0)
                     tilestore.StoreTile(tile, ci.zoom, x, y)
 

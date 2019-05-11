@@ -47,7 +47,7 @@ def main():
     initlog('fetch', args.quiet)
     logger = getlog()
 
-    logger.info('Start fetch tiles')
+    logger.info('Start merge tiles')
 
     if(args.skip_os is True):
         zoom_filter = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]

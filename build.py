@@ -26,12 +26,19 @@ def main():
     initlog('build', options.quiet)
     logger = getlog()
 
-    logger.info('Start fetch tiles')
+    logger.info('Start build mbtiles')
 
     if(options.skip_os is True):
         zoom_filter = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
     else:
         zoom_filter = []
+
+    logger.info('')
+    logger.info('database info:')
+    logger.info('{}'.format(options.DBDIR))
+    logger.info('')
+    logger.info('project info:')
+    logger.info('{}'.format(options.ProjectFile))
 
     # get maps from mobac project file
     if options.ProjectFile is not None:
