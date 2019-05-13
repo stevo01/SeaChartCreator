@@ -3,6 +3,8 @@
 
 from ExternalUtils.Conversions import deg2num, num2deg
 import os
+import re
+from datetime import datetime
 
 
 # storage for coordinates for a single point
@@ -70,3 +72,19 @@ def ensure_dir(file_path):
     directory = os.path.dirname(file_path)
     if not os.path.exists(directory):
         os.makedirs(directory)
+
+
+def HandleDate(date):
+    # 2018-03-12T05:30:30.801Z
+    # 20171012-1120"
+
+    a = re.match("[\d]{8}-[\d]{4}", date)
+
+    if a is not None:
+        b = a.group()
+        datetime_object = datetime.strptime(b, '%Y%m%d-%H%M')
+        b = datetime_object.isoformat('T') + 'Z'
+
+        return b
+
+    return date

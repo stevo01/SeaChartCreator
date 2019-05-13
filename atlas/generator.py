@@ -10,6 +10,7 @@ from Utils.Helper import ChartInfo, ensure_dir
 from tile.mbtilestore import MBTileStore
 from tile.sqllitedb import OpenStreetMap, OpenSeaMap, OpenSeaMapMerged
 from tile.MergeThread import _MergePictures
+import sys
 
 STICHDIR = "StichDir"
 
@@ -59,6 +60,7 @@ class AtlasGenerator(object):
                     if tile is None:
                         self.logger.error("tile with z={} x={} y={} not available in store\n".format(ci.zoom, x, y))
                         assert(0)
+                        sys.exit(1)
 
                     # write tile to local file
                     TileMerged = "{0:s}{1:d}-{2:05d}.png".format(PathTempTiles, ci.zoom, cnt)
@@ -164,6 +166,7 @@ class AtlasGenerator(object):
                     if tile is None:
                         self.logger.error("tile with z={} x={} y={} not available in store\n".format(ci.zoom, x, y))
                         assert(0)
+                        sys.exit(1)
                     tilestore.StoreTile(tile, ci.zoom, x, y)
 
             # determine min lon
@@ -205,6 +208,8 @@ class AtlasGenerator(object):
                                                       minlat,
                                                       maxlon,
                                                       maxlat))
+
+        tilestore.SetMetadata("date", creationtimestamp)
 
         # copy info.txt
         # shutil.copyfile("documents/info.txt", atlasdirname + "info.txt")
