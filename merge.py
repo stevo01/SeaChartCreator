@@ -26,11 +26,6 @@ def main():
                         dest="DBDIR",
                         default=DBDIR)
 
-    parser.add_argument("-f", "--force",
-                        action="store_true",
-                        dest="force_download",
-                        help="force download off tile")
-
     parser.add_argument("-q", "--quiet",
                         action="store_false",
                         dest="quiet",
@@ -41,12 +36,6 @@ def main():
                         action="store_true",
                         dest="skip_os",
                         help="skip odd zoom levels")
-
-    parser.add_argument("-m", "--mapsource",
-                        help="map server configuration file",
-                        dest="MapSrcFile",
-                        default="./sample/mapsource/mp-OpenSeaMap.yaml")
-
 
     args = parser.parse_args()
 
@@ -91,53 +80,20 @@ def main():
     mapcnt = 1
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
-        logger.info('\n\nStart UpdateTile for street map {} / {}:'.format(mapcnt, len(atlas)))
+        logger.info('\n\nStart Merge Tile {} / {}:'.format(mapcnt, len(atlas)))
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
-        cnt = tm.UpdateTiles(TSOpenStreetMap, ti, args.force_download)
+        cnt = tm.MergeTiles( TsOpenSeaMap, TSOpenStreetMap, ti)
         stoptime = time.time()
         runtime = (stoptime - starttime)
         if runtime == 0:
             runtime = 1
         logger.info('time: {} s'.format(int(stoptime - starttime)))
-        logger.info('tiles skipped          {}'.format(tm.tileskipped))
         logger.info('tiles merged           {}'.format(tm.tilemerged))
         logger.info('tiles mergedskipped    {}'.format(tm.tilemergedskipped))
-        logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
-        logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
-        logger.info('tiles download error   {}'.format(tm.downloaderror))
-        logger.info('http status 304        {}'.format(tm.Error_304))
-        logger.info('http status 502        {}'.format(tm.Error_502))
-        logger.info('http status 404        {}'.format(tm.Error_404))
-        logger.info('http url error         {}'.format(tm.Error_url))
         logger.info('processsed tiles/s     {0:.2f}'.format(cnt / runtime))
 
-    logger.info('Fetch Open Sea Map tiles from {}'.format(TsOpenSeaMap.name))
-    mapcnt = 1
-    for singlemap in atlas:
-        ti = ChartInfo(singlemap)
-        logger.info('Start UpdateTile for sea map {} / {}:'.format(mapcnt, len(atlas)))
-        mapcnt += 1
-        starttime = time.time()
-        logger.info(ti)
-        cnt = tm.UpdateTiles(TsOpenSeaMap, ti, args.force_download)
-        stoptime = time.time()
-        runtime = (stoptime - starttime)
-        if runtime == 0:
-            runtime = 1
-        logger.info('time: {} s'.format(int(stoptime - starttime)))
-        logger.info('tiles skipped          {}'.format(tm.tileskipped))
-        logger.info('tiles merged           {}'.format(tm.tilemerged))
-        logger.info('tiles mergedskipped    {}'.format(tm.tilemergedskipped))
-        logger.info('tiles downloaded       {}'.format(tm.tiledownloaded))
-        logger.info('tiles download skipped {}'.format(tm.tiledownloadskipped))
-        logger.info('tiles download error   {}'.format(tm.downloaderror))
-        logger.info('http status 304        {}'.format(tm.Error_304))
-        logger.info('http status 502        {}'.format(tm.Error_502))
-        logger.info('http status 404        {}'.format(tm.Error_404))
-        logger.info('http url error         {}'.format(tm.Error_url))
-        logger.info('processsed tiles/s     {0:.2f}\n'.format(cnt / runtime))
 
     logger.info('\n\nready')
 

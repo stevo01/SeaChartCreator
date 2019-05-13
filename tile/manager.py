@@ -22,7 +22,7 @@ class TileManager(object):
     classdocs
     '''
 
-    def __init__(self, WorkingDirectory, DBDIR, force_download):
+    def __init__(self, WorkingDirectory, DBDIR):
         '''
         Constructor
         '''
@@ -43,13 +43,11 @@ class TileManager(object):
         self.Error_404 = 0
         self.Error_url = 0
 
-        self.force_download = force_download
-
         # just ensure that db UDP_TUNNEL
         db = TileSqlLiteDB(self.DBDIR)
         db.CloseDB()
 
-    def UpdateTiles(self, tileserv, ti):
+    def UpdateTiles(self, tileserv, ti, force_download):
         cnt = 0
         self.joblist = list()
         for y in range(ti.ytile_nw, ti.ytile_se + 1):
@@ -68,7 +66,7 @@ class TileManager(object):
 
         for thread in range(10):
             thread = thread
-            self.threadlist.append(DownloadThread(self, lock, self.force_download, self.DBDIR))
+            self.threadlist.append(DownloadThread(self, lock, force_download, self.DBDIR))
 
         # create download threads
         for threadrunner in self.threadlist:
