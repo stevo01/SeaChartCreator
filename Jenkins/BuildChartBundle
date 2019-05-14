@@ -8,22 +8,7 @@ pipeline {
     
     stages {
     
-        stage('clone OSM_pmd4dl') 
-	    {
-	    	steps
-	    	{
-        	     checkout([$class: 'GitSCM', 
-	        		  branches: [[name: '*/master']], 
-	        		  doGenerateSubmoduleConfigurations: false, 
-	        		  extensions: [], 
-	        		  extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'OSM_pmd4dl']], 
-            		  submoduleCfg: [], 
-	        		  userRemoteConfigs: [[url: 'https://github.com/stevo01/OSM_pmd4dl.git'], 
-	        		 ]])
-	        }   
-	    }
-	    
-     	stage('fetch tiles') 
+        stage('fetch tiles') 
         {
             steps{
      		  sh"""#!/bin/bash
@@ -53,11 +38,11 @@ pipeline {
      	{
             steps{
      	    sh """#!/bin/bash
-     		cd OSM_pmd4dl
+     		cd SeaChartCreator
     		python3 kap2geojson.py -u https://ftp5.gwdg.de \
     		                       -d /pub/misc/openstreetmap/openseamap/charts/history/kap \
-    		                       -f ./../SeaChartCreator/work/history/kap/ \
-    		                       -p ./../SeaChartCreator/${params.BUNDLEPATH}/${params.BUNDLENAME}.xml
+    		                       -f ./work/history/kap/ \
+    		                       -p ./${params.BUNDLEPATH}/${params.BUNDLENAME}.xml
      		"""
             }
      	}
@@ -80,11 +65,11 @@ pipeline {
      	{
             steps{
      	    sh """#!/bin/bash
-     		cd OSM_pmd4dl
-    		python3 mbtile2geojson.py -u https://ftp5.gwdg.de \
+     	    cd SeaChartCreator/
+     		python3 mbtile2geojson.py -u https://ftp5.gwdg.de \
     		                       -d /pub/misc/openstreetmap/openseamap/charts/history/mbtiles \
-    		                       -f ./../SeaChartCreator/work/history/mbtiles/ \
-    		                       -p ./../SeaChartCreator/${params.BUNDLEPATH}/${params.BUNDLENAME}.xml
+    		                       -f ./work/history/mbtiles/ \
+    		                       -p ./${params.BUNDLEPATH}/${params.BUNDLENAME}.xml
      		"""
             }
      	}
