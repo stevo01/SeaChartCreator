@@ -93,7 +93,7 @@ if __name__ == '__main__':
     huell = convexhull(points)
     huell.append(huell[0])
 
-    outfilename = archivfilename[:-7] + '.geojson'
+    outfilename = archivfilename[:-7] + 'geojson'
 
     url = "{}{}/{}".format(
         options.url,

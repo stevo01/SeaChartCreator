@@ -52,7 +52,6 @@ pipeline {
             steps{
              sh"""#!/bin/bash
          	   cd SeaChartCreator/
-         	   rm -fr ./work/
          	   python3 build.py -q -s -t mbtiles -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
          	                             -d /var/lib/SeaChartCreator/work/database/ 
          	   ls /var/lib/SeaChartCreator/work/database/ -l 
@@ -82,15 +81,18 @@ pipeline {
      		
      		steps{
 	            sh """#!/bin/bash
-	     		cd OSM_pmd4dl
-	     		ls ./../SeaChartCreator/work/kap/
-	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/kap/*.7z osm-trans@golf.franken.de:charts/kap/
-	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.7z osm-trans@golf.franken.de:charts/history/kap/
-	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/kap/*.geojson osm-trans@golf.franken.de:charts/history/kap/
+	            set -x
+	     		cd SeaChartCreator/
+	     		ls ./work/kap/
+	     		ls ./work/mbtiles/
+	     		
+	     		rsync -e "ssh -i /var/lib/jenkins/id_osm" -av work/kap/*.7z osm-trans@golf.franken.de:charts/kap/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av work/history/kap/*.7z osm-trans@golf.franken.de:charts/history/kap/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av work/history/kap/*.geojson osm-trans@golf.franken.de:charts/history/kap/
 
-	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/mbtiles/*.mbtiles osm-trans@golf.franken.de:charts/mbtiles/
-	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/mbtiles/*.mbtiles osm-trans@golf.franken.de:charts/history/mbtiles/
-	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av ./../SeaChartCreator/work/history/mbtiles/*.geojson osm-trans@golf.franken.de:charts/history/mbtiles/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av work/mbtiles/*.mbtiles osm-trans@golf.franken.de:charts/mbtiles/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av work/history/mbtiles/*.mbtiles osm-trans@golf.franken.de:charts/history/mbtiles/
+	     	    rsync -e "ssh -i /var/lib/jenkins/id_osm" -av work/history/mbtiles/*.geojson osm-trans@golf.franken.de:charts/history/mbtiles/
 	     		"""
 	     		}
      	} 	
