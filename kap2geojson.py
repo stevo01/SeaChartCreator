@@ -29,7 +29,7 @@ if __name__ == '__main__':
     usage = "usage: %creator [options] arg1 arg2"
     atlas = list()
 
-    parser.add_option("-u", "--url", type="string", help="server address", dest="url", default="https://ftp5.gwdg.de")
+    parser.add_option("-u", "--url", type="string", help="server address", dest="url", default="https://ftp.gwdg.de")
     parser.add_option("-d", "--dir", type="string", help="json file directory on server", dest="InPath", default="/pub/misc/openstreetmap/openseamap/charts/kap")
     parser.add_option("-f", "--filename", type="string", help="filename of the kap file archive", dest="archivfilename", default="./sample/7z/")
     parser.add_option("-p", "--project", type="string", help="filename of the chart bundler project file", dest="ProjectFile", default="sample/atlas/osmcb/sea/osmcb-catalog-Adria.xml")

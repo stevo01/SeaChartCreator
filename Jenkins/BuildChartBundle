@@ -12,6 +12,7 @@ pipeline {
         {
             steps{
      		  sh"""#!/bin/bash
+     		  set -x 
      		  cd SeaChartCreator/
               python3 fetch.py -q -s -f -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
                                         -d /var/lib/SeaChartCreator/work/database/ \
@@ -24,6 +25,7 @@ pipeline {
         {
             steps{
              sh"""#!/bin/bash
+         	   set -x
          	   cd SeaChartCreator/
          	   rm -fr ./work/
          	   python3 build.py -q -s -t kap -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
@@ -38,8 +40,9 @@ pipeline {
      	{
             steps{
      	    sh """#!/bin/bash
+     		set -x
      		cd SeaChartCreator
-    		python3 kap2geojson.py -u https://ftp5.gwdg.de \
+    		python3 kap2geojson.py -u https://ftp.gwdg.de \
     		                       -d /pub/misc/openstreetmap/openseamap/charts/history/kap \
     		                       -f ./work/history/kap/ \
     		                       -p ./${params.BUNDLEPATH}/${params.BUNDLENAME}.xml
@@ -51,6 +54,7 @@ pipeline {
         {
             steps{
              sh"""#!/bin/bash
+         	   set -x
          	   cd SeaChartCreator/
          	   python3 build.py -q -s -t mbtiles -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
          	                             -d /var/lib/SeaChartCreator/work/database/ 
@@ -64,8 +68,9 @@ pipeline {
      	{
             steps{
      	    sh """#!/bin/bash
+     	    set -x
      	    cd SeaChartCreator/
-     		python3 mbtile2geojson.py -u https://ftp5.gwdg.de \
+     		python3 mbtile2geojson.py -u https://ftp.gwdg.de \
     		                       -d /pub/misc/openstreetmap/openseamap/charts/history/mbtiles \
     		                       -f ./work/history/mbtiles/ \
     		                       -p ./${params.BUNDLEPATH}/${params.BUNDLENAME}.xml

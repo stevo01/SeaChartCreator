@@ -24,7 +24,7 @@ License:
 
 links:
   [1] open seamap project: https://www.openseamap.org
-  [2] offline charts in kap format: https://ftp5.gwdg.de/pub/misc/openstreetmap/openseamap/charts/kap
+  [2] offline charts in kap format: https://ftp.gwdg.de/pub/misc/openstreetmap/openseamap/charts/kap
   [3] online charts: http://map.openseamap.org/
   [4] forum: https://forum.openseamap.org/
   [5] openstreetmap: https://www.openstreetmap.org
