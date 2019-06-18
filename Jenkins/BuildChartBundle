@@ -57,7 +57,7 @@ pipeline {
          	   set -x
          	   cd SeaChartCreator/
          	   
-         	   python3 merge.py -q -s -i ./sample/atlas/osmcb/sea/osmcb-catalog-test.xml \
+         	   python3 merge.py -q -s -i ${params.BUNDLEPATH}/${params.BUNDLENAME}.xml \
          	                             -d /var/lib/SeaChartCreator/work/database/
          	   
          	   
