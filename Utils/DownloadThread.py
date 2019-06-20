@@ -99,18 +99,20 @@ class DownloadThread(threading.Thread):
                 self.tileman.tiledownloaded += 1
             except urllib.error.HTTPError as err:
                 if(err.code == 404):
-                    self.log.error("Error 404 / Not Found / url: {}".format(url))
-                    self.log.error("enter sleep {}".format(timeout))
+                    self.log.error("{} Error 404 / Not Found / url: {}".format(self.name, url))
+                    self.log.error("{} enter sleep {}".format(self.name, timeout))
                     time.sleep(timeout)
                     timeout = timeout * 2
                     self.tileman.Error_304 += 1
+                    ret = None
 
                 elif(err.code == 502):
-                    self.log.error("Error 502 / Bad Gateway/ url: {}".format(url))
-                    self.log.error("enter sleep {}".format(timeout))
+                    self.log.error("{} Error 502 / Bad Gateway/ url: {}".format(self.name, url))
+                    self.log.error("{} enter sleep {}".format(self.name, timeout))
                     time.sleep(timeout)
                     timeout = timeout * 2
                     self.tileman.Error_502 += 1
+                    ret = None
 
                 elif (err.code == 304):  # Not Modified
                     self.tileman.tiledownloadskipped += 1
@@ -122,26 +124,28 @@ class DownloadThread(threading.Thread):
                         if ret is not None:
                             ret.updated = False
                     except Exception as e:
-                        self.log.error("Exception: {}".format(e))
+                        self.log.error("{} Exception: {}".format(self.name, e))
                         ret = tile
                         if ret is not None:
                             ret.updated = False
                 else:
-                    self.log.error("HTTPError: {}".format(err.code))
+                    self.log.error("{} HTTPError: {}".format(self.name, err.code))
                     time.sleep(timeout)
                     timeout = timeout * 2
+                    ret = None
 
             except urllib.error.URLError as err:
-                self.log.error("URLError: {}".format(err.reason))
-                self.log.error("url: {}".format(url))
-                self.log.error("enter sleep {}".format(timeout))
+                self.log.error("{} URLError: {}".format(self.name, err.reason))
+                self.log.error("{} url: {}".format(self.name, url))
+                self.log.error("{} enter sleep {}".format(self.name, timeout))
                 time.sleep(timeout)
                 timeout = timeout * 2
                 self.tileman.Error_url += 1
+                ret = None
 
-            if((time.time() - starttime) > 60):
-                self.tileman.downloaderror+=1
-                self.log.error("download error detected")
+            if((time.time() - starttime) > 600):
+                self.tileman.downloaderror += 1
+                self.log.error("[} download error detected, timeout ".format(self.name))
                 break
 
         return ret
