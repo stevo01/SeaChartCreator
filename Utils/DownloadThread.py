@@ -8,6 +8,7 @@ from Utils import __app_identifier__
 from tile.Info import TileInfo
 import time
 import locale
+from Utils.glog import getlog
 
 
 class DownloadThread(threading.Thread):
@@ -26,7 +27,8 @@ class DownloadThread(threading.Thread):
         self.tileserv = tileserv
 
     def run(self):
-        # log = getlog()
+        self.log = getlog()
+        #self.log.info("DownloadThread::run")
         self.db = TileSqlLiteDB(self.DBDIR)
 
         while(self.stop is False):
@@ -35,7 +37,7 @@ class DownloadThread(threading.Thread):
                 break
             job = self.tileman.joblist[0]
             self.tileman.joblist.pop(0)
-            # print("{} is working on job {} {} {} {}".format(self.name, job[0], job[1], job[2], job[3]))
+            #self.log.info("{} is working on job {} {} {} {}".format(self.name, job[0], job[1], job[2], job[3]))
 
             x = job[1]
             y = job[2]
@@ -97,13 +99,15 @@ class DownloadThread(threading.Thread):
                 self.tileman.tiledownloaded += 1
             except urllib.error.HTTPError as err:
                 if(err.code == 404):
-                    print("Error 404 / Not Found / url: {}".format(url))
+                    self.log.error("Error 404 / Not Found / url: {}".format(url))
+                    self.log.error("enter sleep {}".format(timeout))
                     time.sleep(timeout)
                     timeout = timeout * 2
                     self.tileman.Error_304 += 1
 
                 elif(err.code == 502):
-                    print("Error 502 / Bad Gateway/ url: {}".format(url))
+                    self.log.error("Error 502 / Bad Gateway/ url: {}".format(url))
+                    self.log.error("enter sleep {}".format(timeout))
                     time.sleep(timeout)
                     timeout = timeout * 2
                     self.tileman.Error_502 += 1
@@ -118,25 +122,26 @@ class DownloadThread(threading.Thread):
                         if ret is not None:
                             ret.updated = False
                     except Exception as e:
-                        print("Exception: {}".format(e))
+                        self.log.error("Exception: {}".format(e))
                         ret = tile
                         if ret is not None:
                             ret.updated = False
                 else:
-                    print("HTTPError: {}".format(err.code))
+                    self.log.error("HTTPError: {}".format(err.code))
                     time.sleep(timeout)
                     timeout = timeout * 2
 
             except urllib.error.URLError as err:
-                print("URLError: {}".format(err.reason))
-                print("url: {}".format(url))
+                self.log.error("URLError: {}".format(err.reason))
+                self.log.error("url: {}".format(url))
+                self.log.error("enter sleep {}".format(timeout))
                 time.sleep(timeout)
                 timeout = timeout * 2
                 self.tileman.Error_url += 1
 
             if((time.time() - starttime) > 60):
                 self.tileman.downloaderror+=1
-                print("download error detected")
+                self.log.error("download error detected")
                 break
 
         return ret
