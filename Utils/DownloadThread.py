@@ -85,7 +85,7 @@ class DownloadThread(threading.Thread):
         if(tile is not None):
             req.add_header('If-None-Match', tile.etag)
 
-        while(ret is None):
+        while(1 == 1):
 
             try:
                 f = urllib.request.urlopen(req)
@@ -143,10 +143,15 @@ class DownloadThread(threading.Thread):
                 self.tileman.Error_url += 1
                 ret = None
 
+            if ret != None:
+                break
+
             if((time.time() - starttime) > 600):
                 self.tileman.downloaderror += 1
                 self.log.error("[} download error detected, timeout ".format(self.name))
                 break
+            else:
+                self.log.error("{} retry download".format(self.name))
 
         return ret
 
