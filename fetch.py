@@ -91,7 +91,7 @@ def main():
     mapcnt = 1
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
-        logger.info('\n\nStart UpdateTile for street map {} / {}:'.format(mapcnt, len(atlas)))
+        logger.info('\n\n{}, Start UpdateTile for street map {} / {}:'.format(name, mapcnt, len(atlas)))
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
@@ -117,7 +117,7 @@ def main():
     mapcnt = 1
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
-        logger.info('\n\nStart UpdateTile for sea map {} / {}:'.format(mapcnt, len(atlas)))
+        logger.info('\n\n{} Start UpdateTile for sea map {} / {}:'.format(name, mapcnt, len(atlas)))
         mapcnt += 1
         starttime = time.time()
         logger.info(ti)
