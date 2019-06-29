@@ -52,7 +52,7 @@ class DownloadThread(threading.Thread):
                 # print("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.tileserv.name))
                 self.tileman.tileskipped += 1
             # skip download if tile is newer the 7 days
-            elif(tile_osm2 is not None) and (self.CheckTimespan(tile_osm2, 7 * 24) is False):
+            elif(tile_osm2 is not None) and (self.CheckTimespan(tile_osm2, 14 * 24) is False):
                 # print("skip update of tile z={} x={} y={} from {}".format(z, x, y, self.tileserv.name))
                 self.tileman.tileskipped += 1
             else:

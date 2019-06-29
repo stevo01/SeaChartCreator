@@ -8,6 +8,7 @@ from tile.MergeThread import MergeThread
 import threading
 
 MERGEDIR = 'Merge/'
+NUMBER_DOWNLOAD_THREATS = 1
 
 
 class TileServer():
@@ -64,7 +65,7 @@ class TileManager(object):
         # creating a lock
         lock = threading.Lock()
 
-        for thread in range(10):
+        for thread in range(NUMBER_DOWNLOAD_THREATS):
             thread = thread
             self.threadlist.append(DownloadThread(self, lock, force_download, self.DBDIR))
 

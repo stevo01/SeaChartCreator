@@ -81,7 +81,7 @@ class TileSqlLiteDB(object):
                 print(e.args[0])
                 self.logger.error("Error Execute SQL Statement:{}".format(sqlcmd))
                 self.logger.error(e.args[0])
-                time.sleep(0.1) 
+                time.sleep(0.1)
                 retry_cnt += 1
             except Exception as e:
                 self.logger.error("Error Execute SQL Statement:{}".format(sqlcmd))
@@ -91,12 +91,6 @@ class TileSqlLiteDB(object):
             assert(False)
 
         self.con.commit()
-
-        #if(self.writecnt > 1000):
-        #    self.con.commit()
-        #    self.writecnt=0
-        #else:
-        #    self.writecnt += 1
 
 
     def GetTile(self, tablename, z, x, y):
