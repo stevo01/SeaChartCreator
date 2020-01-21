@@ -184,16 +184,16 @@ class AtlasGenerator(object):
                     maxlon = ci.SE_lon
 
             if minlat is None:
-                minlat = ci.NW_lat
+                minlat = ci.SE_lat
             else:
-                if minlat > ci. NW_lat:
-                    minlat = ci.NW_lat
+                if minlat > ci. SE_lat:
+                    minlat = ci.SE_lat
 
             if maxlat is None:
-                maxlat = ci.SE_lat
+                maxlat = ci.NW_lat
             else:
-                if maxlat < ci. SE_lat:
-                    maxlat = ci.SE_lat
+                if maxlat < ci. NW_lat:
+                    maxlat = ci.NW_lat
 
         # set mandatory attributes
         tilestore.SetMetadata("name", atlasname)
