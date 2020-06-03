@@ -6,7 +6,7 @@ SeaChartCreator is based on python script. The script was developed and tested o
 
 The need following external librarys / applications:
 - ImageMagick 7.0.8-1
-- imgkap (master branch from from https://github.com/stevo01/imgkap/commits/master)
+- imgkap (master branch from from https://github.com/stevo01/imgkap/commits/master ,do not use releases)
 - FreeImage - https://kent.dl.sourceforge.net/project/freeimage/Source%20Distribution/3.18.0/FreeImage3180.zip
 - pyyaml
 - PIL
@@ -34,7 +34,7 @@ All loaded tiles and generated maps stay under following license:
 * select GridZoom 16 in upper area of the shown map
 * Create New Atlas Content PNG + Worldwide (PNG & PWG)
 * Set Menue -> Selection -> Selection Mode -> Rectangle
-* Select "15" in zoom level dialog
+* Select "15" in zoom level dialog, select multiple zoom levels where needed.
 * Use the Mouse to select a area for single chart
 * press "add selection" in the "atlas content" dialog
 * save the profile e.g. newatlas 
@@ -50,6 +50,8 @@ note: the atlas will be stored in a xml file located in the mobac software direc
 	python3 build.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
 
 the generated kap file is located in directory ./work/kap/
+
+* In case of file cannot be found errors during building, check the path to the helper scripts in Util/ProcessCommand.py
 
 ## bookmarks:
 [1] http://mobac.sourceforge.net/
