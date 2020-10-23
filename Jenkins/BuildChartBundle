@@ -1,12 +1,12 @@
 pipeline {
     agent any
-    /*
+
     parameters {
         string(name: 'BUNDLENAME', defaultValue: 'osmcb-catalog-test', description: 'name of chart bundle e.g. mobac-profile-Europa1, /osmcb-catalog-Baltic')
         string(name: 'BUNDLEPATH', defaultValue: './sample/atlas/osmcb/sea', description: 'chart bundle path: ./sample/atlas/osmcb/sea , ./sample/atlas/mobac/inland-water-ways')
         booleanParam(name: 'DEPLOY',     defaultValue: true, description: 'deploy files if true')
     }
-    */
+
     
     stages {
     
