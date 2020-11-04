@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="Lake_Balaton" outputFormat="PNGWorldfile">
+    <Layer name="Balaton">
+        <Map maxTileCoordinate="9207039/5921535" minTileCoordinate="9191680/5913600" mapSource="UMP-pcPL" zoom="16" name="Layer_1_16"/>
+        <Map maxTileCoordinate="9220607/5919487" minTileCoordinate="9206784/5905152" mapSource="UMP-pcPL" zoom="16" name="Layer_2_16"/>
+        <Map maxTileCoordinate="9235967/5912831" minTileCoordinate="9220352/5895680" mapSource="UMP-pcPL" zoom="16" name="Layer_3_16"/>
+    </Layer>
+    <Layer name="Balaton_1">
+        <Map maxTileCoordinate="36095/23295" minTileCoordinate="35840/23040" mapSource="OpenSeaMapStone" zoom="8" name="Balaton 08"/>
+        <Map maxTileCoordinate="143871/92671" minTileCoordinate="143616/92160" mapSource="OpenSeaMapStone" zoom="10" name="Balaton 10"/>
+        <Map maxTileCoordinate="575487/370175" minTileCoordinate="574464/369408" mapSource="OpenSeaMapStone" zoom="12" name="Balaton 12"/>
+        <Map maxTileCoordinate="2301951/1480447" minTileCoordinate="2297856/1478144" mapSource="OpenSeaMapStone" zoom="14" name="Balaton 14"/>
+    </Layer>
+    <Layer name="Balaton_2">
+        <Map maxTileCoordinate="144127/92671" minTileCoordinate="143616/92160" mapSource="OpenSeaMapStone" zoom="10" name="Balaton_1 10"/>
+        <Map maxTileCoordinate="576511/370175" minTileCoordinate="575232/368896" mapSource="OpenSeaMapStone" zoom="12" name="Balaton_1 12"/>
+        <Map maxTileCoordinate="2305279/1479935" minTileCoordinate="2301696/1476096" mapSource="OpenSeaMapStone" zoom="14" name="Balaton_1 14"/>
+    </Layer>
+    <Layer name="Balaton_3">
+        <Map maxTileCoordinate="36095/23295" minTileCoordinate="35840/22784" mapSource="OpenSeaMapStone" zoom="8" name="Balaton_2 08"/>
+        <Map maxTileCoordinate="144383/92415" minTileCoordinate="143872/91904" mapSource="OpenSeaMapStone" zoom="10" name="Balaton_2 10"/>
+        <Map maxTileCoordinate="577279/369663" minTileCoordinate="576256/368384" mapSource="OpenSeaMapStone" zoom="12" name="Balaton_2 12"/>
+        <Map maxTileCoordinate="2309119/1478399" minTileCoordinate="2305024/1473792" mapSource="OpenSeaMapStone" zoom="14" name="Balaton_2 14"/>
+    </Layer>
+</atlas>
