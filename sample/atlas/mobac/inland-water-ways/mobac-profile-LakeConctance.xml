@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="LakeConstance" outputFormat="MBTiles">
+    <Layer name="Bodensee">
+        <Map maxTileCoordinate="8843519/5868543" minTileCoordinate="8838400/5862144" mapSource="OpenSeaMapStone" zoom="16" name="Bodensee 16"/>
+    </Layer>
+    <Layer name="Bodensee_1">
+        <Map maxTileCoordinate="8838399/5868287" minTileCoordinate="8833280/5859840" mapSource="OpenSeaMapStone" zoom="16" name="Bodensee_1 16"/>
+    </Layer>
+    <Layer name="Bodensee_2">
+        <Map maxTileCoordinate="8833535/5868287" minTileCoordinate="8828160/5855232" mapSource="OpenSeaMapStone" zoom="16" name="Bodensee_2 16"/>
+    </Layer>
+    <Layer name="Bodensee_3">
+        <Map maxTileCoordinate="8828415/5865727" minTileCoordinate="8825600/5854464" mapSource="OpenSeaMapStone" zoom="16" name="Bodensee_3 16"/>
+    </Layer>
+    <Layer name="Bodensee_4">
+        <Map maxTileCoordinate="8825599/5862143" minTileCoordinate="8819456/5852160" mapSource="OpenSeaMapStone" zoom="16" name="Bodensee_4 16"/>
+    </Layer>
+    <Layer name="Bodensee_5">
+        <Map maxTileCoordinate="8819711/5859327" minTileCoordinate="8815104/5847296" mapSource="OpenSeaMapStone" zoom="16" name="Bodensee_5 16"/>
+    </Layer>
+    <Layer name="Bodensee_6">
+        <Map maxTileCoordinate="8815359/5850111" minTileCoordinate="8808448/5843968" mapSource="OpenSeaMapStone" zoom="16" name="Bodensee_6 16"/>
+    </Layer>
+    <Layer name="Bodensee_7">
+        <Map maxTileCoordinate="8815359/5857535" minTileCoordinate="8800768/5849600" mapSource="OpenSeaMapStone" zoom="16" name="Bodensee_7 16"/>
+    </Layer>
+    <Layer name="Bodensee_8">
+        <Map maxTileCoordinate="34559/23039" minTileCoordinate="34304/22784" mapSource="OpenSeaMapStone" zoom="8" name="Port_Stand 08"/>
+        <Map maxTileCoordinate="138239/91903" minTileCoordinate="137472/91136" mapSource="OpenSeaMapStone" zoom="10" name="Port_Stand 10"/>
+        <Map maxTileCoordinate="552959/366847" minTileCoordinate="549888/365056" mapSource="OpenSeaMapStone" zoom="12" name="Port_Stand 12"/>
+        <Map maxTileCoordinate="2211071/1467391" minTileCoordinate="2199808/1460480" mapSource="OpenSeaMapStone" zoom="14" name="Port_Stand 14"/>
+    </Layer>
+</atlas>
