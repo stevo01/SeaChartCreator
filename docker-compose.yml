@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  SeaChartCreator:
+    image: sea-chart-creator:1.0
+    build: ./docker
+    hostname: mitte-sshd
+    volumes:
+      - ./:/SeaChartCreator/
+
+    command: run
+    ports:
+      - 2022:22
+    restart: unless-stopped
