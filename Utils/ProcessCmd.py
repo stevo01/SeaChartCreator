@@ -9,8 +9,8 @@ from Utils.Helper import ensure_dir
 
 CONVERT_APP = "convert"
 COMPOSITE_APP = "composite"
-MONTAGE_APP = "/usr/local/bin/montage"
-IMGKAP_APP = "/usr/bin/imgkap"
+MONTAGE_APP = "/usr/bin/montage"
+IMGKAP_APP = "/usr/local/bin/imgkap"
 SEVEN_Z_APP = "7z"
 
 

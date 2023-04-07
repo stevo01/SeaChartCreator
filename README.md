@@ -1,23 +1,24 @@
 # SeaChartCreator
 
-SeaChartCreator is based on python script. The script was developed and tested on system with
-- Linux debian 9 / 64 bit 
-- python 3.5
+SeaChartCreator is based on python script. The script was developed and tested on system with following linux OS
+- Linux debian 11 / 64 bit 
 
 The need following external librarys / applications:
-- ImageMagick 7.0.8-1
-- imgkap (master branch from from https://github.com/stevo01/imgkap/commits/master ,do not use releases)
-- FreeImage - https://kent.dl.sourceforge.net/project/freeimage/Source%20Distribution/3.18.0/FreeImage3180.zip
+- python 3.9
+- ImageMagick 6.9.11
+- FreeImage - https://sourceforge.net/projects/freeimage/files/Source Distribution/3.18.0/FreeImage3180.zip
+- imgkap (master branch from from https://github.com/stevo01/imgkap  master branch (do not use releases)
 - pyyaml
-- PIL
+- pillow
+- geojson
 
-SeaChartCreator use tiles from the OpenSeaMap Project and the Open Streetmap Project.
+SeaChartCreator is using tiles from the OpenSeaMap Project and/or the Open Streetmap Project.
 
 Open Sea Map
-     http://openseamap.org/
+     https://openseamap.org/
 
 Open Street Map:
-     http://openstreetmap.org
+     https://openstreetmap.org
      https://operations.osmfoundation.org/policies/tiles/
 
 Please read and meet tile usage policy: 
@@ -43,15 +44,33 @@ note: the atlas will be stored in a xml file located in the mobac software direc
     
 ### clone project and call python scripts to create kap file of specific mobac project file
 
-	cd ~/
-	git clone https://github.com/stevo01/SeaChartCreator
-	cd SeaChartCreator
-	python3 fetch.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
-	python3 build.py -i ./sample/atlas/mobac/mobac-profile-testprj.xml 
+```console
+cd ~/
+git clone https://github.com/stevo01/SeaChartCreator
+cd SeaChartCreator
 
-the generated kap file is located in directory ./work/kap/
+MAP_DESCR_FILE=./sample/atlas/osmcb/sea/osmcb-catalog-test.xml
+MAPSOURCE="./sample/mapsource/mp-OpenSeaMap-Bravo.yaml"
+DB_DIR="./cache/"
 
-* In case of file cannot be found errors during building, check the path to the helper scripts in Util/ProcessCommand.py
+# fetch tiles
+python3 fetch.py -m $MAPSOURCE -d $DB_DIR -q -s -f -i $MAP_DESCR_FILE
+
+# merge tiles
+python3 merge.py -d $DB_DIR -q -s -i $MAP_DESCR_FILE 
+
+# build kap file
+python3 build.py -t kap -d $DB_DIR -s -i $MAP_DESCR_FILE
+
+# build mbtile file
+python3 build.py -t mbtiles -d $DB_DIR -s -i $MAP_DESCR_FILE
+
+```
+
+notes: 
+* the generated kap file is located in directory ./work/kap/
+* the generated mbtiles file is located in directory ./work/mbtiles/
+
 
 ## bookmarks:
 [1] http://mobac.sourceforge.net/
