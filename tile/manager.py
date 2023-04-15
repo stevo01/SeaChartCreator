@@ -8,7 +8,7 @@ from tile.MergeThread import MergeThread
 import threading
 
 MERGEDIR = 'Merge/'
-NUMBER_DOWNLOAD_THREATS = 1
+NUMBER_DOWNLOAD_THREATS = 10
 
 
 class TileServer():

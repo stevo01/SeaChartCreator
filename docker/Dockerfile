@@ -11,14 +11,14 @@ RUN apt-get install -y procps
 RUN apt-get install -y subversion \
     rsync \
     git \
-    wget 
+    wget \
+    python3-pip \
+    imagemagick \
+    build-essential \
+    unzip \
+    p7zip-full 
 
-RUN apt-get install -y python3 python3-pip
-
-RUN apt-get install -y imagemagick 
-
-RUN apt-get install -y build-essential unzip
-
+COPY policy.xml /etc/ImageMagick-6/policy.xml
 
 # install FreeImage
 RUN wget --no-verbose --show-progress --progress=bar:force:noscroll \
@@ -38,6 +38,11 @@ RUN cd imgkap \
 USER root
 COPY requirements.txt /
 RUN pip3 install -r /requirements.txt 
+
+RUN apt install -y locales locales-all
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
 
 # Start running
 USER root
