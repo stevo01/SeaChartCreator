@@ -26,7 +26,7 @@ def main():
     initlog('build', options.quiet)
     logger = getlog()
 
-    logger.info('Start build mbtiles')
+    logger.info('Start build map')
 
     if(options.skip_os is True):
         zoom_filter = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
