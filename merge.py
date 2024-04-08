@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # encoding: utf-8
 
-
 import argparse
 import time
 import os
@@ -13,7 +12,8 @@ from Utils.glog import getlog, initlog
 
 
 def main():
-    parser = argparse.ArgumentParser(description='fetch tiles')
+    
+    parser = argparse.ArgumentParser(description='merge tiles')
     WDIR = os.getcwd() + '/work/'
     DBDIR = WDIR + "database/"
     parser.add_argument("-i",
@@ -21,7 +21,7 @@ def main():
                         dest="ProjectFile",
                         default="./sample/atlas/mobac/mobac-profile-testprj.xml")
 
-    parser.add_argument("-d", "--DatabaseDirectory",
+    parser.add_argument("-d", "--DatabaseDirectory", 
                         help="tile store directory",
                         dest="DBDIR",
                         default=DBDIR)
@@ -44,7 +44,7 @@ def main():
 
     args = parser.parse_args()
 
-    initlog('fetch', args.quiet)
+    initlog('merge', args.quiet)
     logger = getlog()
 
     logger.info('Start merge tiles')
@@ -81,7 +81,7 @@ def main():
     TSOpenStreetMap = TileServer(data['basic_layer']['name'], data['basic_layer']['url'])
     TsOpenSeaMap = TileServer(data['seamark_layer']['name'], data['seamark_layer']['url'])
 
-    logger.info('Fetch Open Sea Map tiles from {}'.format(TSOpenStreetMap.name))
+    logger.info('Merge Open Sea Map tiles from {}'.format(TSOpenStreetMap.name))
     mapcnt = 1
     for singlemap in atlas:
         ti = ChartInfo(singlemap)
