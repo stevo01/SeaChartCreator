@@ -7,6 +7,6 @@ services:
     hostname: scc
     volumes:
       - ./:/SeaChartCreator/
-
+      - ./etc/ImageMagick-6/policy.xml:/etc/ImageMagick-6/policy.xml
     command: run
     restart: unless-stopped
