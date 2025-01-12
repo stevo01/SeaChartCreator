@@ -5,6 +5,7 @@ SeaChartCreator is based on python script. The script was developed and tested o
 
 The need following external librarys / applications:
 - python 3.9
+- python3-venv
 - ImageMagick 6.9.11
 - FreeImage - https://sourceforge.net/projects/freeimage/files/Source Distribution/3.18.0/FreeImage3180.zip
 - imgkap (master branch from from https://github.com/stevo01/imgkap  master branch (do not use releases)
@@ -48,6 +49,8 @@ note: the atlas will be stored in a xml file located in the mobac software direc
 cd ~/
 git clone https://github.com/stevo01/SeaChartCreator
 cd SeaChartCreator
+git clone git@github.com:OpenSeaMap/chart-projectfiles.git
+
 
 MAP_DESCR_FILE=./sample/atlas/osmcb/sea/osmcb-catalog-test.xml
 MAPSOURCE="./sample/mapsource/mp-OpenSeaMap-Bravo.yaml"
